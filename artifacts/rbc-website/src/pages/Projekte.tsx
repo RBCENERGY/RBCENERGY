@@ -12,21 +12,32 @@ export default function Projekte() {
   return (
     <PageLayout title="Referenzprojekte">
       {/* Hero */}
-      <section className="relative pt-40 pb-20 bg-[#F7F8F9] overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.4]"
-          style={{
-            backgroundImage: "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
-        />
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
-            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-5">Referenzen</span>
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-[#1a1a1a] leading-[1.05] mb-6">
+      <section className="relative min-h-[70vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero-projekte.png"
+            alt="LED Referenzprojekte"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0F12]/92 via-[#0D0F12]/70 to-[#0D0F12]/20" />
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "linear-gradient(rgba(152,185,75,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.3) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+          <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 text-[#98B94B] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-6 h-px bg-[#98B94B]" />
+              Referenzen
+            </span>
+            <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Unsere <span className="text-[#98B94B]">Erfolge</span>
             </h1>
-            <p className="text-lg text-[#1a1a1a]/55 leading-relaxed max-w-xl">
+            <p className="text-lg text-white/60 leading-relaxed max-w-xl">
               Überzeugen Sie sich selbst von der visuellen und wirtschaftlichen Transformation durch unsere LED-Lösungen.
             </p>
           </motion.div>

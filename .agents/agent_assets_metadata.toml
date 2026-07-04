@@ -36,3 +36,33 @@ id = "LWQZvMcb5r6GbI0eJCynV"
 uri = "file://artifacts/rbc-website/public/hero-company.png"
 type = "image"
 title = "professional sustainable team"
+
+[[generated]]
+id = "yYyIFIXCE1dMtHUBkK71E"
+uri = "file://artifacts/rbc-website/public/hero-leistungen.png"
+type = "image"
+title = "led services hero"
+
+[[generated]]
+id = "SSKBTZteJAVmYNzM-tCMi"
+uri = "file://artifacts/rbc-website/public/hero-foerdermittel.png"
+type = "image"
+title = "funding hero"
+
+[[generated]]
+id = "iiEmlNMafFzkLiy7wal4h"
+uri = "file://artifacts/rbc-website/public/hero-projekte.png"
+type = "image"
+title = "projects hero"
+
+[[generated]]
+id = "ARsJ4dJ85wBkB-ktnaXTL"
+uri = "file://artifacts/rbc-website/public/hero-news.png"
+type = "image"
+title = "news hero"
+
+[[generated]]
+id = "KsHn-v7afJ7DGBvZRsjSO"
+uri = "file://artifacts/rbc-website/public/hero-kontakt.png"
+type = "image"
+title = "contact hero"
