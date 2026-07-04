@@ -34,15 +34,12 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3.5 z-50" data-testid="link-logo">
+        <Link href="/" className="flex items-center z-50" data-testid="link-logo">
           <img
             src="/rbc-logo.png"
             alt="RBC GmbH Logo"
-            className={`object-contain transition-all duration-300 ${scrolled ? "h-11" : "h-14"}`}
+            className={`object-contain transition-all duration-300 ${scrolled ? "h-16" : "h-20"}`}
           />
-          <span className="text-xl font-bold tracking-tight hidden sm:block text-white">
-            RBC GmbH
-          </span>
         </Link>
 
         {/* Desktop Nav */}
