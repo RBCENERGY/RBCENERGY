@@ -34,7 +34,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center z-50" data-testid="link-logo">
+        <Link href="/" className="flex items-center z-50 lg:ml-10 xl:ml-16" data-testid="link-logo">
           <img
             src="/rbc-logo.png"
             alt="RBC GmbH Logo"
