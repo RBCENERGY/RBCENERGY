@@ -10,7 +10,6 @@ import Industrie from "@/pages/Industrie";
 import Kommunen from "@/pages/Kommunen";
 import Foerdermittel from "@/pages/Foerdermittel";
 import Unternehmen from "@/pages/Unternehmen";
-import Karriere from "@/pages/Karriere";
 import News from "@/pages/News";
 import Kontakt from "@/pages/Kontakt";
 import NotFound from "@/pages/not-found";
@@ -27,7 +26,6 @@ function Router() {
       <Route path="/kommunen" component={Kommunen} />
       <Route path="/foerdermittel" component={Foerdermittel} />
       <Route path="/unternehmen" component={Unternehmen} />
-      <Route path="/karriere" component={Karriere} />
       <Route path="/news" component={News} />
       <Route path="/kontakt" component={Kontakt} />
 
