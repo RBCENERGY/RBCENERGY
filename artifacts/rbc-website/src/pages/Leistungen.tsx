@@ -19,9 +19,9 @@ const services = [
   },
   {
     icon: <Zap size={24} />,
-    title: "Licht-Contracting",
-    desc: "Modernisierung ohne eigene Investitionskosten. Die neue Anlage finanziert sich komplett aus den erzielten Energieeinsparungen.",
-    points: ["0 € Investitionskosten", "Sofortige Liquiditätsschonung", "Bilanzneutrale Umsetzung"],
+    title: "Lichtplanung & Fördermittel",
+    desc: "Individuelle Lichtkonzepte inklusive Wirtschaftlichkeitsberechnung — und die komplette Abwicklung Ihrer Fördermittel von bis zu 20 %.",
+    points: ["Bedarfsanalyse & Lichtkonzept", "Wirtschaftlichkeitsberechnung", "Fördermittel-Beratung (bis 20 %)"],
     featured: true,
   },
   {

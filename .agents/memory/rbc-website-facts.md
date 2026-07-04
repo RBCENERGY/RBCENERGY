@@ -15,7 +15,7 @@ Verified facts:
 - **Register:** Amtsgericht Mannheim, HRB 706834. USt-ID DE231464461.
 - **Key differentiator:** Official **Veko Lightsystems Partner for Süddeutschland** — one of few firms in Germany allowed to plan Veko systems independently. Veko = Dutch maker (Schagen, since 1975) of recyclable aluminium LED light rails.
 - **LED-Förderung:** headline is **up to 20% Zuschuss** for companies (BEG/BAFA). Kommunalrichtlinie for municipalities can go higher (up to ~40% for financially weak communes) — that's the only place 40% is accurate.
-- **Financing models:** Kauf, Leasing, Contracting (contracting = RBC installs at own cost, handles maintenance).
+- **NOT a contractor:** RBC does NOT offer contracting / pay-from-savings financing. Never claim "Null Investition", "Kein Eigenkapital", "vollständig finanziert durch die Einsparung", or "ab Tag 1 profitabel". Lead with efficiency, savings (up to 80%), funding (up to 20%), and Veko partnership instead.
 - **Service segments:** Industrie & Montage, Logistik & Produktion, Einzelhandel & Supermarkt, Bürofläche & Arbeitsplatz, plus Hallenbad/pool and sports-hall lighting.
 - **Real reference clients/projects:** Linamar (automotive supplier, full LED conversion), Heidelberg iT Management (Serverhotel 2 datacenter + offices), Aquadrom Hockenheim (pool), Holzgroßhandel Gerber (warehouse), medical/dental practices (Dr. Leutgeb Rimbach, Zahnmedizin Schenk & Peters).
 - **Do NOT claim:** ISO 9001 certification (not stated on their site), specific project counts, or big-brand clients — none are verified.

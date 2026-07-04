@@ -40,14 +40,14 @@ export default function Home() {
             >
               Maximale<br />
               Effizienz.<br />
-              <span className="text-[#98B94B]">Null Investition.</span>
+              <span className="text-[#98B94B]">Bis zu 80 % Ersparnis.</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp} initial="hidden" animate="show" custom={2}
               className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg"
             >
-              Wir modernisieren Ihre Beleuchtung auf LED — vollständig finanziert durch die Einsparung. Kein Eigenkapital. Kein Risiko. Ab Tag 1 profitabel.
+              Wir modernisieren Ihre Beleuchtung auf LED — für bis zu 80 % weniger Energieverbrauch, wartungsarmen Betrieb und geförderte Investitionen. Offizieller Veko-Partner für Süddeutschland, seit 2009.
             </motion.p>
 
             <motion.div
@@ -120,7 +120,7 @@ export default function Home() {
               Warum RBC GmbH
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
-              Licht-Contracting.<br />
+              LED-Modernisierung.<br />
               <span className="text-[#25412D]">Ohne Kompromisse.</span>
             </h2>
           </div>
@@ -130,12 +130,12 @@ export default function Home() {
               {
                 icon: <TrendingDown size={24} />,
                 title: "Bis 80% Kostensenkung",
-                desc: "Modernste LED-Technologie reduziert Ihren Stromverbrauch drastisch — mit messbarem ROI ab dem ersten Tag.",
+                desc: "Modernste LED-Technologie reduziert Ihren Stromverbrauch drastisch — mit schneller Amortisation.",
               },
               {
                 icon: <Zap size={24} />,
-                title: "Null Eigenkapital",
-                desc: "Unser Contracting-Modell: Wir finanzieren die Anlage vollständig. Die Rate wird durch die Einsparung gedeckt.",
+                title: "Bis zu 20% Förderung",
+                desc: "Wir übernehmen die komplette Fördermittel-Abwicklung — von der Antragstellung bis zur Auszahlung.",
               },
               {
                 icon: <Shield size={24} />,
