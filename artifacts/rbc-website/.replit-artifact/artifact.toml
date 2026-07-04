@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "RBC GmbH Website"
+version = "1.0.0"
+id = "artifacts/rbc-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19175
+
+[services.development]
+run = "pnpm --filter @workspace/rbc-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rbc-website", "run", "build" ]
+publicDir = "artifacts/rbc-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19175"
+BASE_PATH = "/"

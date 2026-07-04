@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "r2DU-0jcCBfa_0NvBngk6"
+uri = "file://artifacts/rbc-website/public/hero-warehouse.png"
+type = "image"
+title = "hero industrial warehouse led"
+
+[[generated]]
+id = "vVfSQ5DoIDc5lv_c0IP2B"
+uri = "file://artifacts/rbc-website/public/project-before-1.png"
+type = "image"
+title = "before old warehouse lighting"
+
+[[generated]]
+id = "d93GIXAKUoGOQBdYhwYOq"
+uri = "file://artifacts/rbc-website/public/project-after-1.png"
+type = "image"
+title = "after new warehouse lighting"
+
+[[generated]]
+id = "1aCkOGMUpvGiprMj9yTaK"
+uri = "file://artifacts/rbc-website/public/hero-municipality.png"
+type = "image"
+title = "municipality street lighting"
+
+[[generated]]
+id = "3usgm0EVO0VE_70JvC93O"
+uri = "file://artifacts/rbc-website/public/hero-industry.png"
+type = "image"
+title = "industry led lighting"
+
+[[generated]]
+id = "LWQZvMcb5r6GbI0eJCynV"
+uri = "file://artifacts/rbc-website/public/hero-company.png"
+type = "image"
+title = "professional sustainable team"
