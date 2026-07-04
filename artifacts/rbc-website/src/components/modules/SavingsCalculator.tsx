@@ -43,8 +43,14 @@ export function SavingsCalculator() {
   const formatEuro = (val: number) => new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(val);
 
   return (
-    <div className="bg-secondary/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+    <div className="bg-[#25412D] border border-white/10 p-6 md:p-10 shadow-2xl relative overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(rgba(152,185,75,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.5) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
         <div className="space-y-8">

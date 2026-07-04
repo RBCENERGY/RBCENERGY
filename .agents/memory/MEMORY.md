@@ -1,0 +1,3 @@
+- [RBC website design language](rbc-website-design.md) — light/futuristic "2030" style; green is accent ONLY, never a dark-green base background.
+- [react-icons gotcha](react-icons-gotcha.md) — brand icons live in react-icons/fa, not react-icons/si (SiLinkedin/SiFacebook/SiXing don't exist).
+- [framer-motion Variants typing](framer-motion-variants.md) — annotate variant objects as `Variants` or `ease` string widens and fails tsc.

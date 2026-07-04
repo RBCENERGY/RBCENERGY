@@ -34,24 +34,24 @@ export function BeforeAfterSlider({
   };
 
   useEffect(() => {
-    if (isDragging) {
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", () => setIsDragging(false));
-      window.addEventListener("touchmove", handleTouchMove);
-      window.addEventListener("touchend", () => setIsDragging(false));
-    }
+    if (!isDragging) return;
+    const stopDragging = () => setIsDragging(false);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", stopDragging);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", stopDragging);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", () => setIsDragging(false));
+      window.removeEventListener("mouseup", stopDragging);
       window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", () => setIsDragging(false));
+      window.removeEventListener("touchend", stopDragging);
     };
   }, [isDragging]);
 
   return (
     <div 
       ref={containerRef}
-      className="relative w-full aspect-[16/9] overflow-hidden rounded-xl select-none group cursor-ew-resize border border-white/10"
+      className="relative w-full aspect-[16/9] overflow-hidden select-none group cursor-ew-resize border border-black/10"
       onMouseDown={(e) => {
         setIsDragging(true);
         handleMove(e.clientX);

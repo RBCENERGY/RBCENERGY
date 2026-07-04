@@ -1,52 +1,80 @@
 import { PageLayout } from "@/components/layout/PageLayout";
+import { CtaBand } from "@/components/modules/CtaBand";
 import { BeforeAfterSlider } from "@/components/modules/BeforeAfterSlider";
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
+};
 
 export default function Projekte() {
   return (
     <PageLayout title="Referenzprojekte">
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mb-16">
-            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 text-white">Unsere <span className="text-primary">Erfolge</span></h1>
-            <p className="text-xl text-white/70">Überzeugen Sie sich selbst von der visuellen und wirtschaftlichen Transformation durch unsere LED-Lösungen.</p>
-          </div>
+      {/* Hero */}
+      <section className="relative pt-40 pb-20 bg-[#F7F8F9] overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.4]"
+          style={{
+            backgroundImage: "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
+            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-5">Referenzen</span>
+            <h1 className="text-5xl md:text-6xl font-display font-bold text-[#1a1a1a] leading-[1.05] mb-6">
+              Unsere <span className="text-[#98B94B]">Erfolge</span>
+            </h1>
+            <p className="text-lg text-[#1a1a1a]/55 leading-relaxed max-w-xl">
+              Überzeugen Sie sich selbst von der visuellen und wirtschaftlichen Transformation durch unsere LED-Lösungen.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
+      {/* Projects */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
           <div className="space-y-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 space-y-6">
-                <div className="inline-flex px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-wider uppercase text-white/60">Logistik & Lager</div>
-                <h2 className="text-3xl font-display font-bold">Logistikzentrum Süd</h2>
-                <p className="text-white/70 text-lg leading-relaxed">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Logistik & Lager
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">Logistikzentrum Süd</h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
                   Austausch von 850 veralteten HQL-Strahlern gegen intelligente, tageslichtgesteuerte LED-Hallenstrahler. Deutliche Verbesserung der Arbeitsplatzsicherheit durch homogenere Ausleuchtung.
                 </p>
-                <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10">
+                <div className="grid grid-cols-2 gap-4 py-6 border-y border-black/8">
                   <div>
-                    <div className="text-white/50 text-sm">Energieeinsparung</div>
-                    <div className="text-2xl font-bold text-primary">76%</div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
+                    <div className="text-3xl font-display font-bold text-[#98B94B]">76 %</div>
                   </div>
                   <div>
-                    <div className="text-white/50 text-sm">CO₂ Reduktion</div>
-                    <div className="text-2xl font-bold text-primary">142 t/Jahr</div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">CO₂ Reduktion</div>
+                    <div className="text-3xl font-display font-bold text-[#98B94B]">142 t/Jahr</div>
                   </div>
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <BeforeAfterSlider 
-                  beforeImage="/project-before-1.png" 
+                <BeforeAfterSlider
+                  beforeImage="/project-before-1.png"
                   afterImage="/project-after-1.png"
                   beforeLabel="400W HQL (Alt)"
                   afterLabel="120W LED (Neu)"
                 />
               </div>
             </div>
-            
-            {/* Add more projects here following the same structure */}
-            <div className="p-10 border border-dashed border-white/20 rounded-2xl text-center">
-              <p className="text-white/50 text-lg">Weitere Projekte werden in Kürze hinzugefügt.</p>
+
+            <div className="p-12 border border-dashed border-black/15 text-center">
+              <p className="text-[#1a1a1a]/45 text-lg">Weitere Projekte werden in Kürze hinzugefügt.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <CtaBand />
     </PageLayout>
   );
 }

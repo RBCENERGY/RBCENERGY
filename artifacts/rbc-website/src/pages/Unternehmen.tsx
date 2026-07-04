@@ -1,60 +1,113 @@
 import { PageLayout } from "@/components/layout/PageLayout";
+import { CtaBand } from "@/components/modules/CtaBand";
+import { motion, type Variants } from "framer-motion";
 import { Users, Award, Shield } from "lucide-react";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
+};
+
+const values = [
+  {
+    icon: <Award size={28} />,
+    title: "Erfahrung & Expertise",
+    desc: "Mit über 500 erfolgreich realisierten Großprojekten kennen wir die spezifischen Anforderungen jeder Branche. Wir planen nicht am Reißbrett, sondern für die Realität.",
+  },
+  {
+    icon: <Shield size={28} />,
+    title: "Geprüfte Qualität",
+    desc: "Die RBC GmbH ist nach DIN EN ISO 9001 zertifiziert. Wir verbauen ausschließlich Premium-Komponenten namhafter Hersteller, die für jahrzehntelangen Dauerbetrieb ausgelegt sind.",
+  },
+  {
+    icon: <Users size={28} />,
+    title: "Alles aus einer Hand",
+    desc: "Von der ersten Lichtmessung über die Förderantragstellung und Montage bis zur Entsorgung der Altleuchten und laufenden Wartung haben Sie bei uns genau einen Ansprechpartner.",
+  },
+];
+
+const stats = [
+  { value: "500+", label: "Realisierte Projekte" },
+  { value: "20 J.", label: "Markterfahrung" },
+  { value: "bis 80%", label: "Energieeinsparung" },
+  { value: "ISO 9001", label: "Zertifiziert" },
+];
 
 export default function Unternehmen() {
   return (
     <PageLayout title="Unternehmen & Werte">
-      <section className="relative min-h-[50vh] flex items-center pt-20 pb-20">
+      {/* Dark image hero (accent) */}
+      <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero-company.png" 
-            alt="RBC Team im Büro" 
-            className="w-full h-full object-cover opacity-30"
+          <img src="/hero-company.png" alt="RBC Team im Büro" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0F12]/92 via-[#0D0F12]/70 to-[#0D0F12]/20" />
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "linear-gradient(rgba(152,185,75,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.3) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent" />
         </div>
-
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-              Ihr Partner für <span className="text-primary">nachhaltiges Licht</span>
+        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+          <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 text-[#98B94B] text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="w-6 h-px bg-[#98B94B]" /> Über RBC GmbH
+            </span>
+            <h1 className="text-5xl md:text-6xl font-display font-extrabold text-white leading-[1.08] mb-6">
+              Ihr Partner für <span className="text-[#98B94B]">nachhaltiges Licht</span>
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              Die RBC GmbH steht für hanseatische Zuverlässigkeit, ingenieurtechnische Präzision und bedingungslose Qualität. Seit über zwei Jahrzehnten.
+            <p className="text-lg text-white/60 leading-relaxed max-w-lg">
+              Die RBC GmbH steht für Zuverlässigkeit, ingenieurtechnische Präzision und bedingungslose Qualität. Seit über zwei Jahrzehnten.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats bar */}
+      <section className="bg-[#F7F8F9] border-b border-black/6">
+        <div className="container mx-auto px-6 py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center md:text-left">
+                <div className="text-3xl md:text-4xl font-display font-bold text-[#25412D]">{s.value}</div>
+                <div className="text-[#1a1a1a]/45 text-xs uppercase tracking-wide mt-1">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="space-y-4">
-              <Award className="text-primary w-10 h-10" />
-              <h3 className="text-2xl font-bold text-white">Erfahrung & Expertise</h3>
-              <p className="text-white/60 leading-relaxed">
-                Mit über 500 erfolgreich realisierten Großprojekten kennen wir die spezifischen Anforderungen jeder Branche. Wir planen nicht am Reißbrett, sondern für die Realität.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <Shield className="text-primary w-10 h-10" />
-              <h3 className="text-2xl font-bold text-white">Geprüfte Qualität</h3>
-              <p className="text-white/60 leading-relaxed">
-                Die RBC GmbH ist nach DIN EN ISO 9001 zertifiziert. Wir verbauen ausschließlich Premium-Komponenten namhafter Hersteller, die für jahrzehntelangen Dauerbetrieb ausgelegt sind.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <Users className="text-primary w-10 h-10" />
-              <h3 className="text-2xl font-bold text-white">Alles aus einer Hand</h3>
-              <p className="text-white/60 leading-relaxed">
-                Von der ersten Lichtmessung über die Förderantragstellung und Montage bis zur Entsorgung der Altleuchten und laufenden Wartung haben Sie bei uns genau einen Ansprechpartner.
-              </p>
-            </div>
+      {/* Values */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mb-16">
+            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Unsere Werte</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+              Worauf Sie sich <span className="text-[#25412D]">verlassen können</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {values.map((v, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                custom={i}
+                className="bg-white border border-black/[0.08] p-8 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
+              >
+                <div className="text-[#98B94B] mb-6">{v.icon}</div>
+                <h3 className="font-display font-bold text-2xl text-[#1a1a1a] mb-4">{v.title}</h3>
+                <p className="text-[#1a1a1a]/55 text-sm leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
+
+      <CtaBand />
     </PageLayout>
   );
 }

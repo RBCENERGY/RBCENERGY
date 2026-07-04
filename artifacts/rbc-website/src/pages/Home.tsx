@@ -1,11 +1,11 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { SavingsCalculator } from "@/components/modules/SavingsCalculator";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Shield, TrendingDown, Clock } from "lucide-react";
 import { SiBmw, SiSiemens, SiDeutschebahn, SiBosch } from "react-icons/si";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
 };
@@ -213,22 +213,22 @@ export default function Home() {
       </section>
 
       {/* ─── CALCULATOR ─── */}
-      <section id="calculator" className="py-28 bg-[#25412D] relative overflow-hidden">
+      <section id="calculator" className="py-28 bg-[#F7F8F9] border-t border-black/6 relative overflow-hidden">
         {/* Background grid */}
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-[0.4]"
           style={{
-            backgroundImage: "linear-gradient(rgba(152,185,75,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.5) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
+            backgroundImage: "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
           }}
         />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Einsparrechner</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Berechnen Sie Ihren Profit
             </h2>
-            <p className="text-white/50 mt-4 max-w-lg mx-auto text-base">
+            <p className="text-[#1a1a1a]/55 mt-4 max-w-lg mx-auto text-base">
               Finden Sie heraus, wie viel Liquidität Sie durch LED-Modernisierung freisetzen können.
             </p>
           </div>
