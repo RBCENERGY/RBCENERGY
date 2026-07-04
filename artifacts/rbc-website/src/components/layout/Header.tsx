@@ -84,20 +84,20 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/97 backdrop-blur-md border-b border-black/8 shadow-sm py-3"
+          ? "bg-white/97 backdrop-blur-md border-b border-black/8 shadow-sm py-4"
           : dark
-          ? "bg-transparent py-5"
-          : "bg-white/97 backdrop-blur-md border-b border-black/8 py-3"
+          ? "bg-transparent py-7"
+          : "bg-white/97 backdrop-blur-md border-b border-black/8 py-5"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 z-50" data-testid="link-logo">
+        <Link href="/" className="flex items-center gap-3.5 z-50" data-testid="link-logo">
           <img
             src="/rbc-logo.png"
             alt="RBC GmbH Logo"
-            className={`h-8 object-contain transition-all duration-300 ${dark ? "" : "brightness-0"}`}
+            className={`object-contain transition-all duration-300 ${scrolled ? "h-11" : "h-14"} ${dark ? "" : "brightness-0"}`}
           />
-          <span className={`text-base font-bold tracking-tight hidden sm:block transition-colors duration-300 ${dark ? "text-white" : "text-[#1a1a1a]"}`}>
+          <span className={`text-xl font-bold tracking-tight hidden sm:block transition-colors duration-300 ${dark ? "text-white" : "text-[#1a1a1a]"}`}>
             RBC GmbH
           </span>
         </Link>

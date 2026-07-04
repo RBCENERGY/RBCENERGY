@@ -1,4 +1,6 @@
 import { Link } from "wouter";
+import { FaFacebookF, FaLinkedinIn, FaXing } from "react-icons/fa";
+import { Phone, Printer, Mail, Clock, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -7,7 +9,7 @@ export function Footer() {
       <div className="border-b border-white/8">
         <div className="container mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-display font-bold text-xl tracking-tight">Bereit für die Energiewende?</p>
+            <p className="text-white font-display font-bold text-2xl tracking-tight">Bereit für die Energiewende?</p>
             <p className="text-white/50 text-sm mt-1">Kostenlose Analyse Ihres Einsparpotenzials — unverbindlich und in 48h.</p>
           </div>
           <Link
@@ -23,25 +25,37 @@ export function Footer() {
       {/* Main grid */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          {/* Brand col */}
-          <div className="md:col-span-4">
-            <div className="flex items-center gap-3 mb-5">
-              <img src="/rbc-logo.png" alt="RBC GmbH" className="h-8 brightness-0 invert opacity-90" />
-              <span className="text-white font-bold text-lg tracking-tight">RBC GmbH</span>
+          {/* Brand + contact col */}
+          <div className="md:col-span-5">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/rbc-logo.png" alt="RBC GmbH" className="h-11 brightness-0 invert opacity-90" />
+              <span className="text-white font-bold text-xl tracking-tight">RBC GmbH</span>
             </div>
-            <p className="text-sm leading-relaxed mb-8 max-w-xs">
-              Ihr ISO-zertifizierter Partner für LED-Modernisierung in Industrie und kommunalen Einrichtungen — seit über 20 Jahren.
+            <p className="text-sm leading-relaxed mb-8 max-w-sm">
+              Ihr ISO-zertifizierter Partner für LED-Modernisierung in Industrie und kommunalen Einrichtungen — seit über 20 Jahren aus Heidelberg.
             </p>
-            <div className="flex gap-3">
-              <span className="inline-block px-3 py-1.5 border border-white/15 text-white/60 text-xs font-mono tracking-wider">
-                ISO 9001
-              </span>
-              <span className="inline-block px-3 py-1.5 border border-white/15 text-white/60 text-xs font-mono tracking-wider">
-                TÜV
-              </span>
-              <span className="inline-block px-3 py-1.5 border border-[#98B94B]/40 text-[#98B94B]/80 text-xs font-mono tracking-wider">
-                BAFA
-              </span>
+
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3">
+                <MapPin size={16} className="text-[#98B94B] mt-0.5 shrink-0" />
+                <span>RBC GmbH · Hardtstr. 80 · 69124 Heidelberg</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock size={16} className="text-[#98B94B] mt-0.5 shrink-0" />
+                <span>Montag bis Freitag · 08:00 – 17:00 Uhr</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone size={16} className="text-[#98B94B] mt-0.5 shrink-0" />
+                <a href="tel:+4962211852020" className="hover:text-white transition-colors">+49 (0) 6221 / 18520-20</a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Printer size={16} className="text-[#98B94B] mt-0.5 shrink-0" />
+                <span>+49 (0) 6221 / 18520-29</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail size={16} className="text-[#98B94B] mt-0.5 shrink-0" />
+                <a href="mailto:info@rbc-energy.de" className="hover:text-[#98B94B] transition-colors">info@rbc-energy.de</a>
+              </div>
             </div>
           </div>
 
@@ -68,17 +82,40 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Kontakt */}
-          <div className="md:col-span-4">
-            <h4 className="text-white/30 text-xs uppercase tracking-widest font-bold mb-5">Kontakt</h4>
-            <address className="not-italic text-sm space-y-2 leading-relaxed">
-              <p className="text-white/80">RBC GmbH</p>
-              <p>Musterstraße 123<br />12345 Berlin, Deutschland</p>
-              <p className="pt-2">
-                <a href="tel:+49301234567" className="hover:text-white transition-colors block">+49 (0) 30 123 45 67</a>
-                <a href="mailto:info@rbc-gmbh.de" className="hover:text-[#98B94B] transition-colors">info@rbc-gmbh.de</a>
-              </p>
-            </address>
+          {/* Zertifikate & Partner */}
+          <div className="md:col-span-3">
+            <h4 className="text-white/30 text-xs uppercase tracking-widest font-bold mb-5">Zertifikate & Partner</h4>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="border border-white/12 px-3 py-4 flex flex-col items-center justify-center text-center gap-1 hover:border-[#98B94B]/40 transition-colors">
+                <span className="text-white font-display font-bold text-sm leading-none">ISO 9001</span>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Zertifiziert</span>
+              </div>
+              <div className="border border-white/12 px-3 py-4 flex flex-col items-center justify-center text-center gap-1 hover:border-[#98B94B]/40 transition-colors">
+                <span className="text-white font-display font-bold text-sm leading-none">VEKO</span>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Official Partner</span>
+              </div>
+              <div className="border border-white/12 px-3 py-4 flex flex-col items-center justify-center text-center gap-1 hover:border-[#98B94B]/40 transition-colors">
+                <span className="text-[#98B94B] font-display font-bold text-sm leading-none">Green</span>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Industry Cluster</span>
+              </div>
+              <div className="border border-white/12 px-3 py-4 flex flex-col items-center justify-center text-center gap-1 hover:border-[#98B94B]/40 transition-colors">
+                <span className="text-white font-display font-bold text-sm leading-none">TÜV</span>
+                <span className="text-white/40 text-[10px] uppercase tracking-wider">Geprüft</span>
+              </div>
+            </div>
+
+            {/* Social */}
+            <div className="flex gap-3 mt-6">
+              <a href="#" aria-label="Facebook" className="w-10 h-10 border border-white/12 flex items-center justify-center hover:bg-[#98B94B] hover:text-[#0D0F12] hover:border-[#98B94B] transition-colors" data-testid="social-facebook">
+                <FaFacebookF size={15} />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="w-10 h-10 border border-white/12 flex items-center justify-center hover:bg-[#98B94B] hover:text-[#0D0F12] hover:border-[#98B94B] transition-colors" data-testid="social-linkedin">
+                <FaLinkedinIn size={15} />
+              </a>
+              <a href="#" aria-label="Xing" className="w-10 h-10 border border-white/12 flex items-center justify-center hover:bg-[#98B94B] hover:text-[#0D0F12] hover:border-[#98B94B] transition-colors" data-testid="social-xing">
+                <FaXing size={15} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +127,7 @@ export function Footer() {
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-white/60 transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white/60 transition-colors">Datenschutz</Link>
-            <Link href="/agb" className="hover:text-white/60 transition-colors">AGB</Link>
+            <Link href="/kontakt" className="hover:text-white/60 transition-colors">Partnerbereich</Link>
           </div>
         </div>
       </div>
