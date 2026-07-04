@@ -18,14 +18,14 @@ export function PageLayout({ children, title }: PageLayoutProps) {
   }, [title, location]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-secondary text-white overflow-x-hidden font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-[#1a1a1a] overflow-x-hidden font-sans">
       <Header />
       <motion.main
         key={location}
-        initial={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: "easeOut" }}
-        className="flex-grow pt-20"
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className="flex-grow"
       >
         {children}
       </motion.main>

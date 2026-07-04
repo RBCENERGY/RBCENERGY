@@ -1,7 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navItems = [
   {
@@ -19,54 +18,43 @@ const navItems = [
   { name: "News", path: "/news" },
 ];
 
-function DropdownMenu({
-  item,
-  isActive,
-}: {
-  item: (typeof navItems)[0];
-  isActive: boolean;
-}) {
+function DropdownMenu({ item, isActive, dark }: { item: (typeof navItems)[0]; isActive: boolean; dark: boolean }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
   }, []);
 
   if (!item.children) return null;
 
+  const textColor = dark
+    ? isActive ? "text-[#98B94B]" : "text-white/80 hover:text-white"
+    : isActive ? "text-[#98B94B]" : "text-[#1a1a1a]/70 hover:text-[#1a1a1a]";
+
   return (
     <div ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
-        className={`flex items-center gap-1 text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary ${
-          isActive ? "text-primary" : "text-white/80"
-        }`}
+        className={`flex items-center gap-1 text-xs font-bold tracking-widest uppercase transition-colors ${textColor}`}
         onClick={() => setOpen(!open)}
       >
         {item.name}
-        <ChevronDown
-          size={14}
-          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        />
+        <ChevronDown size={12} className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
 
-      <div
-        className={`absolute top-full left-0 mt-2 w-52 rounded-lg border border-white/10 bg-secondary/95 backdrop-blur-md shadow-xl overflow-hidden transition-all duration-200 ${
-          open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
-      >
+      <div className={`absolute top-full left-0 mt-3 w-52 border border-black/8 bg-white shadow-2xl overflow-hidden transition-all duration-200 ${
+        open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+      }`}>
         {item.children.map((child) => (
           <Link
             key={child.path}
             href={child.path}
             onClick={() => setOpen(false)}
-            className="block px-4 py-3 text-sm text-white/80 hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+            className="block px-5 py-3.5 text-sm text-[#1a1a1a]/70 hover:text-[#1a1a1a] hover:bg-gray-50 transition-colors border-b border-black/5 last:border-0"
           >
             {child.name}
           </Link>
@@ -78,51 +66,61 @@ function DropdownMenu({
 
 export function Header() {
   const [location] = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrolled = scrollY > 40;
+  const isHome = location === "/";
+  // On homepage, header is dark (over hero image). On scroll or other pages → white
+  const dark = isHome && !scrolled;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-secondary/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3"
-          : "bg-transparent py-5"
+        scrolled
+          ? "bg-white/97 backdrop-blur-md border-b border-black/8 shadow-sm py-3"
+          : dark
+          ? "bg-transparent py-5"
+          : "bg-white/97 backdrop-blur-md border-b border-black/8 py-3"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 z-50" data-testid="link-logo">
-          <img src="/rbc-logo.png" alt="RBC GmbH Logo" className="h-9 object-contain" />
-          <span className="text-lg font-bold text-white tracking-tight hidden sm:block">RBC GmbH</span>
+          <img
+            src="/rbc-logo.png"
+            alt="RBC GmbH Logo"
+            className={`h-8 object-contain transition-all duration-300 ${dark ? "" : "brightness-0"}`}
+          />
+          <span className={`text-base font-bold tracking-tight hidden sm:block transition-colors duration-300 ${dark ? "text-white" : "text-[#1a1a1a]"}`}>
+            RBC GmbH
+          </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item) => {
-            const isActive =
-              item.path === "/"
-                ? location === "/"
-                : location.startsWith(item.path);
+            const isActive = item.path === "/" ? location === "/" : location.startsWith(item.path);
 
             if (item.children) {
-              return (
-                <DropdownMenu key={item.path} item={item} isActive={isActive} />
-              );
+              return <DropdownMenu key={item.path} item={item} isActive={isActive} dark={dark} />;
             }
+
+            const textColor = dark
+              ? isActive ? "text-[#98B94B]" : "text-white/80 hover:text-white"
+              : isActive ? "text-[#98B94B]" : "text-[#1a1a1a]/70 hover:text-[#1a1a1a]";
 
             return (
               <Link
                 key={item.path}
                 href={item.path}
                 data-testid={`nav-${item.name.toLowerCase()}`}
-                className={`text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary ${
-                  isActive ? "text-primary" : "text-white/80"
-                }`}
+                className={`text-xs font-bold tracking-widest uppercase transition-colors ${textColor}`}
               >
                 {item.name}
               </Link>
@@ -131,33 +129,31 @@ export function Header() {
         </nav>
 
         <Link href="/kontakt" className="hidden lg:block" data-testid="button-kontakt-desktop">
-          <Button className="bg-primary hover:bg-primary/90 text-secondary font-bold tracking-wide uppercase text-xs px-6 rounded-sm">
+          <button className="bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold tracking-widest uppercase text-xs px-7 py-3 transition-colors">
             Kostenlose Beratung
-          </Button>
+          </button>
         </Link>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-white z-50 p-2"
+          className={`lg:hidden z-50 p-2 transition-colors ${dark ? "text-white" : "text-[#1a1a1a]"}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           data-testid="button-mobile-menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
         {/* Mobile Overlay */}
-        <div
-          className={`fixed inset-0 bg-secondary flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
+        <div className={`fixed inset-0 bg-white flex flex-col items-center justify-center gap-10 transition-transform duration-300 lg:hidden ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}>
           {navItems.map((item) => (
             <div key={item.path} className="flex flex-col items-center gap-3">
               <Link
                 href={item.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-2xl font-bold uppercase tracking-widest transition-colors ${
-                  location === item.path ? "text-primary" : "text-white"
+                  location === item.path ? "text-[#98B94B]" : "text-[#1a1a1a]"
                 }`}
               >
                 {item.name}
@@ -169,7 +165,7 @@ export function Header() {
                       key={child.path}
                       href={child.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-sm text-white/60 hover:text-primary"
+                      className="text-sm text-[#1a1a1a]/40 hover:text-[#98B94B]"
                     >
                       {child.name}
                     </Link>
@@ -179,9 +175,9 @@ export function Header() {
             </div>
           ))}
           <Link href="/kontakt" onClick={() => setIsMobileMenuOpen(false)} data-testid="button-kontakt-mobile">
-            <Button size="lg" className="mt-4 bg-primary text-secondary font-bold uppercase tracking-wide">
+            <button className="mt-4 bg-[#98B94B] text-[#0D0F12] font-bold uppercase tracking-widest text-sm px-10 py-4">
               Kostenlose Beratung
-            </Button>
+            </button>
           </Link>
         </div>
       </div>

@@ -2,69 +2,97 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { SavingsCalculator } from "@/components/modules/SavingsCalculator";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Zap, Shield, TrendingDown, Clock } from "lucide-react";
 import { SiBmw, SiSiemens, SiDeutschebahn, SiBosch } from "react-icons/si";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
+};
 
 export default function Home() {
   return (
     <PageLayout title="Marktführer für LED-Modernisierung">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 pb-32">
+
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero-warehouse.png" 
-            alt="Industriehalle mit LED Beleuchtung" 
+          <img
+            src="/hero-warehouse.png"
+            alt="Industriehalle mit LED Beleuchtung"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0F12]/92 via-[#0D0F12]/70 to-[#0D0F12]/20" />
+          {/* Subtle grid overlay */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "linear-gradient(rgba(152,185,75,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.3) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-primary font-medium text-sm mb-6">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+        <div className="container mx-auto px-6 relative z-10 pt-32 pb-24">
+          <div className="max-w-2xl">
+            <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
+              <span className="inline-flex items-center gap-2 text-[#98B94B] text-xs font-bold uppercase tracking-widest mb-8">
+                <span className="w-6 h-px bg-[#98B94B]" />
                 Deutschlands Nr. 1 für Licht-Contracting
-              </div>
-              <h1 className="text-5xl md:text-7xl font-display font-extrabold text-white leading-tight mb-6">
-                Maximale Effizienz.<br />
-                <span className="text-primary">Null Investition.</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-10 max-w-2xl">
-                Wir modernisieren Ihre Beleuchtung auf hochmoderne LED-Systeme. Sie sparen ab Tag 1 bis zu 80% Energiekosten – finanziert rein durch die Einsparung.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg font-bold" onClick={() => document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" })}>
-                  Einsparpotenzial berechnen
-                </Button>
-                <Link href="/projekte">
-                  <Button variant="outline" size="lg" className="h-14 px-8 text-lg bg-white/5 border-white/20 text-white hover:bg-white/10">
-                    Referenzen ansehen
-                  </Button>
-                </Link>
-              </div>
+              </span>
+            </motion.div>
+
+            <motion.h1
+              variants={fadeUp} initial="hidden" animate="show" custom={1}
+              className="text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+            >
+              Maximale<br />
+              Effizienz.<br />
+              <span className="text-[#98B94B]">Null Investition.</span>
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp} initial="hidden" animate="show" custom={2}
+              className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg"
+            >
+              Wir modernisieren Ihre Beleuchtung auf LED — vollständig finanziert durch die Einsparung. Kein Eigenkapital. Kein Risiko. Ab Tag 1 profitabel.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp} initial="hidden" animate="show" custom={3}
+              className="flex flex-wrap gap-4"
+            >
+              <button
+                onClick={() => document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" })}
+                className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors"
+                data-testid="button-calculator"
+              >
+                Einsparpotenzial berechnen
+                <ArrowRight size={14} />
+              </button>
+              <Link href="/projekte">
+                <button className="inline-flex items-center gap-3 border border-white/20 text-white/80 hover:border-white/40 hover:text-white font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors" data-testid="button-projekte">
+                  Referenzen ansehen
+                  <ArrowRight size={14} />
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>
 
-        {/* Stats Bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-secondary/80 backdrop-blur-md border-t border-white/10">
-          <div className="container mx-auto px-4 md:px-6 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Stats bar */}
+        <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-[#0D0F12]/60 backdrop-blur-md">
+          <div className="container mx-auto px-6 py-5">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { label: "Erfolgreiche Projekte", value: "500+" },
-                { label: "Energieeinsparung", value: "bis 80%" },
-                { label: "Jahre Erfahrung", value: "20" },
-                { label: "Zertifizierung", value: "ISO 9001" },
+                { value: "500+", label: "Erfolgreiche Projekte" },
+                { value: "bis 80%", label: "Energieeinsparung" },
+                { value: "20 J.", label: "Erfahrung" },
+                { value: "ISO 9001", label: "Zertifiziert" },
               ].map((stat, i) => (
-                <div key={i} className="text-center md:text-left border-l border-white/10 pl-4 first:border-0 first:pl-0">
-                  <div className="text-3xl font-display font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-white/60">{stat.label}</div>
+                <div key={i} className="flex items-baseline gap-3">
+                  <span className="text-2xl font-display font-bold text-white">{stat.value}</span>
+                  <span className="text-white/40 text-xs uppercase tracking-wide hidden sm:block">{stat.label}</span>
                 </div>
               ))}
             </div>
@@ -72,36 +100,171 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logos Section */}
-      <section className="py-16 bg-secondary border-b border-white/5 overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6 mb-8">
-          <p className="text-center text-white/50 text-sm font-bold uppercase tracking-widest">Vertrauen von führenden Industrieunternehmen</p>
+      {/* ─── LOGOS STRIP ─── */}
+      <section className="py-10 border-b border-black/6 overflow-hidden bg-[#F7F8F9]">
+        <div className="container mx-auto px-6 mb-6">
+          <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
+            Vertrauen von führenden Industrieunternehmen
+          </p>
         </div>
-        <div className="flex gap-16 items-center w-max animate-[scroll_40s_linear_infinite]">
+        <div className="flex gap-20 items-center w-max animate-[scroll_50s_linear_infinite]">
           {[...Array(3)].map((_, i) => (
-            <div key={i} className="flex gap-16 items-center">
-              <SiBmw size={48} className="text-white/20" />
-              <SiSiemens size={70} className="text-white/20" />
-              <div className="text-white/20 font-display font-bold text-2xl">REWE Group</div>
-              <SiDeutschebahn size={50} className="text-white/20" />
-              <SiBosch size={80} className="text-white/20" />
+            <div key={i} className="flex gap-20 items-center">
+              <SiBmw size={40} className="text-black/20" />
+              <SiSiemens size={60} className="text-black/20" />
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight">REWE Group</span>
+              <SiDeutschebahn size={44} className="text-black/20" />
+              <SiBosch size={64} className="text-black/20" />
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight">Edeka</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight">ALDI</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Calculator Section */}
-      <section id="calculator" className="py-32 bg-secondary relative">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Berechnen Sie Ihren Profit</h2>
-            <p className="text-xl text-white/70">
-              Mit unserem Contracting-Modell zahlt sich die neue Anlage von selbst. Finden Sie heraus, wie viel Liquidität Sie freisetzen können.
+      {/* ─── USP GRID ─── */}
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mb-16">
+            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">
+              Warum RBC GmbH
+            </span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+              Licht-Contracting.<br />
+              <span className="text-[#25412D]">Ohne Kompromisse.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
+            {[
+              {
+                icon: <TrendingDown size={24} />,
+                title: "Bis 80% Kostensenkung",
+                desc: "Modernste LED-Technologie reduziert Ihren Stromverbrauch drastisch — mit messbarem ROI ab dem ersten Tag.",
+              },
+              {
+                icon: <Zap size={24} />,
+                title: "Null Eigenkapital",
+                desc: "Unser Contracting-Modell: Wir finanzieren die Anlage vollständig. Die Rate wird durch die Einsparung gedeckt.",
+              },
+              {
+                icon: <Shield size={24} />,
+                title: "ISO 9001 zertifiziert",
+                desc: "Geprüfte Qualität, dokumentierte Prozesse und 20 Jahre Expertise — Sie sind in sicheren Händen.",
+              },
+              {
+                icon: <Clock size={24} />,
+                title: "Full-Service aus einer Hand",
+                desc: "Von der Planung über Montage bis zur Wartung — wir übernehmen die vollständige Verantwortung.",
+              },
+            ].map((usp, i) => (
+              <motion.div
+                key={i}
+                className="bg-white p-8 group hover:bg-[#F7F8F9] transition-colors"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+              >
+                <div className="text-[#98B94B] mb-6">{usp.icon}</div>
+                <h3 className="font-display font-bold text-lg text-[#1a1a1a] mb-3">{usp.title}</h3>
+                <p className="text-[#1a1a1a]/50 text-sm leading-relaxed">{usp.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── PROCESS ─── */}
+      <section className="py-28 bg-[#F7F8F9]">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-xl mx-auto mb-16">
+            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Der Prozess</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+              In 4 Schritten zur neuen Anlage
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
+            <div className="absolute top-8 left-0 right-0 h-px bg-[#98B94B]/20 hidden md:block" />
+            {[
+              { step: "01", title: "Analyse", desc: "Kostenlose Bestandsaufnahme Ihrer aktuellen Beleuchtungsanlage." },
+              { step: "02", title: "Konzept", desc: "Maßgeschneiderter Modernisierungsplan mit exakter Einsparberechnung." },
+              { step: "03", title: "Umsetzung", desc: "Professionelle Montage ohne Betriebsunterbrechung — schlüsselfertig." },
+              { step: "04", title: "Betrieb", desc: "Vollständige Wartung und Monitoring durch unser Service-Team." },
+            ].map((s, i) => (
+              <motion.div
+                key={i}
+                className="relative px-8 pt-0 pb-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-white border border-[#98B94B]/30 flex items-center justify-center mb-6 relative z-10">
+                  <span className="text-[#98B94B] font-display font-bold text-sm">{s.step}</span>
+                </div>
+                <h3 className="font-display font-bold text-lg text-[#1a1a1a] mb-2">{s.title}</h3>
+                <p className="text-[#1a1a1a]/50 text-sm leading-relaxed">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CALCULATOR ─── */}
+      <section id="calculator" className="py-28 bg-[#25412D] relative overflow-hidden">
+        {/* Background grid */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "linear-gradient(rgba(152,185,75,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.5) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-14">
+            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Einsparrechner</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
+              Berechnen Sie Ihren Profit
+            </h2>
+            <p className="text-white/50 mt-4 max-w-lg mx-auto text-base">
+              Finden Sie heraus, wie viel Liquidität Sie durch LED-Modernisierung freisetzen können.
             </p>
           </div>
           <SavingsCalculator />
         </div>
       </section>
+
+      {/* ─── CTA BAND ─── */}
+      <section className="py-24 bg-white border-t border-black/6">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Bereit für<br />
+              <span className="text-[#98B94B]">die Energiewende?</span>
+            </h2>
+            <p className="text-[#1a1a1a]/50 text-lg mb-10 max-w-md mx-auto">
+              Kostenlose Potenzialanalyse — unverbindlich, in 48 Stunden bei Ihnen.
+            </p>
+            <Link href="/kontakt">
+              <button
+                className="inline-flex items-center gap-3 bg-[#25412D] hover:bg-[#1d3222] text-white font-bold uppercase tracking-widest text-xs px-10 py-5 transition-colors"
+                data-testid="button-cta-contact"
+              >
+                Jetzt kostenlos anfragen
+                <ArrowRight size={14} />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
     </PageLayout>
   );
 }
