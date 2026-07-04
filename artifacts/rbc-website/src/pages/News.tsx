@@ -51,10 +51,6 @@ export default function News() {
         </div>
         <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 text-[#98B94B] text-xs font-bold uppercase tracking-widest mb-6">
-              <span className="w-6 h-px bg-[#98B94B]" />
-              News & Presse
-            </span>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Aktuelles von <span className="text-[#98B94B]">RBC</span>
             </h1>

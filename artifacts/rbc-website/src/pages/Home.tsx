@@ -35,13 +35,6 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 pt-32 pb-24">
           <div className="max-w-2xl">
-            <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
-              <span className="inline-flex items-center gap-2 text-[#98B94B] text-xs font-bold uppercase tracking-widest mb-8">
-                <span className="w-6 h-px bg-[#98B94B]" />
-                Deutschlands Nr. 1 für Licht-Contracting
-              </span>
-            </motion.div>
-
             <motion.h1
               variants={fadeUp} initial="hidden" animate="show" custom={1}
               className="text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] tracking-tight mb-6"
