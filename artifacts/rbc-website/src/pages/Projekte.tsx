@@ -47,20 +47,20 @@ export default function Projekte() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 space-y-6">
                 <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
-                  Logistik & Lager
+                  Industrie & Produktion
                 </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">Logistikzentrum Süd</h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">Linamar — Automobilzulieferer</h2>
                 <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
-                  Austausch von 850 veralteten HQL-Strahlern gegen intelligente, tageslichtgesteuerte LED-Hallenstrahler. Deutliche Verbesserung der Arbeitsplatzsicherheit durch homogenere Ausleuchtung.
+                  Komplette Umstellung der Produktions- und Hallenbeleuchtung auf moderne LED-Technik. Gleichmäßige, wartungsarme Ausleuchtung für sichere Arbeitsabläufe im laufenden Betrieb.
                 </p>
                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-black/8">
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
-                    <div className="text-3xl font-display font-bold text-[#98B94B]">76 %</div>
+                    <div className="text-3xl font-display font-bold text-[#98B94B]">bis 80 %</div>
                   </div>
                   <div>
-                    <div className="text-[#1a1a1a]/45 text-sm mb-1">CO₂ Reduktion</div>
-                    <div className="text-3xl font-display font-bold text-[#98B94B]">142 t/Jahr</div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Wartungsaufwand</div>
+                    <div className="text-3xl font-display font-bold text-[#98B94B]">minimal</div>
                   </div>
                 </div>
               </div>
@@ -74,8 +74,21 @@ export default function Projekte() {
               </div>
             </div>
 
-            <div className="p-12 border border-dashed border-black/15 text-center">
-              <p className="text-[#1a1a1a]/45 text-lg">Weitere Projekte werden in Kürze hinzugefügt.</p>
+            <div>
+              <h3 className="text-2xl font-display font-bold text-[#1a1a1a] mb-8 text-center">Weitere Referenzen</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
+                {[
+                  { name: "Heidelberg iT Management", detail: "Rechenzentrum & Bürogebäude" },
+                  { name: "Aquadrom Hockenheim", detail: "Bäder- & Hallenbeleuchtung" },
+                  { name: "Holzgroßhandel Gerber", detail: "Lager- & Ausstellungsflächen" },
+                  { name: "Medizinische Praxen", detail: "Präzisions-Beleuchtung" },
+                ].map((ref, i) => (
+                  <div key={i} className="bg-white p-8">
+                    <div className="font-display font-bold text-lg text-[#1a1a1a] mb-1">{ref.name}</div>
+                    <div className="text-[#1a1a1a]/45 text-sm">{ref.detail}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

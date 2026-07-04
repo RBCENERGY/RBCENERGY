@@ -16,16 +16,16 @@ const articles = [
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
   },
   {
-    date: "28. September 2023",
-    title: "Erfolgreicher Projektabschluss: Logistikpark München",
-    category: "Pressemitteilung",
-    excerpt: "Die RBC GmbH hat die komplette Umrüstung von 40.000 Quadratmetern Logistikfläche auf Smart-LED-Systeme im laufenden Betrieb abgeschlossen.",
+    date: "3. September 2024",
+    title: "Linamar: Komplette Umstellung auf LED",
+    category: "RBC Projekte",
+    excerpt: "Für den internationalen Automobilzulieferer Linamar haben wir die gesamte Hallen- und Produktionsbeleuchtung auf moderne, wartungsarme LED-Technik umgestellt.",
   },
   {
-    date: "05. September 2023",
-    title: "Erhöhte Fördersätze in der BEG für den Mittelstand",
+    date: "17. Juni 2025",
+    title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
     category: "Fördermittel",
-    excerpt: "Das BAFA hat die Rahmenbedingungen für die Förderung von Querschnittstechnologien angepasst. KMUs profitieren nun von höheren Zuschüssen.",
+    excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
   },
 ];
 

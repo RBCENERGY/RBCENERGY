@@ -12,12 +12,12 @@ const values = [
   {
     icon: <Award size={28} />,
     title: "Erfahrung & Expertise",
-    desc: "Mit über 500 erfolgreich realisierten Großprojekten kennen wir die spezifischen Anforderungen jeder Branche. Wir planen nicht am Reißbrett, sondern für die Realität.",
+    desc: "Seit 2009 optimieren wir Beleuchtungsanlagen für Industrie, Handel und öffentliche Einrichtungen. Wir planen nicht am Reißbrett, sondern für die Realität.",
   },
   {
     icon: <Shield size={28} />,
     title: "Geprüfte Qualität",
-    desc: "Die RBC GmbH ist nach DIN EN ISO 9001 zertifiziert. Wir verbauen ausschließlich Premium-Komponenten namhafter Hersteller, die für jahrzehntelangen Dauerbetrieb ausgelegt sind.",
+    desc: "Als offizieller Veko-Partner für Süddeutschland verbauen wir ausschließlich langlebige Premium-Komponenten, die für den Dauerbetrieb ausgelegt sind.",
   },
   {
     icon: <Users size={28} />,
@@ -27,10 +27,10 @@ const values = [
 ];
 
 const stats = [
-  { value: "500+", label: "Realisierte Projekte" },
-  { value: "20 J.", label: "Markterfahrung" },
+  { value: "Seit 2009", label: "Am Markt" },
   { value: "bis 80%", label: "Energieeinsparung" },
-  { value: "ISO 9001", label: "Zertifiziert" },
+  { value: "Veko-Partner", label: "Süddeutschland" },
+  { value: "100%", label: "aus einer Hand" },
 ];
 
 export default function Unternehmen() {
@@ -55,7 +55,7 @@ export default function Unternehmen() {
               Ihr Partner für <span className="text-[#98B94B]">nachhaltiges Licht</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-lg">
-              Die RBC GmbH steht für Zuverlässigkeit, ingenieurtechnische Präzision und bedingungslose Qualität. Seit über zwei Jahrzehnten.
+              Die RBC GmbH mit Sitz in Heidelberg steht seit 2009 für Zuverlässigkeit, ingenieurtechnische Präzision und bedingungslose Qualität.
             </p>
           </motion.div>
         </div>

@@ -3,7 +3,6 @@ import { SavingsCalculator } from "@/components/modules/SavingsCalculator";
 import { motion, type Variants } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Shield, TrendingDown, Clock } from "lucide-react";
-import { SiBmw, SiSiemens, SiDeutschebahn, SiBosch } from "react-icons/si";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -12,7 +11,7 @@ const fadeUp: Variants = {
 
 export default function Home() {
   return (
-    <PageLayout title="Marktführer für LED-Modernisierung">
+    <PageLayout title="Ihr Partner für LED-Modernisierung seit 2009">
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-center">
@@ -78,10 +77,10 @@ export default function Home() {
           <div className="container mx-auto px-6 py-5">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: "500+", label: "Erfolgreiche Projekte" },
+                { value: "Seit 2009", label: "Am Markt" },
                 { value: "bis 80%", label: "Energieeinsparung" },
-                { value: "20 J.", label: "Erfahrung" },
-                { value: "ISO 9001", label: "Zertifiziert" },
+                { value: "Veko-Partner", label: "Süddeutschland" },
+                { value: "100%", label: "aus einer Hand" },
               ].map((stat, i) => (
                 <div key={i} className="flex items-baseline gap-3">
                   <span className="text-2xl font-display font-bold text-white">{stat.value}</span>
@@ -97,19 +96,17 @@ export default function Home() {
       <section className="py-10 border-b border-black/6 overflow-hidden bg-[#F7F8F9]">
         <div className="container mx-auto px-6 mb-6">
           <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
-            Vertrauen von führenden Industrieunternehmen
+            Vertrauen von Unternehmen und Institutionen aus der Region
           </p>
         </div>
-        <div className="flex gap-20 items-center w-max animate-[scroll_50s_linear_infinite]">
+        <div className="flex gap-16 items-center w-max animate-[scroll_50s_linear_infinite]">
           {[...Array(3)].map((_, i) => (
-            <div key={i} className="flex gap-20 items-center">
-              <SiBmw size={40} className="text-black/20" />
-              <SiSiemens size={60} className="text-black/20" />
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight">REWE Group</span>
-              <SiDeutschebahn size={44} className="text-black/20" />
-              <SiBosch size={64} className="text-black/20" />
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight">Edeka</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight">ALDI</span>
+            <div key={i} className="flex gap-16 items-center">
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Linamar</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Heidelberg iT Management</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Aquadrom Hockenheim</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Holzgroßhandel Gerber</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Zahnmedizin Schenk &amp; Peters</span>
             </div>
           ))}
         </div>
@@ -142,8 +139,8 @@ export default function Home() {
               },
               {
                 icon: <Shield size={24} />,
-                title: "ISO 9001 zertifiziert",
-                desc: "Geprüfte Qualität, dokumentierte Prozesse und 20 Jahre Expertise — Sie sind in sicheren Händen.",
+                title: "Offizieller Veko-Partner",
+                desc: "Als einer von wenigen Betrieben in Deutschland planen wir die nachhaltigen Lichtsysteme von Veko Lightsystems eigenständig — exklusiv für Süddeutschland.",
               },
               {
                 icon: <Clock size={24} />,

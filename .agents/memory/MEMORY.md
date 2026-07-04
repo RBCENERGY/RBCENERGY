@@ -1,3 +1,4 @@
 - [RBC website design language](rbc-website-design.md) — "2030" style; EVERY page = dark charcoal image-hero + always-dark header (never white); page bodies light, green accent-only; flat nav, no dropdown.
+- [RBC GmbH verified facts](rbc-website-facts.md) — real company data from economiclightdesign.de (since 2009, Heidelberg, Veko-Partner, 20% Förderung, real clients); never reintroduce invented claims.
 - [react-icons gotcha](react-icons-gotcha.md) — brand icons live in react-icons/fa, not react-icons/si (SiLinkedin/SiFacebook/SiXing don't exist).
 - [framer-motion Variants typing](framer-motion-variants.md) — annotate variant objects as `Variants` or `ease` string widens and fails tsc.

@@ -52,7 +52,7 @@ export default function Foerdermittel() {
         <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
-              Bis zu <span className="text-[#98B94B]">40 % Zuschuss</span> sichern
+              Bis zu <span className="text-[#98B94B]">20 % Zuschuss</span> sichern
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
               Bund und Länder fördern den Umstieg auf energieeffiziente LED-Beleuchtung. Wir übernehmen die komplette Abwicklung für Sie — von der Antragstellung bis zur Auszahlung.
