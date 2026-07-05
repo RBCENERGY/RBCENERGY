@@ -64,7 +64,7 @@ export default function Kommunen() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-10">
-            <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Leistungen für Kommunen</span>
+            <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Partner für Kommunen</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Nachhaltig. Gefördert. <span className="text-[#25412D]">Sicher.</span>
             </h2>
