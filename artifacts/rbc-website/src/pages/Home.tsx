@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* ─── USP GRID ─── */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 pb-8 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">
