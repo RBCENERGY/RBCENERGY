@@ -104,11 +104,6 @@ export default function Leistungen() {
                     : "bg-white border border-black/[0.08] hover:border-[#98B94B]/50 hover:shadow-xl"
                 }`}
               >
-                {s.featured && (
-                  <div className="absolute top-0 right-0 bg-[#98B94B] text-[#0D0F12] text-[10px] font-bold uppercase tracking-widest px-3 py-1.5">
-                    Beliebtestes Modell
-                  </div>
-                )}
                 <div className={`mb-6 ${s.featured ? "text-[#98B94B]" : "text-[#98B94B]"}`}>{s.icon}</div>
                 <h3 className={`font-display font-bold text-2xl mb-4 ${s.featured ? "text-white" : "text-[#1a1a1a]"}`}>{s.title}</h3>
                 <p className={`mb-6 leading-relaxed text-[15px] ${s.featured ? "text-white/80" : "text-[#1a1a1a]/70"}`}>{s.desc}</p>
