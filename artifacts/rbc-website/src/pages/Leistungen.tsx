@@ -100,7 +100,7 @@ export default function Leistungen() {
                 custom={i}
                 className={`relative p-10 flex flex-col transition-all ${
                   s.featured
-                    ? "bg-[#25412D] text-white"
+                    ? "bg-[#0D0F12] text-white"
                     : "bg-white border border-black/[0.08] hover:border-[#98B94B]/50 hover:shadow-xl"
                 }`}
               >
