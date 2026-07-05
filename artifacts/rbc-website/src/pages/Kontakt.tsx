@@ -4,14 +4,58 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { motion, type Variants } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { useState, type FormEvent } from "react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" } }),
 };
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function Kontakt() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      firstName: String(data.get("firstName") ?? "").trim(),
+      lastName: String(data.get("lastName") ?? "").trim(),
+      company: String(data.get("company") ?? "").trim(),
+      email: String(data.get("email") ?? "").trim(),
+      phone: String(data.get("phone") ?? "").trim(),
+      message: String(data.get("message") ?? "").trim(),
+    };
+
+    setStatus("sending");
+    setErrorMessage("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        const fieldErrors = body?.errors
+          ? Object.values(body.errors as Record<string, string[]>)
+              .flat()
+              .join(" ")
+          : "";
+        throw new Error(body?.error || fieldErrors || "Anfrage konnte nicht gesendet werden.");
+      }
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Anfrage konnte nicht gesendet werden.");
+    }
+  }
+
   return (
     <PageLayout title="Kontakt">
       {/* Hero */}
@@ -49,46 +93,76 @@ export default function Kontakt() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
             <div className="bg-white border border-black/[0.08] p-8 md:p-10 shadow-sm">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName" className="text-[#1a1a1a]">Vorname</Label>
-                    <Input id="firstName" className="bg-[#F7F8F9] border-black/10" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName" className="text-[#1a1a1a]">Nachname</Label>
-                    <Input id="lastName" className="bg-[#F7F8F9] border-black/10" />
-                  </div>
+              {status === "success" ? (
+                <div className="flex flex-col items-center text-center py-12">
+                  <CheckCircle2 className="h-14 w-14 text-[#98B94B]" strokeWidth={1.5} />
+                  <h3 className="mt-6 text-2xl font-bold text-[#1a1a1a]">Vielen Dank!</h3>
+                  <p className="mt-3 text-[15px] text-[#1a1a1a]/70 max-w-sm">
+                    Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.
+                  </p>
+                  <Button
+                    onClick={() => setStatus("idle")}
+                    className="mt-8 bg-[#98B94B] text-[#0D0F12] hover:bg-[#8aaa3f] h-12 px-8 text-sm font-bold uppercase tracking-widest"
+                  >
+                    Neue Anfrage
+                  </Button>
                 </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="company" className="text-[#1a1a1a]">Unternehmen</Label>
-                  <Input id="company" className="bg-[#F7F8F9] border-black/10" />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-[#1a1a1a]">E-Mail</Label>
-                    <Input id="email" type="email" className="bg-[#F7F8F9] border-black/10" />
+              ) : (
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName" className="text-[#1a1a1a]">Vorname</Label>
+                      <Input id="firstName" name="firstName" required className="bg-[#F7F8F9] border-black/10" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName" className="text-[#1a1a1a]">Nachname</Label>
+                      <Input id="lastName" name="lastName" required className="bg-[#F7F8F9] border-black/10" />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-[#1a1a1a]">Telefon</Label>
-                    <Input id="phone" type="tel" className="bg-[#F7F8F9] border-black/10" />
+                    <Label htmlFor="company" className="text-[#1a1a1a]">Unternehmen</Label>
+                    <Input id="company" name="company" className="bg-[#F7F8F9] border-black/10" />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-[#1a1a1a]">Ihre Nachricht oder Projektdetails</Label>
-                  <Textarea id="message" rows={5} className="bg-[#F7F8F9] border-black/10 resize-none" />
-                </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-[#1a1a1a]">E-Mail</Label>
+                      <Input id="email" name="email" type="email" required className="bg-[#F7F8F9] border-black/10" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone" className="text-[#1a1a1a]">Telefon</Label>
+                      <Input id="phone" name="phone" type="tel" className="bg-[#F7F8F9] border-black/10" />
+                    </div>
+                  </div>
 
-                <Button className="w-full bg-[#98B94B] text-[#0D0F12] hover:bg-[#8aaa3f] h-14 text-sm font-bold uppercase tracking-widest">
-                  Anfrage senden
-                </Button>
-                <p className="text-xs text-[#1a1a1a]/40 text-center">
-                  Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-                </p>
-              </form>
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-[#1a1a1a]">Ihre Nachricht oder Projektdetails</Label>
+                    <Textarea id="message" name="message" rows={5} required className="bg-[#F7F8F9] border-black/10 resize-none" />
+                  </div>
+
+                  {status === "error" && (
+                    <p className="text-sm text-red-600 text-center">{errorMessage}</p>
+                  )}
+
+                  <Button
+                    type="submit"
+                    disabled={status === "sending"}
+                    className="w-full bg-[#98B94B] text-[#0D0F12] hover:bg-[#8aaa3f] h-14 text-sm font-bold uppercase tracking-widest disabled:opacity-70"
+                  >
+                    {status === "sending" ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Wird gesendet…
+                      </>
+                    ) : (
+                      "Anfrage senden"
+                    )}
+                  </Button>
+                  <p className="text-xs text-[#1a1a1a]/40 text-center">
+                    Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+                  </p>
+                </form>
+              )}
             </div>
 
             {/* Contact info */}
