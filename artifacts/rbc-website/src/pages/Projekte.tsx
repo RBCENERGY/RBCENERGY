@@ -1,6 +1,7 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { BeforeAfterSlider } from "@/components/modules/BeforeAfterSlider";
+import { LogoMarquee } from "@/components/modules/LogoMarquee";
 import { motion, type Variants } from "framer-motion";
 
 const fadeUp: Variants = {
@@ -93,6 +94,8 @@ export default function Projekte() {
           </div>
         </div>
       </section>
+
+      <LogoMarquee />
 
       <CtaBand />
     </PageLayout>
