@@ -66,7 +66,7 @@ export default function Industrie() {
       {/* Areas */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Einsatzbereiche</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Für jede Halle die <span className="text-[#25412D]">richtige Lösung</span>
@@ -81,11 +81,11 @@ export default function Industrie() {
                 whileInView="show"
                 viewport={{ once: true }}
                 custom={i}
-                className="bg-white border border-black/[0.08] p-8 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
+                className="bg-white border border-black/[0.08] p-10 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
               >
                 <div className="text-[#98B94B] mb-6">{a.icon}</div>
                 <h3 className="font-display font-bold text-2xl text-[#1a1a1a] mb-4">{a.title}</h3>
-                <p className="text-[#1a1a1a]/55 text-sm leading-relaxed mb-6">{a.desc}</p>
+                <p className="text-[#1a1a1a]/70 text-[15px] leading-relaxed mb-6">{a.desc}</p>
                 <ul className="space-y-2.5">
                   {a.points.map((p, j) => (
                     <li key={j} className="flex items-start gap-2.5 text-sm text-[#1a1a1a]/70">

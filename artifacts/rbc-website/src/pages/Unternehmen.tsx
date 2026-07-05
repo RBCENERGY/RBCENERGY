@@ -78,7 +78,7 @@ export default function Unternehmen() {
       {/* Values */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Unsere Werte</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Worauf Sie sich <span className="text-[#25412D]">verlassen können</span>
@@ -93,11 +93,11 @@ export default function Unternehmen() {
                 whileInView="show"
                 viewport={{ once: true }}
                 custom={i}
-                className="bg-white border border-black/[0.08] p-8 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
+                className="bg-white border border-black/[0.08] p-10 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
               >
                 <div className="text-[#98B94B] mb-6">{v.icon}</div>
                 <h3 className="font-display font-bold text-2xl text-[#1a1a1a] mb-4">{v.title}</h3>
-                <p className="text-[#1a1a1a]/55 text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-[#1a1a1a]/70 text-[15px] leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </div>

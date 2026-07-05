@@ -115,7 +115,7 @@ export default function Home() {
       {/* ─── USP GRID ─── */}
       <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">
               Warum RBC GmbH
             </span>
@@ -150,15 +150,15 @@ export default function Home() {
             ].map((usp, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-8 group hover:bg-[#F7F8F9] transition-colors"
+                className="bg-white p-10 group hover:bg-[#F7F8F9] transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
                 <div className="text-[#98B94B] mb-6">{usp.icon}</div>
-                <h3 className="font-display font-bold text-lg text-[#1a1a1a] mb-3">{usp.title}</h3>
-                <p className="text-[#1a1a1a]/50 text-sm leading-relaxed">{usp.desc}</p>
+                <h3 className="font-display font-bold text-xl text-[#1a1a1a] mb-3">{usp.title}</h3>
+                <p className="text-[#1a1a1a]/70 text-[15px] leading-relaxed">{usp.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function Home() {
       {/* ─── PROCESS ─── */}
       <section className="py-28 bg-[#F7F8F9]">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-xl mx-auto mb-16">
+          <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Der Prozess</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               In 4 Schritten zur neuen Anlage

@@ -77,7 +77,7 @@ export default function Leistungen() {
                 whileInView="show"
                 viewport={{ once: true }}
                 custom={i}
-                className={`relative p-8 flex flex-col transition-all ${
+                className={`relative p-10 flex flex-col transition-all ${
                   s.featured
                     ? "bg-[#25412D] text-white"
                     : "bg-white border border-black/[0.08] hover:border-[#98B94B]/50 hover:shadow-xl"
@@ -90,7 +90,7 @@ export default function Leistungen() {
                 )}
                 <div className={`mb-6 ${s.featured ? "text-[#98B94B]" : "text-[#98B94B]"}`}>{s.icon}</div>
                 <h3 className={`font-display font-bold text-2xl mb-4 ${s.featured ? "text-white" : "text-[#1a1a1a]"}`}>{s.title}</h3>
-                <p className={`mb-6 leading-relaxed text-sm ${s.featured ? "text-white/70" : "text-[#1a1a1a]/55"}`}>{s.desc}</p>
+                <p className={`mb-6 leading-relaxed text-[15px] ${s.featured ? "text-white/80" : "text-[#1a1a1a]/70"}`}>{s.desc}</p>
                 <ul className="space-y-3 mb-8">
                   {s.points.map((p, j) => (
                     <li key={j} className={`flex items-start gap-2.5 text-sm ${s.featured ? "text-white/80" : "text-[#1a1a1a]/70"}`}>
