@@ -290,13 +290,13 @@ export default function Home() {
             {[...clientLogos, ...clientLogos].map((logo, i) => (
               <div
                 key={i}
-                className="flex h-24 w-[200px] shrink-0 items-center justify-center rounded-xl border border-black/[0.06] bg-white px-6 shadow-sm"
+                className="flex h-32 w-[240px] shrink-0 items-center justify-center rounded-xl border border-black/[0.06] bg-white px-8 shadow-sm"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   loading="lazy"
-                  className={`max-h-12 max-w-[150px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
+                  className={`max-h-20 max-w-[190px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
                 />
               </div>
             ))}
