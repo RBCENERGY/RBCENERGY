@@ -53,23 +53,6 @@ function IsoBadge() {
 export function Footer() {
   return (
     <footer className="bg-[#0D0F12] text-white/70">
-      {/* Top CTA strip */}
-      <div className="border-b border-white/8">
-        <div className="container mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="text-white font-display font-bold text-2xl tracking-tight">Bereit für die Energiewende?</p>
-            <p className="text-white/50 text-sm mt-1">Kostenlose Analyse Ihres Einsparpotenzials — unverbindlich und in 48h.</p>
-          </div>
-          <Link
-            href="/kontakt"
-            className="shrink-0 inline-block bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors"
-            data-testid="footer-cta"
-          >
-            Jetzt anfragen
-          </Link>
-        </div>
-      </div>
-
       {/* Main footer — centered, old-site style */}
       <div className="container mx-auto px-6 py-16 relative">
         {/* Membership badge — left */}
