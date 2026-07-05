@@ -23,6 +23,11 @@ import logoSika from "@assets/RBC_Sika_1783271287489.webp";
 import logoImperial from "@assets/RBC_Imperial_1783271287489.webp";
 import logoFrieslandCampina from "@assets/RBC_FrieslandCampina_1783271287489.webp";
 import logoEdeka from "@assets/RBC_Edeka_1783271287489.webp";
+import logoMaag from "@assets/maag_group_min_rgb551x180_1783272239045.png";
+import logoStollwerck from "@assets/RBC_Stollwerk_1783272256048.webp";
+import logoKukident from "@assets/RBC_Kukident_1783272256049.webp";
+import logoHomann from "@assets/RBC_Homann_1783272256049.webp";
+import logoSanner from "@assets/RBC_Sanner_1783272256050.webp";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -45,6 +50,11 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoKlaeger, alt: "Kläger" },
   { src: logoDilo, alt: "Dilo Group" },
   { src: logoKDK, alt: "KDK Automotive" },
+  { src: logoMaag, alt: "MAAG Group" },
+  { src: logoStollwerck, alt: "Stollwerck" },
+  { src: logoKukident, alt: "Kukident" },
+  { src: logoHomann, alt: "Homann" },
+  { src: logoSanner, alt: "Sanner" },
 ];
 
 const fadeUp: Variants = {
