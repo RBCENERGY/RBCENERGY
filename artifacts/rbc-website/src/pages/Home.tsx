@@ -305,7 +305,8 @@ export default function Home() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className={`max-h-20 max-w-[190px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
                 />
               </div>
