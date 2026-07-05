@@ -215,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section className="py-20 bg-[#F7F8F9]">
+      <section className="pt-20 pb-8 bg-[#F7F8F9]">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Der Prozess</span>
