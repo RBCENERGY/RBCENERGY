@@ -3,6 +3,49 @@ import { SavingsCalculator } from "@/components/modules/SavingsCalculator";
 import { motion, type Variants } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Shield, TrendingDown, Clock } from "lucide-react";
+import logoDZPrivatbank from "@assets/RBC_DZPrivatbank_1783271287485.webp";
+import logoDieffenbacher from "@assets/RBC_Dieffenbacher_1783271287486.webp";
+import logoCoveris from "@assets/RBC_Coveris_1783271287486.webp";
+import logoSuntat from "@assets/Suntat_1783271287486.webp";
+import logoCinemaxx from "@assets/RBC_Cinemaxx_1783271287486.webp";
+import logoSuedkabel from "@assets/rbc-suedkabel_1783271287487.webp";
+import logoGlatfelter from "@assets/rbc-glatfelter_1783271287487.webp";
+import logoCaprisun from "@assets/rbc-caprisun_1783271287487.webp";
+import logoAndros from "@assets/rbc-andros_1783271287487.webp";
+import logoKimberlyClark from "@assets/RBC_kimberley-clark_1783271287487.webp";
+import logoDilo from "@assets/RBC_Dilo-Group_1783271287488.webp";
+import logoKDK from "@assets/RBC_KDKAutomotive_1783271287488.webp";
+import logoThyssenkrupp from "@assets/RBC_thyssenkrupp_1783271287488.webp";
+import logoSero from "@assets/rbc-sero_1783271287488.webp";
+import logoKlaeger from "@assets/rbc-klaeger_1783271287488.webp";
+import logoSchwarzkopf from "@assets/RBC_Schwarzkopf_1783271287489.webp";
+import logoSika from "@assets/RBC_Sika_1783271287489.webp";
+import logoImperial from "@assets/RBC_Imperial_1783271287489.webp";
+import logoFrieslandCampina from "@assets/RBC_FrieslandCampina_1783271287489.webp";
+import logoEdeka from "@assets/RBC_Edeka_1783271287489.webp";
+
+const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
+  { src: logoThyssenkrupp, alt: "thyssenkrupp" },
+  { src: logoEdeka, alt: "EDEKA" },
+  { src: logoSika, alt: "Sika" },
+  { src: logoKimberlyClark, alt: "Kimberly-Clark Professional" },
+  { src: logoFrieslandCampina, alt: "FrieslandCampina" },
+  { src: logoCaprisun, alt: "Capri-Sun" },
+  { src: logoCoveris, alt: "Coveris" },
+  { src: logoImperial, alt: "Imperial Logistics International" },
+  { src: logoDieffenbacher, alt: "Dieffenbacher" },
+  { src: logoAndros, alt: "Andros" },
+  { src: logoCinemaxx, alt: "CinemaxX" },
+  { src: logoSuedkabel, alt: "Südkabel", invert: true },
+  { src: logoGlatfelter, alt: "Glatfelter" },
+  { src: logoSuntat, alt: "Suntat" },
+  { src: logoSchwarzkopf, alt: "Schwarzkopf" },
+  { src: logoDZPrivatbank, alt: "DZ Privatbank" },
+  { src: logoSero, alt: "SERO PumpSystems" },
+  { src: logoKlaeger, alt: "Kläger" },
+  { src: logoDilo, alt: "Dilo Group" },
+  { src: logoKDK, alt: "KDK Automotive" },
+];
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -237,21 +280,27 @@ export default function Home() {
 
       {/* ─── LOGOS STRIP ─── */}
       <section className="py-10 border-t border-black/6 overflow-hidden bg-[#F7F8F9]">
-        <div className="container mx-auto px-6 mb-6">
+        <div className="container mx-auto px-6 mb-8">
           <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
             Vertrauen von Unternehmen und Institutionen aus der Region
           </p>
         </div>
-        <div className="flex gap-16 items-center w-max animate-[scroll_50s_linear_infinite]">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="flex gap-16 items-center">
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Linamar</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Heidelberg iT Management</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Aquadrom Hockenheim</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Holzgroßhandel Gerber</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Zahnmedizin Schenk &amp; Peters</span>
-            </div>
-          ))}
+        <div className="group relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <div className="flex w-max gap-6 animate-[marquee_60s_linear_infinite] group-hover:[animation-play-state:paused]">
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
+              <div
+                key={i}
+                className="flex h-24 w-[200px] shrink-0 items-center justify-center rounded-xl border border-black/[0.06] bg-white px-6 shadow-sm"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  className={`max-h-12 max-w-[150px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

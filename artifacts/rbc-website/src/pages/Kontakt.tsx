@@ -14,9 +14,22 @@ const fadeUp: Variants = {
 
 type Status = "idle" | "sending" | "success" | "error";
 
+type FieldName = "firstName" | "lastName" | "company" | "email" | "phone" | "message";
+type FieldErrors = Partial<Record<FieldName, string>>;
+
 export default function Kontakt() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+
+  function clearFieldError(field: FieldName) {
+    setFieldErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -33,6 +46,7 @@ export default function Kontakt() {
 
     setStatus("sending");
     setErrorMessage("");
+    setFieldErrors({});
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -41,18 +55,31 @@ export default function Kontakt() {
       });
       if (!res.ok) {
         const body = await res.json().catch(() => null);
-        const fieldErrors = body?.errors
-          ? Object.values(body.errors as Record<string, string[]>)
-              .flat()
-              .join(" ")
-          : "";
-        throw new Error(body?.error || fieldErrors || "Anfrage konnte nicht gesendet werden.");
+        const errors = body?.errors as Record<string, string[]> | undefined;
+        if (errors) {
+          const mapped: FieldErrors = {};
+          for (const [field, messages] of Object.entries(errors)) {
+            if (messages && messages.length > 0) {
+              mapped[field as FieldName] = messages[0];
+            }
+          }
+          setFieldErrors(mapped);
+        }
+        const hasFieldErrors = errors && Object.keys(errors).length > 0;
+        setStatus("error");
+        setErrorMessage(
+          body?.error ||
+            (hasFieldErrors
+              ? "Bitte überprüfen Sie die markierten Felder."
+              : "Anfrage konnte nicht gesendet werden."),
+        );
+        return;
       }
       setStatus("success");
       form.reset();
-    } catch (err) {
+    } catch {
       setStatus("error");
-      setErrorMessage(err instanceof Error ? err.message : "Anfrage konnte nicht gesendet werden.");
+      setErrorMessage("Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.");
     }
   }
 
@@ -108,37 +135,104 @@ export default function Kontakt() {
                   </Button>
                 </div>
               ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-[#1a1a1a]">Vorname</Label>
-                      <Input id="firstName" name="firstName" required className="bg-[#F7F8F9] border-black/10" />
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        required
+                        onInput={() => clearFieldError("firstName")}
+                        aria-invalid={!!fieldErrors.firstName}
+                        aria-describedby={fieldErrors.firstName ? "firstName-error" : undefined}
+                        className={`bg-[#F7F8F9] border-black/10 ${fieldErrors.firstName ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                      />
+                      {fieldErrors.firstName && (
+                        <p id="firstName-error" className="text-xs text-red-600">{fieldErrors.firstName}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName" className="text-[#1a1a1a]">Nachname</Label>
-                      <Input id="lastName" name="lastName" required className="bg-[#F7F8F9] border-black/10" />
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        required
+                        onInput={() => clearFieldError("lastName")}
+                        aria-invalid={!!fieldErrors.lastName}
+                        aria-describedby={fieldErrors.lastName ? "lastName-error" : undefined}
+                        className={`bg-[#F7F8F9] border-black/10 ${fieldErrors.lastName ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                      />
+                      {fieldErrors.lastName && (
+                        <p id="lastName-error" className="text-xs text-red-600">{fieldErrors.lastName}</p>
+                      )}
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="company" className="text-[#1a1a1a]">Unternehmen</Label>
-                    <Input id="company" name="company" className="bg-[#F7F8F9] border-black/10" />
+                    <Input
+                      id="company"
+                      name="company"
+                      onInput={() => clearFieldError("company")}
+                      aria-invalid={!!fieldErrors.company}
+                      aria-describedby={fieldErrors.company ? "company-error" : undefined}
+                      className={`bg-[#F7F8F9] border-black/10 ${fieldErrors.company ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                    />
+                    {fieldErrors.company && (
+                      <p id="company-error" className="text-xs text-red-600">{fieldErrors.company}</p>
+                    )}
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-[#1a1a1a]">E-Mail</Label>
-                      <Input id="email" name="email" type="email" required className="bg-[#F7F8F9] border-black/10" />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        onInput={() => clearFieldError("email")}
+                        aria-invalid={!!fieldErrors.email}
+                        aria-describedby={fieldErrors.email ? "email-error" : undefined}
+                        className={`bg-[#F7F8F9] border-black/10 ${fieldErrors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                      />
+                      {fieldErrors.email && (
+                        <p id="email-error" className="text-xs text-red-600">{fieldErrors.email}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-[#1a1a1a]">Telefon</Label>
-                      <Input id="phone" name="phone" type="tel" className="bg-[#F7F8F9] border-black/10" />
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        onInput={() => clearFieldError("phone")}
+                        aria-invalid={!!fieldErrors.phone}
+                        aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
+                        className={`bg-[#F7F8F9] border-black/10 ${fieldErrors.phone ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                      />
+                      {fieldErrors.phone && (
+                        <p id="phone-error" className="text-xs text-red-600">{fieldErrors.phone}</p>
+                      )}
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-[#1a1a1a]">Ihre Nachricht oder Projektdetails</Label>
-                    <Textarea id="message" name="message" rows={5} required className="bg-[#F7F8F9] border-black/10 resize-none" />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      required
+                      onInput={() => clearFieldError("message")}
+                      aria-invalid={!!fieldErrors.message}
+                      aria-describedby={fieldErrors.message ? "message-error" : undefined}
+                      className={`bg-[#F7F8F9] border-black/10 resize-none ${fieldErrors.message ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                    />
+                    {fieldErrors.message && (
+                      <p id="message-error" className="text-xs text-red-600">{fieldErrors.message}</p>
+                    )}
                   </div>
 
                   {status === "error" && (
