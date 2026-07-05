@@ -76,7 +76,7 @@ export default function Projekte() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-display font-bold text-[#1a1a1a] mb-8 text-center">Weitere Referenzen</h3>
+              <h3 className="text-2xl font-display font-bold text-[#98B94B] mb-8 text-center">Weitere Referenzen</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
                 {[
                   { name: "Heidelberg iT Management", detail: "Rechenzentrum & Bürogebäude" },
