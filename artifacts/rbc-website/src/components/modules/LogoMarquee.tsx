@@ -89,7 +89,7 @@ export function LogoMarquee() {
                 <img
                   src={logo.src}
                   alt={isDuplicate ? "" : logo.alt}
-                  loading={i < 6 ? "eager" : "lazy"}
+                  loading={isDuplicate ? "lazy" : "eager"}
                   decoding="async"
                   className={`max-h-20 max-w-[190px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
                 />
