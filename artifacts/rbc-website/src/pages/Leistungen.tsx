@@ -11,18 +11,18 @@ const fadeUp: Variants = {
 
 const services = [
   {
-    icon: <Wrench size={24} />,
-    title: "Lichtsanierung mit LED",
-    desc: "Austausch veralteter Leuchtmittel gegen hochmoderne, effiziente LED-Systeme unter Beibehaltung der bestehenden Infrastruktur wo möglich.",
-    points: ["Bestandsaufnahme & Lichtplanung", "Bemusterung vor Ort", "Fachgerechte Montage"],
-    featured: false,
-  },
-  {
     icon: <Zap size={24} />,
     title: "Lichtplanung & Fördermittel",
     desc: "Individuelle Lichtkonzepte inklusive Wirtschaftlichkeitsberechnung — und die komplette Abwicklung Ihrer Fördermittel von bis zu 20 %.",
     points: ["Bedarfsanalyse & Lichtkonzept", "Wirtschaftlichkeitsberechnung", "Fördermittel-Beratung (bis 20 %)"],
     featured: true,
+  },
+  {
+    icon: <Wrench size={24} />,
+    title: "Lichtsanierung mit LED",
+    desc: "Austausch veralteter Leuchtmittel gegen hochmoderne, effiziente LED-Systeme unter Beibehaltung der bestehenden Infrastruktur wo möglich.",
+    points: ["Bestandsaufnahme & Lichtplanung", "Bemusterung vor Ort", "Fachgerechte Montage"],
+    featured: false,
   },
   {
     icon: <LifeBuoy size={24} />,
