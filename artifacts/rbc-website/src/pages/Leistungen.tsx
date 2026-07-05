@@ -12,7 +12,7 @@ const fadeUp: Variants = {
 const services = [
   {
     icon: <Wrench size={24} />,
-    title: "LED Retrofit",
+    title: "Lichtsanierung mit LED",
     desc: "Austausch veralteter Leuchtmittel gegen hochmoderne, effiziente LED-Systeme unter Beibehaltung der bestehenden Infrastruktur wo möglich.",
     points: ["Bestandsaufnahme & Lichtplanung", "Bemusterung vor Ort", "Fachgerechte Montage"],
     featured: false,
