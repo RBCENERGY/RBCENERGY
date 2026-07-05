@@ -313,20 +313,24 @@ export default function Home() {
         </div>
         <div className="group relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
           <div className="flex w-max gap-6 animate-[marquee_60s_linear_infinite] group-hover:[animation-play-state:paused]">
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
-              <div
-                key={i}
-                className="flex h-32 w-[240px] shrink-0 items-center justify-center rounded-xl border border-black/[0.06] bg-white px-8 shadow-sm"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="eager"
-                  decoding="async"
-                  className={`max-h-20 max-w-[190px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
-                />
-              </div>
-            ))}
+            {[...clientLogos, ...clientLogos].map((logo, i) => {
+              const isDuplicate = i >= clientLogos.length;
+              return (
+                <div
+                  key={i}
+                  aria-hidden={isDuplicate}
+                  className="flex h-32 w-[240px] shrink-0 items-center justify-center rounded-xl border border-black/[0.06] bg-white px-8 shadow-sm"
+                >
+                  <img
+                    src={logo.src}
+                    alt={isDuplicate ? "" : logo.alt}
+                    loading={i < 6 ? "eager" : "lazy"}
+                    decoding="async"
+                    className={`max-h-20 max-w-[190px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 ${logo.invert ? "invert" : ""}`}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

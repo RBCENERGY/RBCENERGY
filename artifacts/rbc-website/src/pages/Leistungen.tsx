@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { Link } from "wouter";
 import { motion, type Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Wrench, Zap, LifeBuoy } from "lucide-react";
+import { CheckCircle2, ArrowRight, Wrench, Zap, LifeBuoy, ShieldCheck, SlidersHorizontal, Wallet } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -29,6 +29,27 @@ const services = [
     title: "Wartung & Service",
     desc: "Rundum-Sorglos-Paket für Ihre Beleuchtungsanlage. Wir kümmern uns um den reibungslosen Betrieb und garantieren die Funktionalität.",
     points: ["Regelmäßige Inspektionen", "Kostenloser Teileaustausch", "24/7 Entstörungsservice"],
+    featured: false,
+  },
+  {
+    icon: <ShieldCheck size={24} />,
+    title: "Sicherheits- & Notbeleuchtung",
+    desc: "Als Experte für Sicherheits- und Notbeleuchtung sorgen wir für normgerechte Fluchtweg- und Rettungszeichenleuchten — für den Schutz von Menschen und die Erfüllung gesetzlicher Vorgaben.",
+    points: ["Planung nach DIN & Vorschrift", "Flucht- & Rettungszeichenleuchten", "Prüfung & Dokumentation"],
+    featured: false,
+  },
+  {
+    icon: <SlidersHorizontal size={24} />,
+    title: "Lichtsteuerung & Automation",
+    desc: "Intelligente Lichtsteuerung für maximale Effizienz und Komfort. Unsere DALI- und Casambi-Experten beraten Sie und realisieren maßgeschneiderte Automationslösungen.",
+    points: ["DALI- & Casambi-Systeme", "Präsenz- & Tageslichtsteuerung", "Individuelle Lichtszenen"],
+    featured: false,
+  },
+  {
+    icon: <Wallet size={24} />,
+    title: "Finanzierung & Contracting",
+    desc: "Ob Kauf, Miete oder Contracting — wir finden das passende Finanzierungsmodell für Ihr Projekt, damit Sie ohne hohe Anfangsinvestition von moderner LED-Technik profitieren.",
+    points: ["Miet- & Leasingmodelle", "Light-as-a-Service / Contracting", "Individuelle Finanzierungsberatung"],
     featured: false,
   },
 ];
