@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* ─── USP GRID ─── */}
-      <section className="py-28 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section className="py-28 bg-[#F7F8F9]">
+      <section className="py-20 bg-[#F7F8F9]">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Der Prozess</span>
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* ─── CALCULATOR ─── */}
-      <section id="calculator" className="py-28 bg-[#F7F8F9] border-t border-black/6 relative overflow-hidden">
+      <section id="calculator" className="py-20 bg-[#F7F8F9] border-t border-black/6 relative overflow-hidden">
         {/* Background grid */}
         <div
           className="absolute inset-0 opacity-[0.4]"
@@ -207,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* ─── CTA BAND ─── */}
-      <section className="py-24 bg-white border-t border-black/6">
+      <section className="py-20 bg-white border-t border-black/6">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
