@@ -79,7 +79,7 @@ export default function Unternehmen() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-10">
-            <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest block mb-4">Unsere Werte</span>
+            <span className="text-[#98B94B] text-base font-bold uppercase tracking-widest block mb-4">Unsere Werte</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Worauf Sie sich <span className="text-[#25412D]">verlassen können</span>
             </h2>
