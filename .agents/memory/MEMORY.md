@@ -2,3 +2,4 @@
 - [RBC GmbH verified facts](rbc-website-facts.md) — real company data from economiclightdesign.de (since 2009, Heidelberg, Veko-Partner, 20% Förderung, real clients); never reintroduce invented claims.
 - [react-icons gotcha](react-icons-gotcha.md) — brand icons live in react-icons/fa, not react-icons/si (SiLinkedin/SiFacebook/SiXing don't exist).
 - [framer-motion Variants typing](framer-motion-variants.md) — annotate variant objects as `Variants` or `ease` string widens and fails tsc.
+- [RBC contact form email](rbc-contact-email.md) — Kontakt form → /api/contact → Resend; needs a verified domain (CONTACT_FROM) to deliver to info@rbc-energy.de, else 403.
