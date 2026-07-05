@@ -207,6 +207,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── LOGOS STRIP ─── */}
+      <LogoMarquee />
+
       {/* ─── CTA BAND ─── */}
       <section className="py-20 bg-white border-t border-black/6">
         <div className="container mx-auto px-6 text-center">
@@ -235,9 +238,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* ─── LOGOS STRIP ─── */}
-      <LogoMarquee />
 
     </PageLayout>
   );
