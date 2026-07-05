@@ -293,7 +293,7 @@ export default function Home() {
             </p>
             <Link href="/kontakt">
               <button
-                className="inline-flex items-center gap-3 bg-[#25412D] hover:bg-[#1d3222] text-white font-bold uppercase tracking-widest text-xs px-10 py-5 transition-colors"
+                className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-white font-bold uppercase tracking-widest text-xs px-10 py-5 transition-colors"
                 data-testid="button-cta-contact"
               >
                 Jetzt kostenlos anfragen
