@@ -13,6 +13,7 @@ import Unternehmen from "@/pages/Unternehmen";
 import News from "@/pages/News";
 import Kontakt from "@/pages/Kontakt";
 import Impressum from "@/pages/Impressum";
+import Datenschutz from "@/pages/Datenschutz";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/news" component={News} />
       <Route path="/kontakt" component={Kontakt} />
       <Route path="/impressum" component={Impressum} />
+      <Route path="/datenschutz" component={Datenschutz} />
 
       <Route component={NotFound} />
     </Switch>
