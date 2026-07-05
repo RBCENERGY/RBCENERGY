@@ -79,7 +79,7 @@ export function Header() {
         </button>
 
         {/* Mobile Overlay */}
-        <div className={`fixed inset-0 bg-[#0D0F12] flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${
+        <div className={`fixed inset-0 bg-[#0D0F12] flex flex-col items-center justify-center gap-8 pt-28 pb-10 overflow-y-auto transition-transform duration-300 lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}>
           {navItems.map((item) => (
