@@ -12,6 +12,7 @@ import Foerdermittel from "@/pages/Foerdermittel";
 import Unternehmen from "@/pages/Unternehmen";
 import News from "@/pages/News";
 import Kontakt from "@/pages/Kontakt";
+import Impressum from "@/pages/Impressum";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/unternehmen" component={Unternehmen} />
       <Route path="/news" component={News} />
       <Route path="/kontakt" component={Kontakt} />
+      <Route path="/impressum" component={Impressum} />
 
       <Route component={NotFound} />
     </Switch>
