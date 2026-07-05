@@ -92,26 +92,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── LOGOS STRIP ─── */}
-      <section className="py-10 border-b border-black/6 overflow-hidden bg-[#F7F8F9]">
-        <div className="container mx-auto px-6 mb-6">
-          <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
-            Vertrauen von Unternehmen und Institutionen aus der Region
-          </p>
-        </div>
-        <div className="flex gap-16 items-center w-max animate-[scroll_50s_linear_infinite]">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="flex gap-16 items-center">
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Linamar</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Heidelberg iT Management</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Aquadrom Hockenheim</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Holzgroßhandel Gerber</span>
-              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Zahnmedizin Schenk &amp; Peters</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ─── USP GRID ─── */}
       <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
@@ -252,6 +232,26 @@ export default function Home() {
               </button>
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── LOGOS STRIP ─── */}
+      <section className="py-10 border-t border-black/6 overflow-hidden bg-[#F7F8F9]">
+        <div className="container mx-auto px-6 mb-6">
+          <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
+            Vertrauen von Unternehmen und Institutionen aus der Region
+          </p>
+        </div>
+        <div className="flex gap-16 items-center w-max animate-[scroll_50s_linear_infinite]">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="flex gap-16 items-center">
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Linamar</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Heidelberg iT Management</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Aquadrom Hockenheim</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Holzgroßhandel Gerber</span>
+              <span className="font-display font-bold text-xl text-black/15 tracking-tight whitespace-nowrap">Zahnmedizin Schenk &amp; Peters</span>
+            </div>
+          ))}
         </div>
       </section>
 
