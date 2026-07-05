@@ -72,8 +72,8 @@ export function LogoMarquee() {
   return (
     <section className="py-10 border-t border-black/6 overflow-hidden bg-[#F7F8F9]">
       <div className="container mx-auto px-6 mb-8">
-        <p className="text-center text-black/25 text-xs font-bold uppercase tracking-widest">
-          Vertrauen von Unternehmen und Institutionen aus der Region
+        <p className="text-center text-[#98B94B] text-xs font-bold uppercase tracking-widest">
+          Unternehmen die uns vertrauen
         </p>
       </div>
       <div className="group relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
