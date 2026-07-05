@@ -28,6 +28,14 @@ import logoStollwerck from "@assets/RBC_Stollwerk_1783272256048.webp";
 import logoKukident from "@assets/RBC_Kukident_1783272256049.webp";
 import logoHomann from "@assets/RBC_Homann_1783272256049.webp";
 import logoSanner from "@assets/RBC_Sanner_1783272256050.webp";
+import logoCNH from "@assets/RBC_CNHHeidelberg_1783272801839.webp";
+import logoTCW from "@assets/RBC_tcw_1783272801840.webp";
+import logoFrankfurtAirport from "@assets/rbc-frankfurt-airport_1783272801840.webp";
+import logoLaBiosthetique from "@assets/RBC_LaBio_1783272813759.webp";
+import logoBenckiser from "@assets/RBC_Benckiser_1783272813760.webp";
+import logoSRH from "@assets/RBC_SRH_1783272813760.webp";
+import logoEuroMaint from "@assets/RBC_EuroMaint_klein_1783272813761.webp";
+import logoOrsay from "@assets/RBC_Orsay_1783272813761.webp";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -55,6 +63,14 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoKukident, alt: "Kukident" },
   { src: logoHomann, alt: "Homann" },
   { src: logoSanner, alt: "Sanner" },
+  { src: logoCNH, alt: "CNH Industrial Heidelberg" },
+  { src: logoTCW, alt: "Tennis Center Weinsberg" },
+  { src: logoFrankfurtAirport, alt: "Frankfurt Airport" },
+  { src: logoLaBiosthetique, alt: "La Biosthétique Paris" },
+  { src: logoBenckiser, alt: "Reckitt Benckiser" },
+  { src: logoSRH, alt: "SRH" },
+  { src: logoEuroMaint, alt: "EuroMaint" },
+  { src: logoOrsay, alt: "Orsay" },
 ];
 
 const fadeUp: Variants = {
