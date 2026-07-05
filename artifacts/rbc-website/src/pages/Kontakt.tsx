@@ -309,11 +309,15 @@ export default function Kontakt() {
                 </div>
               </div>
 
-              <div className="w-full h-[280px] bg-[#F7F8F9] border border-black/[0.08] overflow-hidden relative flex items-center justify-center">
-                <div className="text-[#1a1a1a]/35 flex flex-col items-center">
-                  <MapPin size={32} className="mb-2" />
-                  <span className="text-sm">Google Maps Integration</span>
-                </div>
+              <div className="w-full h-[280px] bg-[#F7F8F9] border border-black/[0.08] overflow-hidden relative">
+                <iframe
+                  title="Standort RBC GmbH — Hardtstr. 80, 69124 Heidelberg"
+                  src="https://www.google.com/maps?q=Hardtstr.%2080,%2069124%20Heidelberg&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
