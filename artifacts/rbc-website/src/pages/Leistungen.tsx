@@ -36,7 +36,7 @@ const services = [
     title: "Sicherheits- & Notbeleuchtung",
     desc: "Als Experte für Sicherheits- und Notbeleuchtung sorgen wir für normgerechte Fluchtweg- und Rettungszeichenleuchten — für den Schutz von Menschen und die Erfüllung gesetzlicher Vorgaben.",
     points: ["Planung nach DIN & Vorschrift", "Flucht- & Rettungszeichenleuchten", "Prüfung & Dokumentation"],
-    featured: false,
+    featured: true,
   },
   {
     icon: <SlidersHorizontal size={24} />,
