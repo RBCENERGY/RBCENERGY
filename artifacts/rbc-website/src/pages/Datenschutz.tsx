@@ -48,7 +48,7 @@ export default function Datenschutz() {
         </div>
         <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <span className="text-[#98B94B] text-base font-bold uppercase tracking-widest block mb-4">
+            <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">
               Rechtliches
             </span>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
