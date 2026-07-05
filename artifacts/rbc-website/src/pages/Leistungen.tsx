@@ -74,9 +74,9 @@ export default function Leistungen() {
             }}
           />
         </div>
-        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Unsere <span className="text-[#98B94B]">Leistungen</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
@@ -98,7 +98,7 @@ export default function Leistungen() {
                 whileInView="show"
                 viewport={{ once: true }}
                 custom={i}
-                className={`relative p-10 flex flex-col transition-all ${
+                className={`relative p-6 sm:p-8 md:p-10 flex flex-col transition-all ${
                   s.featured
                     ? "bg-[#25412D] text-white"
                     : "bg-white border border-black/[0.08] hover:border-[#98B94B]/50 hover:shadow-xl"

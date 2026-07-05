@@ -43,7 +43,7 @@ export function SavingsCalculator() {
   const formatEuro = (val: number) => new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(val);
 
   return (
-    <div className="bg-[#25412D] border border-white/10 p-6 md:p-10 shadow-2xl relative overflow-hidden">
+    <div className="bg-[#25412D] border border-white/10 p-6 sm:p-8 md:p-10 shadow-2xl relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
         style={{

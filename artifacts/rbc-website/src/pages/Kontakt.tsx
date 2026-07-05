@@ -102,9 +102,9 @@ export default function Kontakt() {
             }}
           />
         </div>
-        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Lassen Sie uns <span className="text-[#98B94B]">sprechen</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
@@ -119,7 +119,7 @@ export default function Kontakt() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
-            <div className="bg-white border border-black/[0.08] p-8 md:p-10 shadow-sm">
+            <div className="bg-white border border-black/[0.08] p-6 sm:p-8 md:p-10 shadow-sm">
               {status === "success" ? (
                 <div className="flex flex-col items-center text-center py-12">
                   <CheckCircle2 className="h-14 w-14 text-[#98B94B]" strokeWidth={1.5} />

@@ -49,9 +49,9 @@ export default function Foerdermittel() {
             }}
           />
         </div>
-        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Bis zu <span className="text-[#98B94B]">20 % Zuschuss</span> sichern
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
@@ -92,7 +92,7 @@ export default function Foerdermittel() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="bg-[#25412D] p-8 md:p-10 relative overflow-hidden"
+              className="bg-[#25412D] p-6 sm:p-8 md:p-10 relative overflow-hidden"
             >
               <div
                 className="absolute inset-0 opacity-10"

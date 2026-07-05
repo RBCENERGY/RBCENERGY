@@ -83,7 +83,7 @@ export default function Home() {
     <PageLayout title="Ihr Partner für LED-Modernisierung seit 2009">
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-start md:items-center">
         <div className="absolute inset-0 z-0">
           <img
             src="/hero-warehouse.png"
@@ -101,11 +101,11 @@ export default function Home() {
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pt-32 pb-24">
+        <div className="container mx-auto px-6 relative z-10 pt-28 pb-40 md:pt-32 md:pb-24">
           <div className="max-w-2xl">
             <motion.h1
               variants={fadeUp} initial="hidden" animate="show" custom={1}
-              className="text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+              className="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] tracking-tight mb-6"
             >
               Maximale<br />
               Effizienz.<br />
@@ -168,7 +168,7 @@ export default function Home() {
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">
               Warum RBC GmbH
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               LED-Modernisierung.<br />
               <span className="text-[#25412D]">Ohne Kompromisse.</span>
             </h2>
@@ -199,7 +199,7 @@ export default function Home() {
             ].map((usp, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-10 group hover:bg-[#F7F8F9] transition-colors"
+                className="bg-white p-6 sm:p-8 md:p-10 group hover:bg-[#F7F8F9] transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -219,7 +219,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Der Prozess</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               In 4 Schritten zur neuen Anlage
             </h2>
           </div>
@@ -264,7 +264,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-14">
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Einsparrechner</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Berechnen Sie Ihren Profit
             </h2>
             <p className="text-[#1a1a1a]/55 mt-4 max-w-lg mx-auto text-base">
@@ -284,7 +284,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-[#1a1a1a] mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-[#1a1a1a] mb-6 leading-tight">
               Bereit für<br />
               <span className="text-[#98B94B]">die Energiewende?</span>
             </h2>

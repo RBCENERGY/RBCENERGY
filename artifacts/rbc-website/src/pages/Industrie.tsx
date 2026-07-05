@@ -46,9 +46,9 @@ export default function Industrie() {
             }}
           />
         </div>
-        <div className="container mx-auto px-6 relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.05] mb-6">
               Licht für die <span className="text-[#98B94B]">Industrie</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-lg">
@@ -68,7 +68,7 @@ export default function Industrie() {
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-10">
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Einsatzbereiche</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
               Für jede Halle die <span className="text-[#25412D]">richtige Lösung</span>
             </h2>
           </div>
@@ -81,7 +81,7 @@ export default function Industrie() {
                 whileInView="show"
                 viewport={{ once: true }}
                 custom={i}
-                className="bg-white border border-black/[0.08] p-10 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
+                className="bg-white border border-black/[0.08] p-6 sm:p-8 md:p-10 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
               >
                 <div className="text-[#98B94B] mb-6">{a.icon}</div>
                 <h3 className="font-display font-bold text-2xl text-[#1a1a1a] mb-4">{a.title}</h3>
