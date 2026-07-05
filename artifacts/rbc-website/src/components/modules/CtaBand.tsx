@@ -12,7 +12,7 @@ export function CtaBand() {
           Kostenlose Potenzialanalyse — unverbindlich, in 48 Stunden bei Ihnen.
         </p>
         <Link href="/kontakt">
-          <button className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-white font-bold uppercase tracking-widest text-xs px-10 py-5 transition-colors">
+          <button className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-10 py-5 transition-colors">
             Jetzt kostenlos anfragen <ArrowRight size={14} />
           </button>
         </Link>
