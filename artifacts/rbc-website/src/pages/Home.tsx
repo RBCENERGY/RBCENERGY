@@ -197,7 +197,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Einsparrechner</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
-              Berechnen Sie Ihren Profit
+              Berechnen Sie Ihr Einsparpotenzial
             </h2>
             <p className="text-[#1a1a1a]/55 mt-4 max-w-lg mx-auto text-base">
               Finden Sie heraus, wie viel Liquidität Sie durch LED-Modernisierung freisetzen können.
