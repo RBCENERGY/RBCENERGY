@@ -77,7 +77,7 @@ const testimonials = [
   {
     name: "Dr. med. Rüdiger Leutgeb",
     company: "Allgemeinmediziner in Rimbach, Praxis Dres. Leutgeb, Modl, Pielsticker",
-    photo: null,
+    photo: "/testimonial-leutgeb.webp",
     quote: `Um in meiner Praxis verlässliche Diagnosen stellen zu können, benötige ich ein sehr spezielles, hochauflösendes Licht, mit hohem Beleuchtungsniveau und guter Farbwiedergabe. Christoph Reinke und sein Team haben uns ein optimales Beleuchtungskonzept erstellt und die Leuchten geliefert.`,
   },
   {
