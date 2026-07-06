@@ -180,13 +180,13 @@ export default function Projekte() {
                 <img
                   src="/parkhaus-p10-1.png"
                   alt="Parkhaus P10 — LED-Umrüstung im laufenden Betrieb"
-                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  className="w-full h-[300px] object-cover object-bottom rounded-xl shadow-lg"
                   loading="lazy"
                 />
                 <img
                   src="/parkhaus-p10-2.png"
                   alt="Parkhaus P10 — neue Waterproof LED-Leuchten IP66"
-                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  className="w-full h-[300px] object-cover object-bottom rounded-xl shadow-lg"
                   loading="lazy"
                 />
               </div>
