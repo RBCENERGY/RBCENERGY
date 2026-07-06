@@ -131,6 +131,49 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* Aurelis – Halle 18 Turbinenwerk Mannheim */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Industrie & Immobilien
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Aurelis — Halle 18, Turbinenwerk Mannheim
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  In der denkmalgeschützten Halle 18 des Turbinenwerks Mannheim ersetzte RBC 582 konventionelle T8-Leuchten durch 196 VEKO Magnus LED-Lichtbänder — auf 22 Metern Montagehöhe, parallel zum laufenden Betrieb, in nur 4 Tagen. Die neue Anlage mit Casambi-Funksteuerung und tageslichtabhängiger Regelung erzielt eine Stromersparnis von 83 %, inklusive rückstandsfreiem Rückbau der Bestandsanlage.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">−83 %</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">CO₂ / Jahr</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">81 t</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Montagezeit</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">4 Tage</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>Vorher: 582× T8 80 W EVG · 93,12 kW Anschlussleistung</p>
+                  <p>Nachher: 196× VEKO Magnus 80,1 W · 12.406 lm · 15,7 kW · 400 lx</p>
+                  <p>Casambi Funksteuerung · Tageslichtregelung · Notbeleuchtung · Montagehöhe 22 m</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-3">
+                <img
+                  src="/aurelis-halle18.png"
+                  alt="Aurelis Halle 18 Turbinenwerk Mannheim — LED-Lichtbänder auf 22 m Höhe"
+                  className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             {/* BAG Mannheim */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 space-y-6">
