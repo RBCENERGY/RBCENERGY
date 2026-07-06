@@ -59,7 +59,7 @@ const testimonials = [
   {
     name: "Matthias Blatz",
     company: "Heidelberg IT Management GmbH & Co. KG",
-    photo: "/testimonial-blatz.png",
+    photo: "/testimonial-blatz.webp",
     quote: `Seit der Errichtung unseres Firmensitzes nutzen wir sowohl im neuen Rechenzentrum \u201eServerhotel 2\u201c als auch im Bürogebäude ausschließlich LED-Beleuchtung. Christoph Reinke und das RBC-Team haben uns bei der gesamten Lichtplanung kompetent beraten und das gemeinsam erarbeitete Konzept professionell umgesetzt. Das Ergebnis ist eine energieeffiziente und wartungsarme Raum- und Arbeitsplatzbeleuchtung, die für optimale Lichtverhältnisse sorgt.`,
   },
 ];
