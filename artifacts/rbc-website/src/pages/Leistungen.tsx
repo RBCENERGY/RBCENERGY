@@ -71,7 +71,7 @@ const testimonials = [
   {
     name: "Reto Gerber",
     company: "Holzgrosshandel Gerber",
-    photo: null,
+    photo: "/testimonial-gerber.webp",
     quote: `Danke für die Erleuchtung. Unser Holz strahlt in den neu gestalteten Lagerflächen in bestem Licht.`,
   },
   {
