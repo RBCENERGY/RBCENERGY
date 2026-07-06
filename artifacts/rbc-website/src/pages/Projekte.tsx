@@ -1,6 +1,6 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
-import { BeforeAfterSlider } from "@/components/modules/BeforeAfterSlider";
+
 import { LogoMarquee } from "@/components/modules/LogoMarquee";
 import { motion, type Variants } from "framer-motion";
 
@@ -45,32 +45,45 @@ export default function Projekte() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="space-y-24">
+            {/* Linamar */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 space-y-6">
                 <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
-                  Industrie & Produktion
+                  Automobilindustrie
                 </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">Linamar — Automobilzulieferer</h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Linamar — Komplette Umstellung auf LED
+                </h2>
                 <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
-                  Komplette Umstellung der Produktions- und Hallenbeleuchtung auf moderne LED-Technik. Gleichmäßige, wartungsarme Ausleuchtung für sichere Arbeitsabläufe im laufenden Betrieb.
+                  Seit mehr als fünf Jahrzehnten ist Linamar ein internationaler Zulieferer der Automobilindustrie und zählt zu den Marktführern in der Entwicklung und Herstellung von Präzisionskomponenten für die Antriebs- und Fahrwerktechnik. Die von RBC sanierten Werke in Plettenberg und Halver gehören zum kanadischen Linamar-Konzern mit über 34.000 Mitarbeitern an 75 Standorten weltweit.
                 </p>
-                <div className="grid grid-cols-2 gap-4 py-6 border-y border-black/8">
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
                   <div>
-                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
-                    <div className="text-3xl font-display font-bold text-[#98B94B]">bis 80 %</div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">LED-System</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">3.000 m</div>
                   </div>
                   <div>
-                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Wartungsaufwand</div>
-                    <div className="text-3xl font-display font-bold text-[#98B94B]">minimal</div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Lichtfarbe</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">5.000 K</div>
                   </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Notlicht</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">80× EATON</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>3.000 m VEKO Magnus DALI · dimmbar · 5.000 K</p>
+                  <p>60× Hallentiefstrahler · 80× Hochtemperaturstrahler (bis 80 °C)</p>
+                  <p>300× Wannenleuchten · 80× EATON Notlichtbausteine</p>
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <BeforeAfterSlider
-                  beforeImage="/project-before-1.png"
-                  afterImage="/project-after-1.png"
-                  beforeLabel="400W HQL (Alt)"
-                  afterLabel="120W LED (Neu)"
+                <img
+                  src="/linamar-halle.png"
+                  alt="Linamar Werk Plettenberg — LED-Hallenbeleuchtung nach Sanierung"
+                  className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+                  loading="eager"
                 />
               </div>
             </div>
