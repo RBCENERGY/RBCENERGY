@@ -102,11 +102,11 @@ function TestimonialsSlideshow() {
   const t = testimonials[active];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-[#0D0F12]">
+    <section className="relative py-24 overflow-hidden bg-[#25412D]">
       <div
-        className="absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.08]"
         style={{
-          backgroundImage: "linear-gradient(rgba(152,185,75,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.4) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.5) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
@@ -126,7 +126,7 @@ function TestimonialsSlideshow() {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="flex flex-col items-center max-w-3xl"
           >
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#98B94B]/40 mb-8 shadow-lg shrink-0 flex items-center justify-center bg-[#25412D]">
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#98B94B]/60 mb-8 shadow-lg shrink-0 flex items-center justify-center bg-[#0D0F12]">
               {t.photo ? (
                 <img
                   src={t.photo}
