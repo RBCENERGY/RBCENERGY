@@ -144,8 +144,8 @@ function TestimonialsSlideshow() {
               „{t.quote}"
             </blockquote>
 
-            <p className="text-xs font-bold tracking-[0.2em] uppercase">
-              <span className="text-[#98B94B]">{t.name}</span><span className="text-white/50"> &bull; {t.company}</span>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/50">
+              {t.name} &bull; {t.company}
             </p>
           </motion.div>
         </AnimatePresence>
