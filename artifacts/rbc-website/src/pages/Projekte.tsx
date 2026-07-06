@@ -164,11 +164,17 @@ export default function Projekte() {
                   <p>Funksteuerung Zigbee · Dresden Elektronik · Reichweite &gt; 100 m</p>
                 </div>
               </div>
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-2 grid grid-cols-2 gap-3">
                 <img
                   src="/bag-mannheim.webp"
-                  alt="BAG Mannheim — Außengelände Nachtbeleuchtung nach LED-Sanierung"
-                  className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+                  alt="BAG Mannheim — Vogelperspektive Nachtbeleuchtung"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/bag-mannheim-2.webp"
+                  alt="BAG Mannheim — Weitwinkel Außengelände beleuchtet"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
                   loading="lazy"
                 />
               </div>
