@@ -515,7 +515,7 @@ export default function Projekte() {
                   { name: "Medizinische Praxen", detail: "Präzisions-Beleuchtung" },
                 ].map((ref, i) => (
                   <div key={i} className="bg-white p-8">
-                    <div className="font-display font-bold text-lg text-[#1a1a1a] mb-1">{ref.name}</div>
+                    <div className="font-display font-bold text-lg text-[#98B94B] mb-1">{ref.name}</div>
                     <div className="text-[#1a1a1a]/45 text-sm">{ref.detail}</div>
                   </div>
                 ))}
