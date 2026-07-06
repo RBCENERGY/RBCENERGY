@@ -80,7 +80,7 @@ export default function Home() {
               {[
                 { value: <span>Seit 2009</span>, label: "Am Markt" },
                 { value: <span>bis 80%</span>, label: "Energieeinsparung" },
-                { value: <span><span className="text-red-500">Veko</span>-Partner</span>, label: "Süddeutschland" },
+                { value: <span><span className="text-red-500">Veko</span> Partner</span>, label: "Süddeutschland" },
                 { value: <span>100%</span>, label: "aus einer Hand" },
               ].map((stat, i) => (
                 <div key={i} className="flex items-baseline gap-3">
