@@ -131,6 +131,49 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* BAG Mannheim */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Bauwirtschaft & Außengelände
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  BAG Mannheim — Neues Licht nach Maß
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  Die Baustahl-Armierungsgesellschaft Mannheim mbH liefert und verlegt seit 1968 deutschlandweit Bau- und Armierungsstahl — mit über 7.000 begleiteten Baumaßnahmen, darunter Kraftwerks- und Tunnelbauten wie das GKM Mannheim. Nach gemeinsamer Analyse der 200.000 m² Außenfläche entschieden wir uns für 60 Hochleistungsstrahler mit Zigbee-Funksteuerung von Dresden Elektronik — eines der wenigen Systeme, das bei Kraneinstreuung störungsfrei über 100 m überbrückt.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Fläche</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">200.000 m²</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Strahler</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">60 Stk.</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Steuerung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">Zigbee</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>200 W · 30.000 lm &nbsp;|&nbsp; 500 W · 78.000 lm &nbsp;|&nbsp; 1.000 W · 154.000 lm</p>
+                  <p>Abstrahlwinkel 95° × 25°</p>
+                  <p>Funksteuerung Zigbee · Dresden Elektronik · Reichweite &gt; 100 m</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/bag-mannheim.webp"
+                  alt="BAG Mannheim — Außengelände Nachtbeleuchtung nach LED-Sanierung"
+                  className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             <div>
               <h3 className="text-2xl font-display font-bold text-[#98B94B] mb-8 text-center">Weitere Referenzen</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
