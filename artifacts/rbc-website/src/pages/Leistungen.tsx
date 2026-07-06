@@ -1,7 +1,8 @@
+import { useState, useEffect } from "react";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { Link } from "wouter";
-import { motion, type Variants } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { CheckCircle2, ArrowRight, Wrench, Zap, LifeBuoy, ShieldCheck, SlidersHorizontal, Wallet } from "lucide-react";
 
 const fadeUp: Variants = {
@@ -53,6 +54,99 @@ const services = [
     featured: false,
   },
 ];
+
+const testimonials = [
+  {
+    name: "Matthias Blatz",
+    company: "Heidelberg IT Management GmbH & Co. KG",
+    photo: "/testimonial-blatz.png",
+    quote: `Seit der Errichtung unseres Firmensitzes nutzen wir sowohl im neuen Rechenzentrum \u201eServerhotel 2\u201c als auch im Bürogebäude ausschließlich LED-Beleuchtung. Christoph Reinke und das RBC-Team haben uns bei der gesamten Lichtplanung kompetent beraten und das gemeinsam erarbeitete Konzept professionell umgesetzt. Das Ergebnis ist eine energieeffiziente und wartungsarme Raum- und Arbeitsplatzbeleuchtung, die für optimale Lichtverhältnisse sorgt.`,
+  },
+];
+
+function TestimonialsSlideshow() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (testimonials.length <= 1) return;
+    const id = setInterval(() => {
+      setActive((i) => (i + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
+
+  const t = testimonials[active];
+
+  return (
+    <section className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/hero-leistungen.png"
+          alt=""
+          className="w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-[#0D0F12]/82" />
+        <div
+          className="absolute inset-0 opacity-8"
+          style={{
+            backgroundImage: "linear-gradient(rgba(152,185,75,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.25) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
+        <p className="text-xs font-bold tracking-[0.3em] uppercase text-[#98B94B] mb-2">
+          • Das sagen unsere Kunden •
+        </p>
+        <div className="w-16 h-px bg-[#98B94B]/50 mb-10" />
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="flex flex-col items-center max-w-3xl"
+          >
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#98B94B]/40 mb-8 shadow-lg shrink-0">
+              <img
+                src={t.photo}
+                alt={t.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <blockquote className="text-white/85 text-lg md:text-xl leading-relaxed italic mb-8">
+              „{t.quote}"
+            </blockquote>
+
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/50">
+              {t.name} &bull; {t.company}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+
+        {testimonials.length > 1 && (
+          <div className="flex gap-2.5 mt-10">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActive(i)}
+                aria-label={`Testimonial ${i + 1}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  i === active ? "bg-[#98B94B] scale-110" : "bg-white/30 hover:bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
 
 export default function Leistungen() {
   return (
@@ -126,6 +220,9 @@ export default function Leistungen() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsSlideshow />
 
       {/* CTA */}
       <CtaBand />
