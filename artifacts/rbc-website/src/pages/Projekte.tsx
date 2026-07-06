@@ -180,6 +180,55 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* Kimberly-Clark */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-1 grid grid-cols-2 gap-3">
+                <img
+                  src="/kimberly-1.webp"
+                  alt="Kimberly-Clark Koblenz — Prozessbereich mit neuer LED-Beleuchtung"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/kimberly-2.webp"
+                  alt="Kimberly-Clark Koblenz — Produktionshalle mit Auriga-Leuchten"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <div className="order-2 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Konsumgüter & Produktion
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Kimberly-Clark — Lichtsanierung in Koblenz
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  Als weltweit führender Hersteller von Hygieneprodukten stand Nachhaltigkeit im Mittelpunkt. RBC ermöglichte es Kimberly-Clark, das bestehende Canalis-Trägersystem weiter zu nutzen und trotzdem vollständig auf LED umzustellen — mit der eigenen Triproof-Leuchte „Auriga": stufenlos per Dip-Switch einstellbar von 22 bis 69 W, Plug-and-Play vorkonfektioniert, Montage in nur 4 Wochen. Ausfallrate nach Installation: 0.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Leuchten</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">900 Stk.</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Stromersparnis</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">−62 %</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Montagezeit</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">4 Wochen</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>RBC Triproof „Auriga" · 150 lm/W · max. 9.900 lm · 22–69 W</p>
+                  <p>Abstrahlwinkel 60°, 90° und 120° · Fläche ca. 5.000 m²</p>
+                  <p>Canalis-kompatibel · Plug &amp; Play · Dip-Switch dimmbar</p>
+                </div>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-2xl font-display font-bold text-[#98B94B] mb-8 text-center">Weitere Referenzen</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
