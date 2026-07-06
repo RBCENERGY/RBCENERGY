@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Slider } from "@/components/ui/slider";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -82,11 +82,27 @@ export function SavingsCalculator() {
                     <SelectValue placeholder="Watt wählen" />
                   </SelectTrigger>
                   <SelectContent className="bg-secondary border-white/10 text-white">
-                    <SelectItem value="150">150 Watt (HQL/HQI)</SelectItem>
-                    <SelectItem value="250">250 Watt (HQL/HQI)</SelectItem>
-                    <SelectItem value="400">400 Watt (HQL/HQI)</SelectItem>
-                    <SelectItem value="600">600 Watt (HQL/HQI)</SelectItem>
-                    <SelectItem value="1000">1000 Watt (HQL/HQI)</SelectItem>
+                    <SelectGroup>
+                      <SelectLabel className="text-white/40 text-xs uppercase tracking-widest px-2 py-1">HQL / HQI (Quecksilber/Halogen)</SelectLabel>
+                      <SelectItem value="150">150 Watt (HQL/HQI)</SelectItem>
+                      <SelectItem value="250">250 Watt (HQL/HQI)</SelectItem>
+                      <SelectItem value="400">400 Watt (HQL/HQI)</SelectItem>
+                      <SelectItem value="600">600 Watt (HQL/HQI)</SelectItem>
+                      <SelectItem value="1000">1000 Watt (HQL/HQI)</SelectItem>
+                    </SelectGroup>
+                    <SelectGroup>
+                      <SelectLabel className="text-white/40 text-xs uppercase tracking-widest px-2 py-1 mt-2">Leuchtstoffröhre T8 (klassisch)</SelectLabel>
+                      <SelectItem value="18">18 Watt (T8)</SelectItem>
+                      <SelectItem value="36">36 Watt (T8)</SelectItem>
+                      <SelectItem value="58">58 Watt (T8)</SelectItem>
+                    </SelectGroup>
+                    <SelectGroup>
+                      <SelectLabel className="text-white/40 text-xs uppercase tracking-widest px-2 py-1 mt-2">Leuchtstoffröhre T5</SelectLabel>
+                      <SelectItem value="14">14 Watt (T5)</SelectItem>
+                      <SelectItem value="28">28 Watt (T5)</SelectItem>
+                      <SelectItem value="54">54 Watt (T5)</SelectItem>
+                      <SelectItem value="80">80 Watt (T5 HO)</SelectItem>
+                    </SelectGroup>
                   </SelectContent>
                 </Select>
               </div>
