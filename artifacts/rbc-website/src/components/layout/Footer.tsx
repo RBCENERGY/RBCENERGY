@@ -111,7 +111,7 @@ export function Footer() {
             <a href="https://www.linkedin.com/company/rbc-gmbh/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 bg-[#98B94B] text-[#0D0F12] flex items-center justify-center hover:bg-white transition-colors" data-testid="social-linkedin">
               <FaLinkedinIn size={15} />
             </a>
-            <a href="#" aria-label="Xing" className="w-9 h-9 bg-[#98B94B] text-[#0D0F12] flex items-center justify-center hover:bg-white transition-colors" data-testid="social-xing">
+            <a href="https://www.xing.com/pages/rbcgmbh" target="_blank" rel="noopener noreferrer" aria-label="Xing" className="w-9 h-9 bg-[#98B94B] text-[#0D0F12] flex items-center justify-center hover:bg-white transition-colors" data-testid="social-xing">
               <FaXing size={15} />
             </a>
           </div>
