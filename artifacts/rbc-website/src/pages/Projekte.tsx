@@ -103,7 +103,7 @@ export default function Projekte() {
                   Maschinenbau & Industrie
                 </div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
-                  MAAG — Firma in neuem Licht
+                  MAAG — In neuem Licht
                 </h2>
                 <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
                   Die MAAG Germany GmbH in Grossostheim — Teil einer global führenden Gruppe für Kunststoff­industrie, Chemie und Pharma — setzte auf RBCs Full-Service-Konzept: kundenspezifische Fertigung, vollautomatische Lichtsteuerung mit Casambi und eine Sanierung des kompletten Standorts im laufenden Mehrschichtbetrieb.
