@@ -223,6 +223,49 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* Peter-Bruckmann-Schule Heilbronn */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Öffentliche Gebäude & Schulen
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Peter-Bruckmann-Schule — LED-Modernisierung Heilbronn
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  410 Downlights mit nicht mehr verkäuflichen Kompaktleuchtmitteln stellten die Schule vor ein typisches Bestandsproblem: funktionierend, aber nicht mehr betriebssicher. RBC entwickelte passgenaue LED-Einsätze für die vorhandenen Sonderleuchten in den Fluren, um die bestehende Einbausituation zu erhalten — und schloss die Umrüstung in nur vier Wochen im laufenden Schulbetrieb ab.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">−75 %</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">CO₂ / Jahr</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">12,1 t</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Leuchten</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">410 Stk.</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>Vorher: 47.008 kWh/Jahr · Nachher: 11.804 kWh/Jahr</p>
+                  <p>Individuelle LED-Einsätze für Sonderleuchten in Fluren</p>
+                  <p>Erhalt bestehender Einbausituationen · Umbau in 4 Wochen</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/peter-bruckmann-schule.png"
+                  alt="Peter-Bruckmann-Schule Heilbronn — Eingangsbereich nach LED-Modernisierung"
+                  className="w-full h-[420px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             {/* Gleason-Pfauter Ludwigsburg */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-1 grid grid-cols-2 gap-3">
