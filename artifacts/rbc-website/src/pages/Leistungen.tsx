@@ -62,6 +62,12 @@ const testimonials = [
     photo: "/testimonial-blatz.webp",
     quote: `Seit der Errichtung unseres Firmensitzes nutzen wir sowohl im neuen Rechenzentrum \u201eServerhotel 2\u201c als auch im Bürogebäude ausschließlich LED-Beleuchtung. Christoph Reinke und das RBC-Team haben uns bei der gesamten Lichtplanung kompetent beraten und das gemeinsam erarbeitete Konzept professionell umgesetzt. Das Ergebnis ist eine energieeffiziente und wartungsarme Raum- und Arbeitsplatzbeleuchtung, die für optimale Lichtverhältnisse sorgt.`,
   },
+  {
+    name: "Andreas Rothermel",
+    company: "Aquadrom Hockenheim",
+    photo: "/testimonial-rothermel.webp",
+    quote: `Mit Herrn Reinke und der RBC haben wir einen starken Partner an unserer Seite, der uns seit Jahren bei der Planung und der Beschaffung unserer Beleuchtung kompetent berät und unterstützt.`,
+  },
 ];
 
 function TestimonialsSlideshow() {
