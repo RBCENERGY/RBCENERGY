@@ -172,8 +172,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <div className="w-16 h-16 bg-white border border-[#98B94B]/30 flex items-center justify-center mb-6 relative z-10">
-                  <span className="text-[#98B94B] font-display font-bold text-sm">{s.step}</span>
+                <div className="w-16 h-16 bg-[#98B94B] flex items-center justify-center mb-6 relative z-10">
+                  <span className="text-[#0D0F12] font-display font-bold text-sm">{s.step}</span>
                 </div>
                 <h3 className="font-display font-bold text-lg text-[#1a1a1a] mb-2">{s.title}</h3>
                 <p className="text-[#1a1a1a]/50 text-sm leading-relaxed">{s.desc}</p>
