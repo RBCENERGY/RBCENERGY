@@ -96,6 +96,18 @@ export default function Industrie() {
               </motion.div>
             ))}
           </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-12">
+            <Link href="/foerdermittel">
+              <button className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors">
+                Einsparpotenzial berechnen <ArrowRight size={14} />
+              </button>
+            </Link>
+            <Link href="/projekte">
+              <button className="inline-flex items-center gap-3 border border-[#1a1a1a]/20 hover:border-[#98B94B] text-[#1a1a1a] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors">
+                Referenzen ansehen <ArrowRight size={14} />
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
 
