@@ -78,10 +78,10 @@ export default function Home() {
           <div className="container mx-auto px-6 py-5">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: "Seit 2009", label: "Am Markt" },
-                { value: "bis 80%", label: "Energieeinsparung" },
-                { value: "Veko-Partner", label: "Süddeutschland" },
-                { value: "100%", label: "aus einer Hand" },
+                { value: <span>Seit 2009</span>, label: "Am Markt" },
+                { value: <span>bis 80%</span>, label: "Energieeinsparung" },
+                { value: <span><span className="text-red-500">Veko</span>-Partner</span>, label: "Süddeutschland" },
+                { value: <span>100%</span>, label: "aus einer Hand" },
               ].map((stat, i) => (
                 <div key={i} className="flex items-baseline gap-3">
                   <span className="text-2xl font-display font-bold text-white">{stat.value}</span>
