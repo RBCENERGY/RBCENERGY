@@ -1,6 +1,6 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { motion, type Variants } from "framer-motion";
 import { CheckCircle2, Factory, Warehouse, Zap, ArrowRight } from "lucide-react";
 
@@ -31,6 +31,15 @@ const areas = [
 ];
 
 export default function Industrie() {
+  const [, navigate] = useLocation();
+
+  const goToCalculator = () => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" });
+    }, 80);
+  };
+
   return (
     <PageLayout title="Industrie & Logistik">
       {/* Dark image hero (accent) */}
@@ -97,11 +106,9 @@ export default function Industrie() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 mt-12">
-            <a href="/#calculator">
-              <button className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors">
-                Einsparpotenzial berechnen <ArrowRight size={14} />
-              </button>
-            </a>
+            <button onClick={goToCalculator} className="inline-flex items-center gap-3 bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors">
+              Einsparpotenzial berechnen <ArrowRight size={14} />
+            </button>
             <Link href="/projekte">
               <button className="inline-flex items-center gap-3 border border-[#1a1a1a]/20 hover:border-[#98B94B] text-[#1a1a1a] font-bold uppercase tracking-widest text-xs px-8 py-4 transition-colors">
                 Referenzen ansehen <ArrowRight size={14} />
