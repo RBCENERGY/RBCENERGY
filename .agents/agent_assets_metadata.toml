@@ -66,9 +66,3 @@ id = "KsHn-v7afJ7DGBvZRsjSO"
 uri = "file://artifacts/rbc-website/public/hero-kontakt.png"
 type = "image"
 title = "contact hero"
-
-[[generated]]
-id = "U9knNUFOyFsDARQJuiYHU"
-uri = "file://artifacts/rbc-website/public/hero-projekte-new.png"
-type = "image"
-title = "dark warehouse LED centered aisle hero"
