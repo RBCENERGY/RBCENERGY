@@ -198,16 +198,16 @@ export default function Projekte() {
                   Gleason-Pfauter — Gesamtwerk Ludwigsburg
                 </h2>
                 <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
-                  Die Gleason-Pfauter Maschinenfabrik GmbH in Ludwigsburg — weltweiter Marktführer in der Verzahnungstechnik seit 1865 — ließ RBC das gesamte Werksgelände mit 22.500 m² vollständig neu beleuchten. 2.250 m VEKO Magnus Circular Lichtbänder, 1.457 Lichteinsätze, 33 BEG-Sensoren für Tageslicht- und Bewegungssteuerung. Montage im laufenden Betrieb — fertig in 6 Wochen.
+                  Die Gleason-Pfauter Maschinenfabrik GmbH in Ludwigsburg — weltweiter Marktführer in der Verzahnungstechnik seit 1865 — ließ RBC das gesamte Werksgelände mit ca. 30.000 m² vollständig neu beleuchten. 3.000 m VEKO Magnus Circular Lichtbänder, 1.457 Lichteinsätze, 33 BEG-Sensoren für Tageslicht- und Bewegungssteuerung. Montage im laufenden Betrieb — fertig in 6 Wochen.
                 </p>
                 <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Fläche</div>
-                    <div className="text-2xl font-display font-bold text-[#98B94B]">22.500 m²</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">30.000 m²</div>
                   </div>
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Lichtband</div>
-                    <div className="text-2xl font-display font-bold text-[#98B94B]">2.250 m</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">3.000 m</div>
                   </div>
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Montagezeit</div>
@@ -216,7 +216,7 @@ export default function Projekte() {
                 </div>
                 <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
                   <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
-                  <p>VEKO Magnus Circular · 2.250 m · DALI · IP20 · 10.000–12.000 lm · max. 75,2 W</p>
+                  <p>VEKO Magnus Circular · 3.000 m · DALI · IP20 · 10.000–12.000 lm · max. 75,2 W</p>
                   <p>1.457 Lichteinsätze · 33× BEG Multisensor (Tageslicht &amp; Bewegung)</p>
                   <p>Stromverbrauch nahezu halbiert · Montage im laufenden Betrieb</p>
                 </div>
