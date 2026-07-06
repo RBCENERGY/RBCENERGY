@@ -57,10 +57,10 @@ const services = [
 
 const testimonials = [
   {
-    name: "Matthias Blatz",
-    company: "Heidelberg IT Management GmbH & Co. KG",
-    photo: "/testimonial-blatz.webp",
-    quote: `Seit der Errichtung unseres Firmensitzes nutzen wir sowohl im neuen Rechenzentrum \u201eServerhotel 2\u201c als auch im Bürogebäude ausschließlich LED-Beleuchtung. Christoph Reinke und das RBC-Team haben uns bei der gesamten Lichtplanung kompetent beraten und das gemeinsam erarbeitete Konzept professionell umgesetzt. Das Ergebnis ist eine energieeffiziente und wartungsarme Raum- und Arbeitsplatzbeleuchtung, die für optimale Lichtverhältnisse sorgt.`,
+    name: "Larissa Schenk",
+    company: "Zahnmedizin Schenk & Peters",
+    photo: "/testimonial-schenk.webp",
+    quote: `Das Beleuchtungskonzept unserer Praxis haben wir in die Hände von Christoph Reinke und seinem Team gelegt. Die gesamte Abwicklung des Auftrags lief reibungslos und zu unserer vollsten Zufriedenheit.`,
   },
   {
     name: "Andreas Rothermel",
@@ -81,10 +81,10 @@ const testimonials = [
     quote: `Um in meiner Praxis verlässliche Diagnosen stellen zu können, benötige ich ein sehr spezielles, hochauflösendes Licht, mit hohem Beleuchtungsniveau und guter Farbwiedergabe. Christoph Reinke und sein Team haben uns ein optimales Beleuchtungskonzept erstellt und die Leuchten geliefert.`,
   },
   {
-    name: "Larissa Schenk",
-    company: "Zahnmedizin Schenk & Peters",
-    photo: "/testimonial-schenk.webp",
-    quote: `Das Beleuchtungskonzept unserer Praxis haben wir in die Hände von Christoph Reinke und seinem Team gelegt. Die gesamte Abwicklung des Auftrags lief reibungslos und zu unserer vollsten Zufriedenheit.`,
+    name: "Matthias Blatz",
+    company: "Heidelberg IT Management GmbH & Co. KG",
+    photo: "/testimonial-blatz.webp",
+    quote: `Seit der Errichtung unseres Firmensitzes nutzen wir sowohl im neuen Rechenzentrum \u201eServerhotel 2\u201c als auch im Bürogebäude ausschließlich LED-Beleuchtung. Christoph Reinke und das RBC-Team haben uns bei der gesamten Lichtplanung kompetent beraten und das gemeinsam erarbeitete Konzept professionell umgesetzt. Das Ergebnis ist eine energieeffiziente und wartungsarme Raum- und Arbeitsplatzbeleuchtung, die für optimale Lichtverhältnisse sorgt.`,
   },
 ];
 
