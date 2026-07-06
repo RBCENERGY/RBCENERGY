@@ -10,10 +10,10 @@ const fadeUp: Variants = {
 
 const articles = [
   {
-    date: "12. Oktober 2023",
-    title: "Leuchtstoffröhren-Verbot: Was Unternehmen jetzt tun müssen",
-    category: "Branchen-News",
-    excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
+    date: "17. Juni 2025",
+    title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
+    category: "Fördermittel",
+    excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
   },
   {
     date: "3. September 2024",
@@ -22,10 +22,10 @@ const articles = [
     excerpt: "Für den internationalen Automobilzulieferer Linamar haben wir die gesamte Hallen- und Produktionsbeleuchtung auf moderne, wartungsarme LED-Technik umgestellt.",
   },
   {
-    date: "17. Juni 2025",
-    title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
-    category: "Fördermittel",
-    excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
+    date: "12. Oktober 2023",
+    title: "Leuchtstoffröhren-Verbot: Was Unternehmen jetzt tun müssen",
+    category: "Branchen-News",
+    excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
   },
 ];
 
