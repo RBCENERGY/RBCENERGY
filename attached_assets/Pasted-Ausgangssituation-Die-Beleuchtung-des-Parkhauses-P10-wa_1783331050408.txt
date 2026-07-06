@@ -1,0 +1,79 @@
+Ausgangssituation
+Die Beleuchtung des Parkhauses P10 war technisch veraltet
+und entsprach nicht mehr den heutigen Anforderungen an
+Energieeffizienz und Lichtqualität. Im Bestand befanden sich
+überwiegend konventionelle T8-Leuchtstofflampen sowie
+diverse HQL-Leuchtmittel. Insgesamt waren 726 Leuchten
+installiert.
+Der jährliche Energiebedarf der Beleuchtungsanlage lag vor
+der Umrüstung bei ca. 335.050 kWh.
+RBC erhielt den Auftrag, das Parkhaus zu begutachten und
+ein Konzept zur Umrüstung auf moderne LED-Technik zu
+erstellen. Nach Freigabe des Konzepts wurde die Umsetzung
+im Zeitraum November bis Dezember 2025 durchgeführt.
+Ziel des Projektes
+Ziel war es, die bestehende Beleuchtungsanlage durch energieeffiziente
+LED-Leuchten zu ersetzen, die Beleuchtungsstärke
+und Gleichmäßigkeit zu verbessern sowie den Energieverbrauch
+und CO₂-Ausstoß deutlich zu reduzieren – bei
+gleichzeitigem Erhalt des laufenden Parkhausbetriebs.
+Umsetzung
+Die Umrüstung erfolgte im laufenden Betrieb und nahezu
+ohne Einschränkungen für die Nutzer des Parkhauses. Die
+Installation verlief insgesamt problemlos.
+Die Ebenen schalten nun nach 10 Minuten ohne Bewegung
+automatisch auf ein Grundlicht herunter. Diese Funktion sorgt
+für eine zusätzliche, erhebliche Energieeinsparung.
+Zusätzliche Maßnahmen
+Neben dem Austausch der Leuchten wurden:
+Erneuerung bestehender Altverkabelung
+Modernisierung der Notbeleuchtung mit Integration
+in die vorhandene Zentralbatterieanlage
+Installation von Präsenzmeldern zur Realisierung zu
+sätzlicher Energieeinsparungen
+Teile der alten Verkabelung erneuert
+die Notbeleuchtung vollständig ersetzt
+die neuen Notleuchten an die bestehende ABB-Zentralbatterieanlage
+ViaFlex CPS angebunden
+Überwachungsbausteine ABB ViaFlex FLX integriert
+pro Ebene sechs Präsenzmelder installiert
+Alle alten Leuchten und Leuchtmittel wurden fachgerecht
+entsorgt. Zusätzlich wurden vorhandene Bestandsleuchten
+gereinigt. Die neuen Leuchten wurden auf eine minimale erforderliche
+Leistung programmiert, um Effizienz und Lebensdauer
+weiter zu optimieren.
+Eingesetzte Technik
+Neue LED-Leuchten
+360 × 17,7 W, 150 cm, 6.500 K – Waterproof IP66
+(RBC Sonderausführung)
+68 × 17,7 W Notlicht, 150 cm, 6.500 K – Waterproof IP66
+(DC-fähig, RBC Sonderausführung)
+157 × 11,3 W, 60 cm, 6.500 K – Waterproof IP66
+(RBC Sonderausführung)
+Umbau vorhandener Leuchten
+105 × Wandfluter von 54 W auf 26 W
+36 × Wandeinbauleuchten Ein-/Ausfahrt von 125 W auf 17,5 W
+Steuerung
+18 × BEG Präsenzmelder PD4-M-1C-K-AP
+Notlichtintegration
+ABB ViaFlex FLX Überwachungsbausteine
+ABB ViaFlex CPS Zentralbatterieanlage
+Die Lichtfarbe wurde einheitlich auf 6.500 K
+(Tageslichtweiß) ausgelegt, wodurch subjektiv eine
+deutlich höhere Beleuchtungsstärke sowie eine bessere
+Gleichmäßigkeit erreicht wurde.
+Ergebnisse
+Nach Abschluss der Umrüstung beträgt der jährliche
+Energiebedarf der Beleuchtungsanlage nur noch ca. 95.000 kWh.
+Energie & Effizienz
+Lichtqualität & Sicherheit Nachhaltigkeit
+Intelligente Steuerung & Technik
+Fazit
+Mit der LED-Umrüstung des Parkhauses P10 wurde ein nachhaltiges
+und zukunftssicheres Beleuchtungskonzept umgesetzt. Trotz
+laufendem Betrieb konnte das Projekt termingerecht und in kürzester
+Umbauzeit realisiert werden.
+Die Kombination aus moderner LED-Technik, intelligenter Steuerung
+und erneuerter Infrastruktur führt zu erheblichen Energieund
+CO₂-Einsparungen und verbessert gleichzeitig die Lichtqualität
+im gesamten Parkhaus deutlich.

@@ -174,6 +174,55 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* Parkhaus P10 */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-1 grid grid-cols-2 gap-3">
+                <img
+                  src="/parkhaus-p10-1.png"
+                  alt="Parkhaus P10 — LED-Umrüstung im laufenden Betrieb"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/parkhaus-p10-2.png"
+                  alt="Parkhaus P10 — neue Waterproof LED-Leuchten IP66"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <div className="order-2 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Parkhaus & Infrastruktur
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Parkhaus P10 — Vollständige LED-Modernisierung
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  726 veraltete T8-Leuchtstofflampen und HQL-Leuchtmittel wichen modernen Waterproof-LED-Leuchten (IP66, RBC Sonderausführung) in 6.500 K Tageslichtweiß. Die Umrüstung erfolgte im November–Dezember 2025 vollständig im laufenden Parkbetrieb — inklusive neuer Notbeleuchtung, integrierter ABB-Zentralbatterieanlage und Präsenzmeldern, die jede Ebene nach 10 Minuten auf Grundlicht dimmen.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">−72 %</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Vorher / Nachher</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">335 → 95 MWh</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Leuchten</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">726 Stk.</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>360× 17,7 W · 68× 17,7 W Notlicht · 157× 11,3 W — alle Waterproof IP66, 6.500 K</p>
+                  <p>105× Wandfluter 54 W → 26 W · 36× Wandeinbauleuchten 125 W → 17,5 W</p>
+                  <p>18× BEG Präsenzmelder · ABB ViaFlex CPS Zentralbatterieanlage</p>
+                </div>
+              </div>
+            </div>
+
             {/* Gleason-Pfauter Ludwigsburg */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-1 grid grid-cols-2 gap-3">
