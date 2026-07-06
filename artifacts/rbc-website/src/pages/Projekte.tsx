@@ -75,6 +75,49 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* MAAG */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-1">
+                <img
+                  src="/maag-halle.webp"
+                  alt="MAAG Germany GmbH Grossostheim — LED-Hallenbeleuchtung"
+                  className="w-full h-[380px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <div className="order-2 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Maschinenbau & Industrie
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  MAAG — Firma in neuem Licht
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  Die MAAG Germany GmbH in Grossostheim — Teil einer global führenden Gruppe für Kunststoff­industrie, Chemie und Pharma — setzte auf RBCs Full-Service-Konzept: kundenspezifische Fertigung, vollautomatische Lichtsteuerung mit Casambi und eine Sanierung des kompletten Standorts im laufenden Mehrschichtbetrieb.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">LED-System</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">3.350 m</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Leuchtstärke</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">bis 12.000 lm</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Steuerung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">Casambi</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>VEKO System Magnus, DALI · 3.350 m</p>
+                  <p>7.000–12.000 Lumen · 42W–80W</p>
+                  <p>Tageslichtsteuerung via Casambi</p>
+                </div>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-2xl font-display font-bold text-[#98B94B] mb-8 text-center">Weitere Referenzen</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
