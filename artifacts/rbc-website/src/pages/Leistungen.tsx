@@ -102,23 +102,14 @@ function TestimonialsSlideshow() {
   const t = testimonials[active];
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/hero-leistungen.png"
-          alt=""
-          className="w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-[#0D0F12]/82" />
-        <div
-          className="absolute inset-0 opacity-8"
-          style={{
-            backgroundImage: "linear-gradient(rgba(152,185,75,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.25) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
+    <section className="relative py-24 overflow-hidden bg-[#0D0F12]">
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage: "linear-gradient(rgba(152,185,75,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(152,185,75,0.4) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
 
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
         <p className="text-xs font-bold tracking-[0.3em] uppercase text-[#98B94B] mb-2">
