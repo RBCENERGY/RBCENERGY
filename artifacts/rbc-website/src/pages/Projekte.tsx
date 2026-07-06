@@ -233,12 +233,12 @@ export default function Projekte() {
                   BAG Mannheim — Neues Licht nach Maß
                 </h2>
                 <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
-                  Die Baustahl-Armierungsgesellschaft Mannheim mbH liefert und verlegt seit 1968 deutschlandweit Bau- und Armierungsstahl — mit über 7.000 begleiteten Baumaßnahmen, darunter Kraftwerks- und Tunnelbauten wie das GKM Mannheim. Nach gemeinsamer Analyse der 2.000 m² Außenfläche entschieden wir uns für 60 Hochleistungsstrahler mit Zigbee-Funksteuerung von Dresden Elektronik — eines der wenigen Systeme, das bei Kraneinstreuung störungsfrei über 100 m überbrückt.
+                  Die Baustahl-Armierungsgesellschaft Mannheim mbH liefert und verlegt seit 1968 deutschlandweit Bau- und Armierungsstahl — mit über 7.000 begleiteten Baumaßnahmen, darunter Kraftwerks- und Tunnelbauten wie das GKM Mannheim. Nach gemeinsamer Analyse der 20.000 m² Außenfläche entschieden wir uns für 60 Hochleistungsstrahler mit Zigbee-Funksteuerung von Dresden Elektronik — eines der wenigen Systeme, das bei Kraneinstreuung störungsfrei über 100 m überbrückt.
                 </p>
                 <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Fläche</div>
-                    <div className="text-2xl font-display font-bold text-[#98B94B]">2.000 m²</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">20.000 m²</div>
                   </div>
                   <div>
                     <div className="text-[#1a1a1a]/45 text-sm mb-1">Strahler</div>
