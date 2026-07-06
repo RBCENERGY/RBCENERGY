@@ -229,6 +229,55 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* Tenniscenter Weinsberg */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Sport & Freizeit
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  Tenniscenter Weinsberg — Hallenbeleuchtung neu
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  Tennissport erfordert blendfreies, gleichmäßiges Licht ohne Schatten — bei 4 Plätzen und verschiedenen Nutzungszonen keine leichte Aufgabe. RBC setzte für den neuen Betreiber auf VEKO Magnus Sport Lichtbänder entlang der Spielfelder, kombiniert mit DALI-Steuerung: Drei Beleuchtungsklassen pro Platz, individuell dimmbar, vollautomatisch mit dem Buchungssystem verzahnt. Montage in nur 4 Tagen, Wiedereröffnung termingerecht.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Spielfelder</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">4 Plätze</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Beleuchtungsstärke</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">500 lx</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Montagezeit</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">4 Tage</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>Spielfeld: VEKO Magnus Sport · 240 m · 9.879 lm · 500 lx · 67 W · DALI</p>
+                  <p>Sitzbereich/Grundlinie: VEKO Justin · 16× · 10.367 lm · 500 lx · 61,9 W · DALI</p>
+                  <p>3 Lichtszenen pro Platz · vollautomatische Buchungsintegration</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-3 grid grid-cols-2 gap-3">
+                <img
+                  src="/weinsberg-tennis-1.webp"
+                  alt="Tenniscenter Weinsberg — Lichtbänder entlang der Spielfelder"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/weinsberg-tennis-2.webp"
+                  alt="Tenniscenter Weinsberg — schattenfreie Ausleuchtung aller 4 Plätze"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             <div>
               <h3 className="text-2xl font-display font-bold text-[#98B94B] mb-8 text-center">Weitere Referenzen</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
