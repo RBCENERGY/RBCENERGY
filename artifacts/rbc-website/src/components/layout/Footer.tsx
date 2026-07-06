@@ -25,7 +25,7 @@ function VekoBadge() {
   return (
     <svg viewBox="0 0 130 130" className="w-24 h-24" role="img" aria-label="VEKO Lightsystems Official Partner">
       <circle cx="65" cy="65" r="63" fill="#F7F8F9" />
-      <text x="65" y="62" textAnchor="middle" fontSize="27" fontWeight="800" fill="#98B94B" letterSpacing="1" fontFamily="Manrope, sans-serif">VEKO</text>
+      <text x="65" y="62" textAnchor="middle" fontSize="27" fontWeight="800" fill="#C50019" letterSpacing="1" fontFamily="Manrope, sans-serif">VEKO</text>
       <text x="65" y="78" textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#25412D" letterSpacing="2.5" fontFamily="Manrope, sans-serif">LIGHTSYSTEMS</text>
       <text x="65" y="95" textAnchor="middle" fontSize="7.5" fontWeight="600" fill="#25412D" letterSpacing="1" fontFamily="Inter, sans-serif">Official Partner</text>
     </svg>
