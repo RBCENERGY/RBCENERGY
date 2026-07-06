@@ -68,6 +68,24 @@ const testimonials = [
     photo: "/testimonial-rothermel.webp",
     quote: `Mit Herrn Reinke und der RBC haben wir einen starken Partner an unserer Seite, der uns seit Jahren bei der Planung und der Beschaffung unserer Beleuchtung kompetent berät und unterstützt.`,
   },
+  {
+    name: "Reto Gerber",
+    company: "Holzgrosshandel Gerber",
+    photo: null,
+    quote: `Danke für die Erleuchtung. Unser Holz strahlt in den neu gestalteten Lagerflächen in bestem Licht.`,
+  },
+  {
+    name: "Dr. med. Rüdiger Leutgeb",
+    company: "Allgemeinmediziner in Rimbach, Praxis Dres. Leutgeb, Modl, Pielsticker",
+    photo: null,
+    quote: `Um in meiner Praxis verlässliche Diagnosen stellen zu können, benötige ich ein sehr spezielles, hochauflösendes Licht, mit hohem Beleuchtungsniveau und guter Farbwiedergabe. Christoph Reinke und sein Team haben uns ein optimales Beleuchtungskonzept erstellt und die Leuchten geliefert.`,
+  },
+  {
+    name: "Larissa Schenk",
+    company: "Zahnmedizin Schenk & Peters",
+    photo: "/testimonial-schenk.webp",
+    quote: `Das Beleuchtungskonzept unserer Praxis haben wir in die Hände von Christoph Reinke und seinem Team gelegt. Die gesamte Abwicklung des Auftrags lief reibungslos und zu unserer vollsten Zufriedenheit.`,
+  },
 ];
 
 function TestimonialsSlideshow() {
@@ -117,12 +135,18 @@ function TestimonialsSlideshow() {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="flex flex-col items-center max-w-3xl"
           >
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#98B94B]/40 mb-8 shadow-lg shrink-0">
-              <img
-                src={t.photo}
-                alt={t.name}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#98B94B]/40 mb-8 shadow-lg shrink-0 flex items-center justify-center bg-[#25412D]">
+              {t.photo ? (
+                <img
+                  src={t.photo}
+                  alt={t.name}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span className="text-[#98B94B] font-display font-bold text-2xl select-none">
+                  {t.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+                </span>
+              )}
             </div>
 
             <blockquote className="text-white/85 text-lg md:text-xl leading-relaxed italic mb-8">
