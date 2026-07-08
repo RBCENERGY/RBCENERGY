@@ -12,6 +12,7 @@ import Foerdermittel from "@/pages/Foerdermittel";
 import Unternehmen from "@/pages/Unternehmen";
 import News from "@/pages/News";
 import NewsLedFoerderung from "@/pages/NewsLedFoerderung";
+import NewsLeuchtstoffroehren from "@/pages/NewsLeuchtstoffroehren";
 import Kontakt from "@/pages/Kontakt";
 import Impressum from "@/pages/Impressum";
 import Datenschutz from "@/pages/Datenschutz";
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/unternehmen" component={Unternehmen} />
       <Route path="/news" component={News} />
       <Route path="/news/led-foerderung" component={NewsLedFoerderung} />
+      <Route path="/news/leuchtstoffroehren-verbot" component={NewsLeuchtstoffroehren} />
       <Route path="/kontakt" component={Kontakt} />
       <Route path="/impressum" component={Impressum} />
       <Route path="/datenschutz" component={Datenschutz} />

@@ -42,6 +42,7 @@ const articles: Article[] = [
     title: "Leuchtstoffröhren-Verbot: Was Unternehmen jetzt tun müssen",
     category: "Branchen-News",
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
+    link: "/news/leuchtstoffroehren-verbot",
   },
 ];
 
