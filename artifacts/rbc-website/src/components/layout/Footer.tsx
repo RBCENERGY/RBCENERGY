@@ -1,23 +1,18 @@
 import { Link } from "wouter";
-import { useId } from "react";
 import { FaFacebookF, FaLinkedinIn, FaXing } from "react-icons/fa";
 
 function MembershipBadge() {
-  const arcId = useId();
   return (
-    <svg viewBox="0 0 150 150" className="w-32 h-32" role="img" aria-label="Mitglied im Green Industry Cluster">
-      <circle cx="75" cy="75" r="73" fill="#F7F8F9" />
-      <defs>
-        <path id={arcId} d="M 22 75 A 53 53 0 0 1 128 75" fill="none" />
-      </defs>
-      <text fill="#25412D" fontSize="12.5" fontWeight="700" letterSpacing="1.5" fontFamily="Manrope, sans-serif">
-        <textPath href={`#${arcId}`} startOffset="50%" textAnchor="middle">WIR SIND MITGLIED</textPath>
-      </text>
-      <text x="72" y="92" textAnchor="middle" fontSize="46" fontWeight="800" fill="#98B94B" fontFamily="Manrope, sans-serif">g</text>
-      <circle cx="93" cy="60" r="4" fill="#98B94B" />
-      <text x="75" y="108" textAnchor="middle" fontSize="9" fontWeight="700" fill="#25412D" fontFamily="Manrope, sans-serif">Green Industry</text>
-      <text x="75" y="119" textAnchor="middle" fontSize="9" fontWeight="700" fill="#25412D" fontFamily="Manrope, sans-serif">Cluster</text>
-    </svg>
+    <div className="flex flex-col items-center gap-2">
+      <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Wir sind Mitglied</p>
+      <div className="bg-white p-3 rounded-full">
+        <img
+          src="/green-industry-cluster.png"
+          alt="Mitglied im Green Industry Cluster"
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+    </div>
   );
 }
 
@@ -33,19 +28,11 @@ function VekoBadge() {
 
 function IsoBadge() {
   return (
-    <svg viewBox="0 0 130 140" className="w-24 h-24" role="img" aria-label="ISO 9001 zertifiziert">
-      <circle cx="65" cy="58" r="46" fill="none" stroke="#98B94B" strokeWidth="1.5" opacity="0.7" />
-      <ellipse cx="65" cy="58" rx="18" ry="46" fill="none" stroke="#ffffff" strokeWidth="1" opacity="0.25" />
-      <line x1="19" y1="58" x2="111" y2="58" stroke="#ffffff" strokeWidth="1" opacity="0.25" />
-      <line x1="26" y1="34" x2="104" y2="34" stroke="#ffffff" strokeWidth="1" opacity="0.25" />
-      <line x1="26" y1="82" x2="104" y2="82" stroke="#ffffff" strokeWidth="1" opacity="0.25" />
-      <text x="58" y="66" textAnchor="middle" fontSize="26" fontWeight="800" fill="#ffffff" fontFamily="Manrope, sans-serif">ISO</text>
-      <rect x="70" y="47" width="34" height="17" fill="#98B94B" />
-      <text x="87" y="60" textAnchor="middle" fontSize="12" fontWeight="800" fill="#0D0F12" fontFamily="Manrope, sans-serif">9001</text>
-      <text x="65" y="122" textAnchor="middle" fontSize="9" fontWeight="700" fill="#ffffff" letterSpacing="2" fontFamily="Manrope, sans-serif">ZERTIFIZIERT</text>
-      <path d="M 50 100 L 42 132 L 54 124 L 62 112 Z" fill="#98B94B" />
-      <path d="M 80 100 L 88 132 L 76 124 L 68 112 Z" fill="#98B94B" />
-    </svg>
+    <img
+      src="/iso-9001-badge.png"
+      alt="ISO 9001 zertifiziert"
+      className="w-24 h-24 object-contain"
+    />
   );
 }
 
