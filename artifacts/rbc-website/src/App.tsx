@@ -13,6 +13,8 @@ import Unternehmen from "@/pages/Unternehmen";
 import News from "@/pages/News";
 import NewsLedFoerderung from "@/pages/NewsLedFoerderung";
 import NewsLeuchtstoffroehren from "@/pages/NewsLeuchtstoffroehren";
+import NewsCasambi from "@/pages/NewsCasambi";
+import NewsIso9001 from "@/pages/NewsIso9001";
 import Kontakt from "@/pages/Kontakt";
 import Impressum from "@/pages/Impressum";
 import Datenschutz from "@/pages/Datenschutz";
@@ -33,6 +35,8 @@ function Router() {
       <Route path="/news" component={News} />
       <Route path="/news/led-foerderung" component={NewsLedFoerderung} />
       <Route path="/news/leuchtstoffroehren-verbot" component={NewsLeuchtstoffroehren} />
+      <Route path="/news/casambi-modul" component={NewsCasambi} />
+      <Route path="/news/iso-9001" component={NewsIso9001} />
       <Route path="/kontakt" component={Kontakt} />
       <Route path="/impressum" component={Impressum} />
       <Route path="/datenschutz" component={Datenschutz} />

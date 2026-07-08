@@ -44,6 +44,20 @@ const articles: Article[] = [
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
     link: "/news/leuchtstoffroehren-verbot",
   },
+  {
+    date: "15. Juli 2021",
+    title: "RBC entwickelt ein Casambi Modul",
+    category: "RBC Produkte",
+    excerpt: "Mit dem RBC-Casambi-Modul wird unser bewährter Hallenstrahler LGE Solaris intelligent steuerbar — per App, Sensoren oder Schaltern. Flexibel, erweiterbar und zukunftssicher.",
+    link: "/news/casambi-modul",
+  },
+  {
+    date: "1. Juli 2021",
+    title: "RBC ist ISO 9001 zertifiziert!",
+    category: "RBC News",
+    excerpt: "Unser Streben nach Optimierung ist jetzt amtlich: RBC ist ISO 9001 zertifiziert. Klar definierte Verantwortlichkeiten, transparente Prozesse und geschultes Personal garantieren Qualität.",
+    link: "/news/iso-9001",
+  },
 ];
 
 export default function News() {
