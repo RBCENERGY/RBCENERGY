@@ -1,6 +1,7 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { motion, type Variants } from "framer-motion";
+import { Link } from "wouter";
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 const fadeUp: Variants = {
@@ -13,6 +14,7 @@ type Article = {
   title: string;
   category: string;
   excerpt: string;
+  link?: string;
   video?: string;
   pressLink?: string;
   pressSource?: string;
@@ -24,6 +26,7 @@ const articles: Article[] = [
     title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
     category: "Fördermittel",
     excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
+    link: "/news/led-foerderung",
   },
   {
     date: "30. September 2024",
@@ -116,10 +119,14 @@ export default function News() {
                   >
                     Pressebericht lesen <ExternalLink size={13} />
                   </a>
-                ) : (
-                  <a href="#" className="text-[#98B94B] font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto group-hover:gap-3 transition-all">
+                ) : article.link ? (
+                  <Link href={article.link} className="text-[#98B94B] font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto group-hover:gap-3 transition-all">
                     Weiterlesen <ArrowRight size={14} />
-                  </a>
+                  </Link>
+                ) : (
+                  <span className="text-[#98B94B]/40 font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto">
+                    Demnächst
+                  </span>
                 )}
               </motion.article>
             ))}
