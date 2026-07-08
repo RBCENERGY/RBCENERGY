@@ -17,7 +17,7 @@ const values = [
   {
     icon: <Shield size={28} />,
     title: "Geprüfte Qualität",
-    desc: "Als offizieller Veko-Partner für Süddeutschland verbauen wir ausschließlich langlebige Premium-Komponenten, die für den Dauerbetrieb ausgelegt sind.",
+    desc: "Als zertifizierter Veko Lightsystems Partnerbetrieb verbauen wir ausschließlich langlebige Premium-Komponenten, die für den industriellen Dauerbetrieb ausgelegt und geprüft sind.",
   },
   {
     icon: <Users size={28} />,
@@ -29,7 +29,7 @@ const values = [
 const stats = [
   { value: "Seit 2009", label: "Am Markt" },
   { value: "bis 80%", label: "Energieeinsparung" },
-  { value: "Veko-Partner", label: "Süddeutschland" },
+  { value: "Veko", label: "Partnerbetrieb" },
   { value: "100%", label: "aus einer Hand" },
 ];
 

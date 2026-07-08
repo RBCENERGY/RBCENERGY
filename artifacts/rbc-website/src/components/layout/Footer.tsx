@@ -75,8 +75,8 @@ export function Footer() {
           </p>
 
           <p className="text-sm leading-relaxed">
-            Telefonisch erreichen Sie uns <span className="text-white font-semibold">Montag bis Freitag</span> von{" "}
-            <span className="text-white font-semibold">08:00 bis 17:00 Uhr</span> unter:
+            Telefonisch erreichen Sie uns <span className="text-white font-semibold">Mo – Do 08:00–17:00 Uhr</span> und{" "}
+            <span className="text-white font-semibold">Fr 08:00–15:00 Uhr</span> unter:
           </p>
 
           <p className="text-sm">

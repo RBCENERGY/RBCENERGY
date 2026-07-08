@@ -280,7 +280,7 @@ export default function Kontakt() {
                     </div>
                     <div>
                       <h4 className="text-[#1a1a1a] font-bold mb-1">Öffnungszeiten</h4>
-                      <p className="text-[#1a1a1a]/55">Montag bis Freitag<br />08:00 – 17:00 Uhr</p>
+                      <p className="text-[#1a1a1a]/55">Mo – Do: 08:00 – 17:00 Uhr<br />Fr: 08:00 – 15:00 Uhr</p>
                     </div>
                   </div>
 

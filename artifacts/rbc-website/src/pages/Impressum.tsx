@@ -62,6 +62,10 @@ export default function Impressum() {
               </p>
             </Block>
 
+            <Block title="Vertreten durch">
+              <p>Geschäftsführer: Christoph Reinke</p>
+            </Block>
+
             <Block title="Kontakt">
               <p>
                 Telefon: <a href="tel:+4962211852020" className="hover:text-[#98B94B] transition-colors">+49 (0) 6221 / 18520-20</a><br />
