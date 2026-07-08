@@ -28,7 +28,7 @@ const articles: Article[] = [
     category: "Fördermittel",
     excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
     link: "/news/led-foerderung",
-    image: "/hero-foerdermittel.png",
+    image: "/news-foerderung.png",
   },
   {
     date: "30. September 2024",
@@ -45,7 +45,7 @@ const articles: Article[] = [
     category: "Branchen-News",
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
     link: "/news/leuchtstoffroehren-verbot",
-    image: "/hero-industry.png",
+    image: "/news-verbot.png",
   },
   {
     date: "15. Juli 2021",

@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "r2DU-0jcCBfa_0NvBngk6"
@@ -66,3 +65,51 @@ id = "KsHn-v7afJ7DGBvZRsjSO"
 uri = "file://artifacts/rbc-website/public/hero-kontakt.png"
 type = "image"
 title = "contact hero"
+
+[[generated]]
+id = "Rd77ItX8Ll8-WyZRHHrmr"
+uri = "file://artifacts/rbc-website/public/news-foerderung.png"
+type = "image"
+title = "LED Foerderung Halle"
+
+[[generated]]
+id = "3w7dnFlVSHCwsZqP0NEpF"
+uri = "file://artifacts/rbc-website/public/news-verbot.png"
+type = "image"
+title = "Leuchtstoffroehren Austausch"
+
+[[outputs]]
+id = "fso1sFJAtfO-GD70AhvJm"
+uri = "file://attached_assets/stock_images/news_led_foerderung_1.jpg"
+type = "image"
+title = "LED lighting industrial hall energy efficiency modern warehouse ceiling lights"
+
+[[outputs]]
+id = "fyKT6YmzlQzGnioUucZSU"
+uri = "file://attached_assets/stock_images/news_led_foerderung_2.jpg"
+type = "image"
+title = "LED lighting industrial hall energy efficiency modern warehouse ceiling lights"
+
+[[outputs]]
+id = "hakA2JqpZScCl_l_kEHVL"
+uri = "file://attached_assets/stock_images/news_led_foerderung_3.jpg"
+type = "image"
+title = "LED lighting industrial hall energy efficiency modern warehouse ceiling lights"
+
+[[outputs]]
+id = "8BZMxzrpQEgVDS_ldD52Y"
+uri = "file://attached_assets/stock_images/news_leuchtstoffroehren_1.jpg"
+type = "image"
+title = "fluorescent tube lamps old lighting replacement close up"
+
+[[outputs]]
+id = "armefi5t5WjCvxqJZOR98"
+uri = "file://attached_assets/stock_images/news_leuchtstoffroehren_2.jpg"
+type = "image"
+title = "fluorescent tube lamps old lighting replacement close up"
+
+[[outputs]]
+id = "3fwmLyrohuiqwiqRd8BT-"
+uri = "file://attached_assets/stock_images/news_leuchtstoffroehren_3.jpg"
+type = "image"
+title = "fluorescent tube lamps old lighting replacement close up"
