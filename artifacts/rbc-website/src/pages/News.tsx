@@ -31,7 +31,7 @@ const articles: Article[] = [
     image: "/news-gic-parkhaus.jpg",
   },
   {
-    date: "8. Juli 2026",
+    date: "Januar 2026",
     title: "LED-Umrüstung für Unternehmen – Einfach erklärt",
     category: "RBC News",
     excerpt: "Wie läuft eine LED-Umrüstung mit RBC ab? Unser neues Video erklärt in wenigen Minuten den kompletten Ablauf — von der Lichtplanung über die Förderung bis zur fertigen Anlage.",
