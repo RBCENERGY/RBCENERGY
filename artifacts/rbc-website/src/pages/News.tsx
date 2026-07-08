@@ -15,6 +15,7 @@ type Article = {
   category: string;
   excerpt: string;
   link?: string;
+  image?: string;
   video?: string;
   pressLink?: string;
   pressSource?: string;
@@ -27,6 +28,7 @@ const articles: Article[] = [
     category: "Fördermittel",
     excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
     link: "/news/led-foerderung",
+    image: "/hero-foerdermittel.png",
   },
   {
     date: "30. September 2024",
@@ -43,6 +45,7 @@ const articles: Article[] = [
     category: "Branchen-News",
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
     link: "/news/leuchtstoffroehren-verbot",
+    image: "/hero-industry.png",
   },
   {
     date: "15. Juli 2021",
@@ -50,6 +53,7 @@ const articles: Article[] = [
     category: "RBC Produkte",
     excerpt: "Mit dem RBC-Casambi-Modul wird unser bewährter Hallenstrahler LGE Solaris intelligent steuerbar — per App, Sensoren oder Schaltern. Flexibel, erweiterbar und zukunftssicher.",
     link: "/news/casambi-modul",
+    image: "/news-casambi.webp",
   },
   {
     date: "1. Juli 2021",
@@ -57,6 +61,7 @@ const articles: Article[] = [
     category: "RBC News",
     excerpt: "Unser Streben nach Optimierung ist jetzt amtlich: RBC ist ISO 9001 zertifiziert. Klar definierte Verantwortlichkeiten, transparente Prozesse und geschultes Personal garantieren Qualität.",
     link: "/news/iso-9001",
+    image: "/news-iso9001.png",
   },
 ];
 
@@ -112,6 +117,16 @@ export default function News() {
                 </div>
                 <h3 className="text-xl font-display font-bold text-[#1a1a1a] mb-4 leading-snug">{article.title}</h3>
                 <p className="text-[#1a1a1a]/55 text-sm leading-relaxed mb-6 flex-grow">{article.excerpt}</p>
+
+                {article.image && (
+                  <div className="mb-6 aspect-video w-full overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
 
                 {article.video && (
                   <div className="mb-6 aspect-video w-full overflow-hidden">
