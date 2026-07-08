@@ -23,6 +23,14 @@ type Article = {
 
 const articles: Article[] = [
   {
+    date: "Juli 2026",
+    title: "Ein Projekt, das sich sehen lassen kann",
+    category: "Presse & Projekte",
+    excerpt: "Der Green Industry Cluster berichtet über unsere LED-Sanierung des Parkhauses P10 in Heidelberg: über 700 Leuchten getauscht, 240.000 kWh und 154 Tonnen CO₂ pro Jahr eingespart – bei laufendem Betrieb.",
+    link: "/news/green-industry-cluster",
+    image: "/news-gic-parkhaus.jpg",
+  },
+  {
     date: "8. Juli 2026",
     title: "LED-Umrüstung für Unternehmen – Einfach erklärt",
     category: "RBC News",
