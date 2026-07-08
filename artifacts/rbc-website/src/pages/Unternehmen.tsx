@@ -78,23 +78,6 @@ export default function Unternehmen() {
       {/* Values */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          {/* Statement */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center mb-16"
-          >
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#98B94B] mb-6">• WIR SIND FÜR SIE DA •</p>
-            <p className="text-[#1a1a1a]/80 text-lg leading-relaxed mb-5">
-              In der RBC GmbH vereinen wir langjährige Erfahrung, Expertise, die Begeisterung für Lichtdesign und Freude an der Arbeit. Unsere Architekten und Designer erarbeiten professionelle Komplettlösungen nach Ihren Wünschen. Bei der Planung Ihrer Beleuchtungsanlage und der Auswahl unserer Produkte folgen wir stets unserem Leitbild: Dem Schutz von Umwelt, Natur und Mensch sowie der behutsame Umgang mit den Ressourcen.
-            </p>
-            <p className="text-[#1a1a1a]/60 text-base leading-relaxed">
-              Überzeugen Sie sich von unseren Leistungen und kontaktieren Sie uns gerne für ein unverbindliches Informationsgespräch. Unser Team steht Ihnen gerne jederzeit zur Seite und wir freuen uns darauf von Ihnen zu hören!
-            </p>
-          </motion.div>
-
           <div className="max-w-2xl mb-10">
             <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Unsere Werte</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#1a1a1a] leading-tight">
@@ -118,6 +101,23 @@ export default function Unternehmen() {
               </motion.div>
             ))}
           </div>
+
+          {/* Statement */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center mt-16"
+          >
+            <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#98B94B] mb-6">• WIR SIND FÜR SIE DA •</p>
+            <p className="text-[#1a1a1a]/80 text-lg leading-relaxed mb-5">
+              In der RBC GmbH vereinen wir langjährige Erfahrung, Expertise, die Begeisterung für Lichtdesign und Freude an der Arbeit. Unsere Architekten und Designer erarbeiten professionelle Komplettlösungen nach Ihren Wünschen. Bei der Planung Ihrer Beleuchtungsanlage und der Auswahl unserer Produkte folgen wir stets unserem Leitbild: Dem Schutz von Umwelt, Natur und Mensch sowie der behutsame Umgang mit den Ressourcen.
+            </p>
+            <p className="text-[#1a1a1a]/60 text-base leading-relaxed">
+              Überzeugen Sie sich von unseren Leistungen und kontaktieren Sie uns gerne für ein unverbindliches Informationsgespräch. Unser Team steht Ihnen gerne jederzeit zur Seite und wir freuen uns darauf von Ihnen zu hören!
+            </p>
+          </motion.div>
         </div>
       </section>
 
