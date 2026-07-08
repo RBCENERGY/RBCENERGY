@@ -197,6 +197,12 @@ export default function NewsLedFoerderung() {
                   Die Umrüstung auf LED ist nicht nur ökologisch sinnvoll, sondern auch ökonomisch extrem attraktiv. Nutzen Sie die aktuellen Förderprogramme, um Ihre Investitionen zu reduzieren und dauerhaft Betriebskosten zu sparen. Besonders Unternehmen mit hohen Beleuchtungslaufzeiten (z. B. Lager, Produktion, Logistik) profitieren massiv.
                 </p>
               </div>
+
+              <div className="mt-10">
+                <Link href="/news" className="inline-flex items-center gap-2 text-[#1a1a1a]/50 hover:text-[#98B94B] font-bold text-xs uppercase tracking-widest transition-all hover:gap-3">
+                  <ArrowLeft size={14} /> Zurück zu News
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
