@@ -23,6 +23,13 @@ type Article = {
 
 const articles: Article[] = [
   {
+    date: "8. Juli 2026",
+    title: "LED-Umrüstung für Unternehmen – Einfach erklärt",
+    category: "RBC News",
+    excerpt: "Wie läuft eine LED-Umrüstung mit RBC ab? Unser neues Video erklärt in wenigen Minuten den kompletten Ablauf — von der Lichtplanung über die Förderung bis zur fertigen Anlage.",
+    video: "https://www.youtube.com/embed/PGaPyx55tWs",
+  },
+  {
     date: "17. Juni 2025",
     title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
     category: "Fördermittel",
@@ -153,7 +160,7 @@ export default function News() {
                   <Link href={article.link} className="text-[#98B94B] font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto group-hover:gap-3 transition-all">
                     Weiterlesen <ArrowRight size={14} />
                   </Link>
-                ) : (
+                ) : article.video ? null : (
                   <span className="text-[#98B94B]/40 font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto">
                     Demnächst
                   </span>
