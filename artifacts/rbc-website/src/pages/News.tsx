@@ -1,7 +1,7 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, ExternalLink, Play } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -29,7 +29,7 @@ const articles: Article[] = [
     date: "30. September 2024",
     title: "Linamar: Komplette Umstellung auf LED – jetzt auch in der Presse",
     category: "Presse & Projekte",
-    excerpt: "VEKO Lightsystems lieferte fast 3 km Aluminiumprofile und 1.700 LED-Einheiten für die Produktionsumgebung von Linamar in Plettenberg. Die nachhaltige Beleuchtung senkt die Energiekosten und verbessert den Arbeitsbereich – passend zur Effizienz- und Nachhaltigkeitsstrategie von Linamar.",
+    excerpt: "VEKO Lightsystems lieferte fast 3 km Aluminiumprofile und 1.700 LED-Einheiten für die Produktionsumgebung von Linamar in Plettenberg. Die nachhaltige Beleuchtung senkt die Energiekosten und verbessert den Arbeitsbereich.",
     video: "https://www.youtube.com/embed/UGc2nouXnGQ",
     pressLink: "https://bauprojekte.online/projekte/veko-lightsystems-linamar-plettenberg/",
     pressSource: "bauprojekte.online",
@@ -78,20 +78,25 @@ export default function News() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map((article, i) =>
-              article.video ? (
-                /* Featured press article — spans full row on lg */
-                <motion.article
-                  key={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  custom={i}
-                  className="lg:col-span-3 bg-white border border-black/[0.08] hover:border-[#98B94B]/50 hover:shadow-xl transition-all flex flex-col lg:flex-row group overflow-hidden"
-                >
-                  {/* Video embed */}
-                  <div className="lg:w-1/2 aspect-video lg:aspect-auto lg:min-h-[300px] bg-black flex-shrink-0">
+            {articles.map((article, i) => (
+              <motion.article
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                custom={i}
+                className="bg-white border border-black/[0.08] p-8 hover:border-[#98B94B]/50 hover:shadow-xl transition-all flex flex-col group"
+              >
+                <div className="flex justify-between items-center mb-5">
+                  <span className="text-[#25412D] bg-[#98B94B]/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest">{article.category}</span>
+                  <span className="text-[#1a1a1a]/40 text-sm">{article.date}</span>
+                </div>
+                <h3 className="text-xl font-display font-bold text-[#1a1a1a] mb-4 leading-snug">{article.title}</h3>
+                <p className="text-[#1a1a1a]/55 text-sm leading-relaxed mb-6 flex-grow">{article.excerpt}</p>
+
+                {article.video && (
+                  <div className="mb-6 aspect-video w-full overflow-hidden">
                     <iframe
                       src={article.video}
                       title={article.title}
@@ -100,56 +105,24 @@ export default function News() {
                       className="w-full h-full"
                     />
                   </div>
+                )}
 
-                  {/* Text */}
-                  <div className="p-8 flex flex-col justify-between lg:w-1/2">
-                    <div>
-                      <div className="flex justify-between items-center mb-5">
-                        <span className="text-[#25412D] bg-[#98B94B]/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest inline-flex items-center gap-1.5">
-                          <Play size={9} />
-                          {article.category}
-                        </span>
-                        <span className="text-[#1a1a1a]/40 text-sm">{article.date}</span>
-                      </div>
-                      <h3 className="text-xl font-display font-bold text-[#1a1a1a] mb-4 leading-snug">{article.title}</h3>
-                      <p className="text-[#1a1a1a]/55 text-sm leading-relaxed mb-6">{article.excerpt}</p>
-                    </div>
-
-                    {article.pressLink && (
-                      <a
-                        href={article.pressLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-[#98B94B] font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all mt-auto"
-                      >
-                        Pressebericht auf {article.pressSource} lesen <ExternalLink size={13} />
-                      </a>
-                    )}
-                  </div>
-                </motion.article>
-              ) : (
-                /* Regular article card */
-                <motion.article
-                  key={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  custom={i}
-                  className="bg-white border border-black/[0.08] p-8 hover:border-[#98B94B]/50 hover:shadow-xl transition-all flex flex-col group"
-                >
-                  <div className="flex justify-between items-center mb-5">
-                    <span className="text-[#25412D] bg-[#98B94B]/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest">{article.category}</span>
-                    <span className="text-[#1a1a1a]/40 text-sm">{article.date}</span>
-                  </div>
-                  <h3 className="text-xl font-display font-bold text-[#1a1a1a] mb-4 leading-snug line-clamp-3">{article.title}</h3>
-                  <p className="text-[#1a1a1a]/55 text-sm leading-relaxed mb-8 flex-grow">{article.excerpt}</p>
+                {article.pressLink ? (
+                  <a
+                    href={article.pressLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#98B94B] font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto group-hover:gap-3 transition-all"
+                  >
+                    Pressebericht lesen <ExternalLink size={13} />
+                  </a>
+                ) : (
                   <a href="#" className="text-[#98B94B] font-bold text-xs uppercase tracking-widest inline-flex items-center gap-2 mt-auto group-hover:gap-3 transition-all">
                     Weiterlesen <ArrowRight size={14} />
                   </a>
-                </motion.article>
-              )
-            )}
+                )}
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
