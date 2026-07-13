@@ -119,3 +119,9 @@ id = "3fwmLyrohuiqwiqRd8BT-"
 uri = "file://attached_assets/stock_images/news_leuchtstoffroehren_3.jpg"
 type = "image"
 title = "fluorescent tube lamps old lighting replacement close up"
+
+[[outputs]]
+id = "QCapGV--skPQBbt_FHB7z"
+uri = "file://rbc-website-dist.zip"
+type = "unspecified"
+title = "RBC Website – Produktions-Build (dist)"
