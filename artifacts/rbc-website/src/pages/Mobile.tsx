@@ -89,10 +89,6 @@ export default function Mobile() {
         </div>
         <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-[2px] bg-[#98B94B]" />
-              <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest">Modulare Ladeinfrastruktur</span>
-            </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
               Elektromobilität für Ihre <span className="text-[#98B94B]">Immobilie</span>
             </h1>
@@ -113,10 +109,7 @@ export default function Mobile() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="w-10 h-[2px] bg-[#98B94B]" />
-                <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest">Kennen Sie es auch?</span>
-              </div>
+              <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Kennen Sie es auch?</span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a] leading-tight mb-6">
                 Die richtige Entscheidung im Wandel der Energiewirtschaft
               </h2>
@@ -153,10 +146,7 @@ export default function Mobile() {
       <section className="py-24 bg-[#F7F8F9]">
         <div className="container mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl mb-14">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-[2px] bg-[#98B94B]" />
-              <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest">Unsere Leistungen</span>
-            </div>
+            <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Unsere Leistungen</span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a] leading-tight">
               Unsere Leistungen für Ihre WEG
             </h2>
@@ -186,10 +176,7 @@ export default function Mobile() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="w-10 h-[2px] bg-[#98B94B]" />
-                <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest">Ihre passende Förderung</span>
-              </div>
+              <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Ihre passende Förderung</span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a] leading-tight mb-6">
                 Fördermöglichkeiten für WEG in <span className="text-[#98B94B]">Baden-Württemberg</span>
               </h2>
@@ -237,10 +224,7 @@ export default function Mobile() {
       <section className="py-24 bg-[#F7F8F9]">
         <div className="container mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl mb-14">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-[2px] bg-[#98B94B]" />
-              <span className="text-[#98B94B] text-xs font-bold uppercase tracking-widest">Ihre Vorteile</span>
-            </div>
+            <span className="inline-block bg-[#EDF1E4] text-[#25412D] text-base font-bold uppercase tracking-widest px-4 py-2 mb-4">Ihre Vorteile</span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a] leading-tight mb-4">
               Die Vorteile für Ihre WEG
             </h2>
