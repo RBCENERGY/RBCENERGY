@@ -44,7 +44,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-8 lg:mr-10 xl:mr-16">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-8">
           {navItems.map((item) => {
             const isActive = location.startsWith(item.path);
             const textColor = isActive
@@ -63,6 +63,12 @@ export function Header() {
             );
           })}
         </nav>
+
+        <Link href="/kontakt" className="hidden lg:block" data-testid="button-kontakt-desktop">
+          <button className="bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold tracking-widest uppercase text-xs px-5 xl:px-7 py-3 whitespace-nowrap transition-colors">
+            Kostenlose Beratung
+          </button>
+        </Link>
 
         {/* Mobile Toggle */}
         <button
