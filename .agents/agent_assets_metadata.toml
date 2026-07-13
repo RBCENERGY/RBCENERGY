@@ -78,6 +78,12 @@ uri = "file://artifacts/rbc-website/public/news-verbot.png"
 type = "image"
 title = "Leuchtstoffroehren Austausch"
 
+[[generated]]
+id = "eC_EzC9JQew4p1Y-CfvS4"
+uri = "file://artifacts/rbc-website/public/hero-mobile.png"
+type = "image"
+title = "EV charging garage hero"
+
 [[outputs]]
 id = "fso1sFJAtfO-GD70AhvJm"
 uri = "file://attached_assets/stock_images/news_led_foerderung_1.jpg"
