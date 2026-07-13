@@ -1,24 +1,19 @@
 ---
 name: RBC contact form email
-description: How the Kontakt form delivers email and the Resend domain-verification constraint
+description: Kontakt form posts to external PHP endpoint; Resend/api-server route was removed on purpose
 ---
 
-The RBC website Kontakt form POSTs to the api-server `/api/contact` route, which sends
-mail via the Resend integration (Replit connectors-sdk proxy, `connectors.proxy("resend", "/emails", ...)`).
+The RBC website Kontakt form POSTs JSON to the **relative path `/api/send-mail.php`**
+and treats the submission as successful only when the response body contains
+`success: true` (otherwise it shows the inline error message, no page reload).
 
-Sender/recipient are env-configurable:
-- `CONTACT_TO` — recipient, defaults to `info@rbc-energy.de`
-- `CONTACT_FROM` — sender, defaults to `RBC GmbH Website <onboarding@resend.dev>`
+**Why:** The user ships the site as a static `dist` export to external hosting where a
+PHP script handles mail delivery (intended recipient: `c.reinke@rbc-energy.de`, kept
+in the PHP script, not in this repo). The former api-server `/api/contact` route, the
+Resend lib, and the `@replit/connectors-sdk` dependency were deliberately removed
+(July 2026) — do not reintroduce them or "fix" the .php URL.
 
-**Constraint / gotcha:** Resend refuses to deliver to arbitrary recipients until a
-sending domain is verified at resend.com/domains. Until then it returns **403
-validation_error** and only allows sending to the Resend account owner's own email
-from `onboarding@resend.dev`.
-
-**Why:** This is a Resend account-level requirement, not a code bug — the route,
-validation, and proxy call are correct (a 403 with "verify a domain" means success
-up to that point).
-
-**How to apply:** To make the form deliver to `info@rbc-energy.de` in production, the
-user must verify a domain (ideally rbc-energy.de) in Resend, then set `CONTACT_FROM`
-to a mailbox on that domain. No code change needed.
+**How to apply:** In the Replit dev preview the form will 404 (no PHP host) — that is
+expected, not a bug. Static builds are made with
+`NODE_ENV=production PORT=5000 BASE_PATH=/ pnpm --filter @workspace/rbc-website run build`
+and zipped from `artifacts/rbc-website/dist/public`.

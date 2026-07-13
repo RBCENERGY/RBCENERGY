@@ -48,13 +48,13 @@ export default function Kontakt() {
     setErrorMessage("");
     setFieldErrors({});
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/send-mail.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
+      const body = await res.json().catch(() => null);
+      if (!res.ok || body?.success !== true) {
         const errors = body?.errors as Record<string, string[]> | undefined;
         if (errors) {
           const mapped: FieldErrors = {};
