@@ -1,7 +1,7 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBand } from "@/components/modules/CtaBand";
 import { motion, type Variants } from "framer-motion";
-import { Users, Award, Shield } from "lucide-react";
+import { Users, Award, Shield, Lightbulb, Leaf, MessageCircle } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -23,6 +23,21 @@ const values = [
     icon: <Users size={28} />,
     title: "Alles aus einer Hand",
     desc: "Von der ersten Lichtmessung über die Förderantragstellung und Montage bis zur Entsorgung der Altleuchten und laufenden Wartung haben Sie bei uns genau einen Ansprechpartner.",
+  },
+  {
+    icon: <Lightbulb size={28} />,
+    title: "Leidenschaft für Lichtdesign",
+    desc: "Wir vereinen langjährige Erfahrung mit echter Begeisterung für Licht. Unsere Architekten und Designer erarbeiten professionelle Komplettlösungen nach Ihren Wünschen — funktional, effizient und ästhetisch.",
+  },
+  {
+    icon: <Leaf size={28} />,
+    title: "Verantwortung für Umwelt & Mensch",
+    desc: "Bei jeder Planung folgen wir unserem Leitbild: dem Schutz von Umwelt, Natur und Mensch sowie dem behutsamen Umgang mit Ressourcen. Energie sparen, Elektromüll vermeiden, Wertstoffe recyceln.",
+  },
+  {
+    icon: <MessageCircle size={28} />,
+    title: "Persönlich für Sie da",
+    desc: "Überzeugen Sie sich von unseren Leistungen — in einem unverbindlichen Informationsgespräch. Unser Team steht Ihnen jederzeit zur Seite und freut sich darauf, von Ihnen zu hören.",
   },
 ];
 
@@ -102,32 +117,6 @@ export default function Unternehmen() {
             ))}
           </div>
 
-          {/* Statement cards */}
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            {[
-              {
-                label: "• WIR SIND FÜR SIE DA •",
-                text: "In der RBC GmbH vereinen wir langjährige Erfahrung, Expertise, die Begeisterung für Lichtdesign und Freude an der Arbeit. Unsere Architekten und Designer erarbeiten professionelle Komplettlösungen nach Ihren Wünschen. Bei der Planung Ihrer Beleuchtungsanlage und der Auswahl unserer Produkte folgen wir stets unserem Leitbild: Dem Schutz von Umwelt, Natur und Mensch sowie der behutsame Umgang mit den Ressourcen.",
-              },
-              {
-                label: "• IHR ANSPRECHPARTNER •",
-                text: "Überzeugen Sie sich von unseren Leistungen und kontaktieren Sie uns gerne für ein unverbindliches Informationsgespräch. Unser Team steht Ihnen gerne jederzeit zur Seite und wir freuen uns darauf von Ihnen zu hören!",
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                custom={i}
-                className="bg-white border border-black/[0.08] p-6 sm:p-8 md:p-10 hover:border-[#98B94B]/50 hover:shadow-xl transition-all"
-              >
-                <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#98B94B] mb-5">{card.label}</p>
-                <p className="text-[#1a1a1a]/70 text-[15px] leading-relaxed">{card.text}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
