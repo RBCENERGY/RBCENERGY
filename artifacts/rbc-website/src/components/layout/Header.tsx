@@ -6,6 +6,7 @@ const navItems = [
   { name: "Leistungen", path: "/leistungen" },
   { name: "Industrie", path: "/industrie" },
   { name: "Kommunen", path: "/kommunen" },
+  { name: "Mobile", path: "/mobile" },
   { name: "Fördermittel", path: "/foerdermittel" },
   { name: "Projekte", path: "/projekte" },
   { name: "Über uns", path: "/unternehmen" },
@@ -43,7 +44,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-8">
           {navItems.map((item) => {
             const isActive = location.startsWith(item.path);
             const textColor = isActive
@@ -55,7 +56,7 @@ export function Header() {
                 key={item.path}
                 href={item.path}
                 data-testid={`nav-${item.name.toLowerCase()}`}
-                className={`text-xs font-bold tracking-widest uppercase transition-colors ${textColor}`}
+                className={`text-xs font-bold tracking-widest uppercase whitespace-nowrap transition-colors ${textColor}`}
               >
                 {item.name}
               </Link>
@@ -64,7 +65,7 @@ export function Header() {
         </nav>
 
         <Link href="/kontakt" className="hidden lg:block" data-testid="button-kontakt-desktop">
-          <button className="bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold tracking-widest uppercase text-xs px-7 py-3 transition-colors">
+          <button className="bg-[#98B94B] hover:bg-[#8aaa3f] text-[#0D0F12] font-bold tracking-widest uppercase text-xs px-5 xl:px-7 py-3 whitespace-nowrap transition-colors">
             Kostenlose Beratung
           </button>
         </Link>
