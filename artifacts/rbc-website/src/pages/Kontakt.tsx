@@ -48,31 +48,23 @@ export default function Kontakt() {
     setErrorMessage("");
     setFieldErrors({});
     try {
-      const res = await fetch("/api/send-mail.php", {
+      const encode = (data: Record<string, string>) =>
+        Object.keys(data)
+          .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+          .join("&");
+
+      const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "kontakt",
+          "bot-field": String(data.get("bot-field") ?? ""),
+          ...payload,
+        }),
       });
-      const body = await res.json().catch(() => null);
-      if (!res.ok || body?.success !== true) {
-        const errors = body?.errors as Record<string, string[]> | undefined;
-        if (errors) {
-          const mapped: FieldErrors = {};
-          for (const [field, messages] of Object.entries(errors)) {
-            if (messages && messages.length > 0) {
-              mapped[field as FieldName] = messages[0];
-            }
-          }
-          setFieldErrors(mapped);
-        }
-        const hasFieldErrors = errors && Object.keys(errors).length > 0;
+      if (!res.ok) {
         setStatus("error");
-        setErrorMessage(
-          body?.error ||
-            (hasFieldErrors
-              ? "Bitte überprüfen Sie die markierten Felder."
-              : "Anfrage konnte nicht gesendet werden."),
-        );
+        setErrorMessage("Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.");
         return;
       }
       setStatus("success");
@@ -136,6 +128,11 @@ export default function Kontakt() {
                 </div>
               ) : (
                 <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+                  <p className="hidden" aria-hidden="true">
+                    <label>
+                      Nicht ausfüllen: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                    </label>
+                  </p>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-[#1a1a1a]">Vorname</Label>
