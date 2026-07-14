@@ -1,0 +1,43 @@
+habe ich gemacht das klappt nichtNetlify hat den Public-Status offenbar noch nicht übernommen (der Cache hängt an der alten „Private"-Bewertung des Repos). Statt weiter auf Netlifys Cache zu warten, machen wir den zuverlässigen Fix – einen eigenen Commit unter deinem Account, der garantiert als „recognized contributor" gilt:
+Eigener Mini-Commit über GitHub (löst es fast sicher):
+
+Geh auf github.com/RBCENERGY/RBCENERGY
+Klick auf „Add file" → „Create new file"
+Dateiname: .netlify-trigger (oder irgendwas Beliebiges)
+Inhalt: eine beliebige Zeile, z. B. trigger
+Unten „Commit changes" → „Commit directly to the main branch" → bestätigen
+
+Dieser Commit trägt deine GitHub-Identität (RBCENERGY/c-reinke), nicht die von replit-agent. Netlify startet dadurch automatisch einen neuen Build – und da der jüngste Commit jetzt von einem erkannten Contributor stammt, sollte die Blockade wegfallen.
+Falls das auch nicht reicht (weil Netlify weiterhin private-Logik anwendet), gibt es noch:
+Option: Git-Account in Netlify direkt verknüpfen
+Auf dem Screenshot unten siehst du den Button „Link Git account" – klick den an und verknüpfe deinen GitHub-Account (RBCENERGY) direkt mit dem Netlify-Team. Das autorisiert deine Commits explizit.
+Probier zuerst den eigenen Commit (Weg 1) – der ist erfahrungsgemäß der zuverlässigste Hebel. Sag mir, ob der neue Build danach durchläuft.hat geklappt icch sehe das preview der seiteSehr gut, der Build läuft jetzt durch und die Seite ist live auf der .netlify.app-Vorschau-URL. Der schwierigste Teil ist geschafft.
+Jetzt testen, bevor die Domain drankommt:
+
+Alle Unterseiten direkt per URL aufrufen (nicht nur durchklicken) – also z. B. deine-site.netlify.app/leistungen direkt in die Adressleiste. Wenn das ohne 404 lädt, funktioniert das SPA-Routing (die _redirects-Datei greift).
+Bilder/Slideshow/Animationen prüfen – ob alle Assets geladen werden.
+Kontaktformular: Hier gibt's noch einen offenen Punkt – das PHP-Script (send-mail.php) funktioniert auf Netlify nicht, weil Netlify kein PHP ausführt. Das Formular wird aktuell also noch nicht senden. Dafür brauchen wir eine Netlify-taugliche Lösung (Netlify Functions oder Netlify Forms).
+
+Nächste große Schritte, sobald der Test passt:
+
+Domain rbc-energy.de verbinden (dafür müssen wir noch klären, wo die DNS/MX-Records liegen – die MX-Lookup-Sache von vorhin steht noch aus)
+Kontaktformular auf eine Netlify-Lösung umstellen
+
+Zwei Fragen zum Priorisieren:der link ist so https://6a55f553057443246b35ee81--astonishing-madeleine-6a2054.netlify.app/Das ist eine sogenannte Deploy-Preview-URL (mit dem langen Hash 6a55f553... vorne) – die zeigt nur einen einzelnen, bestimmten Build-Stand und ist nicht die Haupt-Adresse deiner Seite. Für den echten Test und später die Domain-Verbindung brauchst du die permanente Production-URL, die so aussieht:
+https://astonishing-madeleine-6a2054.netlify.app
+(also ohne den Hash-Teil vorne)
+So findest du sie:
+Netlify → Project overview (oder Deploys) → dort steht oben die Haupt-URL der Site, meist direkt unter dem Projektnamen. Auf die klicken.
+Tipp zum Testen des Routings:
+Ruf über die Production-URL gezielt eine Unterseite direkt auf, z. B.:
+https://astonishing-madeleine-6a2054.netlify.app/leistungen
+Wenn die ohne „Page not found" lädt, funktioniert das SPA-Routing. Falls doch ein 404 kommt, fehlt die _redirects-Datei im Build – das müssten wir dann noch ergänzen.
+Probier die Production-URL (ohne Hash) und teste ein, zwei Unterseiten direkt. Läuft alles sauber oder gibt's 404s?https://astonishing-madeleine-6a2054.netlify.app/leistungen zeigt page not foundBestätigt: Die _redirects-Datei fehlt im Build, deshalb der 404. Wouter macht das Routing im Browser, aber Netlify sucht bei direktem Aufruf von /leistungen nach einer echten Datei und findet keine.
+Fix: Eine Datei _redirects muss in den Build-Output. Am saubersten legst du sie in Replit im public-Ordner des Projekts an, dann kopiert Vite sie automatisch mit in den dist-Output.
+Prompt für Replit:
+
+Erstelle im Projekt artifacts/rbc-website eine Datei namens _redirects (ohne Dateiendung) im public-Ordner. Falls es keinen public-Ordner gibt, lege ihn im Projekt-Root an (auf derselben Ebene wie index.html bzw. src), sodass Vite den Inhalt beim Build automatisch nach dist kopiert.
+Inhalt der Datei _redirects (genau eine Zeile):
+/*    /index.html   200
+Diese Regel sorgt dafür, dass alle Pfade an index.html ausgeliefert werden, damit das clientseitige Routing (Wouter) auch bei direktem Aufruf von Unterseiten wie /leistungen funktioniert, statt einen 404 zu zeigen.
+Prüfe, dass die Datei nach npm run build tatsächlich im Build-Output landet (im dist- bzw. dist/public-Ordner als _redirects). Baue das Projekt anschließend neu und bestätige, dass die Datei im Output enthalten ist.
