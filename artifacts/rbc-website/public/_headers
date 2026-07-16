@@ -1,0 +1,16 @@
+# Netlify Cache-Regeln
+# HTML nie cachen -> Besucher bekommen nach jedem Deploy sofort die neue Version
+/*
+  Cache-Control: no-cache
+
+# Gehashte Assets (JS/CSS) duerfen dauerhaft gecacht werden
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Bilder duerfen einen Tag gecacht werden
+/*.webp
+  Cache-Control: public, max-age=86400
+/*.png
+  Cache-Control: public, max-age=86400
+/*.jpg
+  Cache-Control: public, max-age=86400
