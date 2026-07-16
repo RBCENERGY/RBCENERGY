@@ -180,6 +180,8 @@ export function SavingsCalculator() {
                 </SelectContent>
               </Select>
             </div>
+
+            <p className="text-sm text-white/50">Berechnung inkl. Montagekosten</p>
           </div>
         </div>
 
