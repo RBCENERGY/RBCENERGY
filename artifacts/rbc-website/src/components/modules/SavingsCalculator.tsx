@@ -27,11 +27,11 @@ const FIXTURES: { group: string; options: FixtureOption[] }[] = [
   {
     group: "HQL / HQI (Quecksilber/Halogen)",
     options: [
-      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 165, ledFactor: 0.32, invest: 220 },
-      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 270, ledFactor: 0.32, invest: 280 },
-      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 428, ledFactor: 0.32, invest: 350 },
-      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 640, ledFactor: 0.32, invest: 450 },
-      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1060, ledFactor: 0.32, invest: 600 },
+      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 150, ledFactor: 0.22, invest: 170 },
+      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 250, ledFactor: 0.22, invest: 200 },
+      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 400, ledFactor: 0.22, invest: 230 },
+      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 600, ledFactor: 0.22, invest: 290 },
+      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1000, ledFactor: 0.22, invest: 380 },
     ],
   },
   {
