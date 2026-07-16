@@ -3,13 +3,13 @@ name: RBC Einsparrechner calibration
 description: Real-world calibration basis for the savings calculator on the RBC website
 ---
 
-Calibrated from a real RBC customer Energieberechnung (Treofan, T8 2x58W plant, 08.07.2024):
+Calibrated from two real RBC customer Energieberechnungen; the second (Birkenfeld 2023, 1:1 renovation) superseded the first (Treofan 2024, which had heavy fixture-count reduction → unrealistically high 78% for a generic calculator).
 
-- LED replacement consumes ~22% of old system power → **78% savings** for T8 and HQL/HQI (user confirmed HQL ratio is similar).
-- T5 is already efficient → use ledFactor 0.5 (~50% savings), so amortization is noticeably longer (per user instruction).
-- Investment ~**160 € netto per Lichtpunkt** for a 2x58W T8 fixture, **including Montage + DALI Lichtsteuerung**; HQL highbays scaled higher (220–600 € by wattage).
-- Acceptance fixture: 116W fixture, 8,766 h/yr (24h × 365d), 0.16 €/kWh, 160 €/point → payback ≈ **1.27 years** (matches the Excel).
-- Calculator has a "Betriebstage pro Jahr" select (250/312/365) so continuous operation is representable.
+- Old-fixture watts in the calculator are **real draw incl. konventionellem Vorschaltgerät** (e.g. 2x58W T8 → 130W, matches Excel: 4.550W/35 fixtures).
+- ledFactor: **T8/HQL 0.35** (~65% savings; 2x58 → 0.33, LED 42,7W), **T5 0.55** (~45% savings, longer amortization — per user).
+- Investment netto per Lichtpunkt incl. Montage + DALI: T8 90–170 € (2x58 → 170), HQL highbays 220–600 € by wattage.
+- Acceptance fixture (Birkenfeld-style): 2x58W, 4.000 h/yr, 0,21 €/kWh → savings ≈ 73 €/point/yr, payback ≈ **2.3–2.7 years**.
+- Calculator has "Betriebstage pro Jahr" select (250/312/365); footnote "Berechnung inkl. Montagekosten und realem Verbrauch (inkl. Vorschaltgerät)".
 
-**Why:** User said the old generic 70%/150€ numbers "entsprechen nicht der Realität" and provided the Excel as ground truth.
-**How to apply:** Any change to SavingsCalculator math must still reproduce the acceptance fixture above.
+**Why:** User twice said generic numbers "entsprechen nicht der Realität" and provided both Excels as ground truth; 1:1 case is the representative one.
+**How to apply:** Any change to SavingsCalculator math must stay consistent with the Birkenfeld acceptance fixture above.

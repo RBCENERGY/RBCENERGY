@@ -7,15 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 
-// Kalibriert anhand realer RBC-Energieberechnung (T8 2x58W Anlage):
-// LED-Systemleistung ~22% der Altanlage (78% Einsparung), Investition
-// ~160 € netto je Lichtpunkt inkl. Montage & DALI, Amortisation ~1,3 Jahre
-// bei Dauerbetrieb und 0,16 €/kWh. HQL: ähnliches Verhältnis. T5: bereits
-// effizienter, daher geringere Einsparung und längere Amortisation.
+// Kalibriert anhand realer RBC-Energieberechnungen:
+// Birkenfeld 2023 (1:1-Sanierung, 2x58W Lichtbänder): reale Anschlussleistung
+// inkl. konventionellem Vorschaltgerät ~130W je 2x58W-Leuchte, LED-Ersatz
+// 42,7W -> ~65% Einsparung, Investition ~140-170 € netto je Lichtpunkt inkl.
+// Montage & DALI, Amortisation ~2,7 Jahre bei 4.000 h/Jahr und 0,21 €/kWh.
+// HQL: ähnliches Verhältnis. T5: bereits effizienter, daher geringere
+// Einsparung (~45%) und längere Amortisation.
 type FixtureOption = {
   value: string;
   label: string;
-  watts: number;       // Anschlussleistung Altanlage je Lichtpunkt
+  watts: number;       // reale Anschlussleistung Altanlage inkl. Vorschaltgerät
   ledFactor: number;   // Restverbrauch LED im Verhältnis zur Altanlage
   invest: number;      // € netto je Lichtpunkt inkl. Montage
 };
@@ -24,30 +26,30 @@ const FIXTURES: { group: string; options: FixtureOption[] }[] = [
   {
     group: "HQL / HQI (Quecksilber/Halogen)",
     options: [
-      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 150, ledFactor: 0.22, invest: 220 },
-      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 250, ledFactor: 0.22, invest: 280 },
-      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 400, ledFactor: 0.22, invest: 350 },
-      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 600, ledFactor: 0.22, invest: 450 },
-      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1000, ledFactor: 0.22, invest: 600 },
+      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 165, ledFactor: 0.35, invest: 220 },
+      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 270, ledFactor: 0.35, invest: 280 },
+      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 428, ledFactor: 0.35, invest: 350 },
+      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 640, ledFactor: 0.35, invest: 450 },
+      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1060, ledFactor: 0.35, invest: 600 },
     ],
   },
   {
     group: "Leuchtstoffröhre T8 (klassisch)",
     options: [
-      { value: "t8-18", label: "18 Watt (T8)", watts: 18, ledFactor: 0.22, invest: 80 },
-      { value: "t8-36", label: "36 Watt (T8)", watts: 36, ledFactor: 0.22, invest: 120 },
-      { value: "t8-58", label: "58 Watt (T8)", watts: 58, ledFactor: 0.22, invest: 140 },
-      { value: "t8-2x36", label: "2x36 Watt (T8)", watts: 72, ledFactor: 0.22, invest: 150 },
-      { value: "t8-2x58", label: "2x58 Watt (T8)", watts: 116, ledFactor: 0.22, invest: 160 },
+      { value: "t8-18", label: "18 Watt (T8)", watts: 24, ledFactor: 0.35, invest: 90 },
+      { value: "t8-36", label: "36 Watt (T8)", watts: 43, ledFactor: 0.35, invest: 120 },
+      { value: "t8-58", label: "58 Watt (T8)", watts: 65, ledFactor: 0.35, invest: 140 },
+      { value: "t8-2x36", label: "2x36 Watt (T8)", watts: 84, ledFactor: 0.35, invest: 155 },
+      { value: "t8-2x58", label: "2x58 Watt (T8)", watts: 130, ledFactor: 0.33, invest: 170 },
     ],
   },
   {
     group: "Leuchtstoffröhre T5",
     options: [
-      { value: "t5-14", label: "14 Watt (T5)", watts: 14, ledFactor: 0.5, invest: 80 },
-      { value: "t5-28", label: "28 Watt (T5)", watts: 28, ledFactor: 0.5, invest: 120 },
-      { value: "t5-54", label: "54 Watt (T5)", watts: 54, ledFactor: 0.5, invest: 140 },
-      { value: "t5-80", label: "80 Watt (T5 HO)", watts: 80, ledFactor: 0.5, invest: 160 },
+      { value: "t5-14", label: "14 Watt (T5)", watts: 17, ledFactor: 0.55, invest: 90 },
+      { value: "t5-28", label: "28 Watt (T5)", watts: 32, ledFactor: 0.55, invest: 120 },
+      { value: "t5-54", label: "54 Watt (T5)", watts: 60, ledFactor: 0.55, invest: 140 },
+      { value: "t5-80", label: "80 Watt (T5 HO)", watts: 88, ledFactor: 0.55, invest: 160 },
     ],
   },
 ];
@@ -181,7 +183,7 @@ export function SavingsCalculator() {
               </Select>
             </div>
 
-            <p className="text-sm text-white/50">Berechnung inkl. Montagekosten</p>
+            <p className="text-sm text-white/50">Berechnung inkl. Montagekosten und realem Verbrauch (inkl. Vorschaltgerät)</p>
           </div>
         </div>
 
