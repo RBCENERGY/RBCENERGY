@@ -33,7 +33,7 @@ export default function Kommunen() {
       {/* Dark image hero (accent) */}
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <img src="/hero-municipality.png" alt="LED Straßenbeleuchtung in der Stadt" className="w-full h-full object-cover" />
+          <img src="/hero-municipality.webp" alt="LED Straßenbeleuchtung in der Stadt" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D0F12]/92 via-[#0D0F12]/70 to-[#0D0F12]/20" />
           <div
             className="absolute inset-0 opacity-10"

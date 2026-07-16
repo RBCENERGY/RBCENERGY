@@ -74,7 +74,7 @@ export default function Mobile() {
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-mobile.png"
+            src="/hero-mobile.webp"
             alt="Ladeinfrastruktur für Elektromobilität in der Tiefgarage"
             className="w-full h-full object-cover"
           />

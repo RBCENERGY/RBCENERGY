@@ -28,7 +28,7 @@ const articles: Article[] = [
     category: "RBC Mobile",
     excerpt: "Elektromobilität für Ihre Immobilie: Wir rüsten Wohnungseigentümergemeinschaften mit modularer Ladeinfrastruktur aus — von der Bedarfsermittlung über die Installation bis zur fairen Abrechnung. Bis zu 40 % Förderung sichern.",
     link: "/mobile",
-    image: "/hero-mobile.png",
+    image: "/hero-mobile.webp",
   },
   {
     date: "Juli 2026",
@@ -51,7 +51,7 @@ const articles: Article[] = [
     category: "Fördermittel",
     excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
     link: "/news/led-foerderung",
-    image: "/news-foerderung.png",
+    image: "/news-foerderung.webp",
   },
   {
     date: "30. September 2024",
@@ -68,7 +68,7 @@ const articles: Article[] = [
     category: "Branchen-News",
     excerpt: "Seit Herbst 2023 dürfen keine neuen T8-Leuchtstoffröhren mehr in Verkehr gebracht werden. Wir zeigen Ihnen die Alternativen und Fristen.",
     link: "/news/leuchtstoffroehren-verbot",
-    image: "/news-verbot.png",
+    image: "/news-verbot.webp",
   },
   {
     date: "15. Juli 2021",
@@ -95,7 +95,7 @@ export default function News() {
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-news.png"
+            src="/hero-news.webp"
             alt="RBC News und Presse"
             className="w-full h-full object-cover"
           />

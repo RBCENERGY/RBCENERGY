@@ -18,7 +18,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-start md:items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-warehouse.png"
+            src="/hero-warehouse.webp"
             alt="Industriehalle mit LED Beleuchtung"
             className="w-full h-full object-cover"
           />

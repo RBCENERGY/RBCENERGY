@@ -36,7 +36,7 @@ export default function Foerdermittel() {
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-foerdermittel.png"
+            src="/hero-foerdermittel.webp"
             alt="Fördermittel für LED-Modernisierung"
             className="w-full h-full object-cover"
           />

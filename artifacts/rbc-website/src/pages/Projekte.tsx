@@ -16,7 +16,7 @@ export default function Projekte() {
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-projekte.png"
+            src="/hero-projekte.webp"
             alt="LED Referenzprojekte"
             className="w-full h-full object-cover"
           />
@@ -80,7 +80,7 @@ export default function Projekte() {
               </div>
               <div className="order-1 lg:order-2">
                 <img
-                  src="/linamar-halle.png"
+                  src="/linamar-halle.webp"
                   alt="Linamar Werk Plettenberg — LED-Hallenbeleuchtung nach Sanierung"
                   className="w-full h-[420px] object-cover rounded-xl shadow-lg"
                   loading="eager"
@@ -166,7 +166,7 @@ export default function Projekte() {
               </div>
               <div className="order-1 lg:order-3">
                 <img
-                  src="/aurelis-halle18.png"
+                  src="/aurelis-halle18.webp"
                   alt="Aurelis Halle 18 Turbinenwerk Mannheim — LED-Lichtbänder auf 22 m Höhe"
                   className="w-full h-[420px] object-cover rounded-xl shadow-lg"
                   loading="lazy"
@@ -178,13 +178,13 @@ export default function Projekte() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-1 grid grid-cols-2 gap-3">
                 <img
-                  src="/parkhaus-p10-1.png"
+                  src="/parkhaus-p10-1.webp"
                   alt="Parkhaus P10 — LED-Umrüstung im laufenden Betrieb"
                   className="w-full h-[300px] object-cover object-bottom rounded-xl shadow-lg"
                   loading="lazy"
                 />
                 <img
-                  src="/parkhaus-p10-2.png"
+                  src="/parkhaus-p10-2.webp"
                   alt="Parkhaus P10 — neue Waterproof LED-Leuchten IP66"
                   className="w-full h-[300px] object-cover object-bottom rounded-xl shadow-lg"
                   loading="lazy"
@@ -258,7 +258,7 @@ export default function Projekte() {
               </div>
               <div className="order-1 lg:order-2">
                 <img
-                  src="/peter-bruckmann-schule.png"
+                  src="/peter-bruckmann-schule.webp"
                   alt="Peter-Bruckmann-Schule Heilbronn — Eingangsbereich nach LED-Modernisierung"
                   className="w-full h-[420px] object-cover rounded-xl shadow-lg"
                   loading="lazy"
@@ -270,13 +270,13 @@ export default function Projekte() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-1 grid grid-cols-2 gap-3">
                 <img
-                  src="/gleason-1.jpg"
+                  src="/gleason-1.webp"
                   alt="Gleason-Pfauter Ludwigsburg — Produktionshalle mit DEMAG-Kran und neuen LED-Lichtbändern"
                   className="w-full h-[300px] object-cover rounded-xl shadow-lg"
                   loading="lazy"
                 />
                 <img
-                  src="/gleason-2.jpg"
+                  src="/gleason-2.webp"
                   alt="Gleason Innovation Center Ludwigsburg — VEKO Magnus Circular Lichtbänder"
                   className="w-full h-[300px] object-cover rounded-xl shadow-lg"
                   loading="lazy"
@@ -466,7 +466,7 @@ export default function Projekte() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-1">
                 <img
-                  src="/nbhx.jpg"
+                  src="/nbhx.webp"
                   alt="NBHX Trim Group Bruchsal — neue VEKO Lichtbänder in der Produktionshalle"
                   className="w-full h-[420px] object-cover rounded-xl shadow-lg"
                   loading="lazy"

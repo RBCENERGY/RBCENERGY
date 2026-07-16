@@ -22,7 +22,7 @@ export default function Impressum() {
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero-company.png"
+            src="/hero-company.webp"
             alt="Impressum RBC GmbH"
             className="w-full h-full object-cover"
           />
