@@ -27,21 +27,21 @@ const FIXTURES: { group: string; options: FixtureOption[] }[] = [
   {
     group: "HQL / HQI (Quecksilber/Halogen)",
     options: [
-      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 165, ledFactor: 0.35, invest: 220 },
-      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 270, ledFactor: 0.35, invest: 280 },
-      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 428, ledFactor: 0.35, invest: 350 },
-      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 640, ledFactor: 0.35, invest: 450 },
-      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1060, ledFactor: 0.35, invest: 600 },
+      { value: "hql150", label: "150 Watt (HQL/HQI)", watts: 165, ledFactor: 0.32, invest: 220 },
+      { value: "hql250", label: "250 Watt (HQL/HQI)", watts: 270, ledFactor: 0.32, invest: 280 },
+      { value: "hql400", label: "400 Watt (HQL/HQI)", watts: 428, ledFactor: 0.32, invest: 350 },
+      { value: "hql600", label: "600 Watt (HQL/HQI)", watts: 640, ledFactor: 0.32, invest: 450 },
+      { value: "hql1000", label: "1000 Watt (HQL/HQI)", watts: 1060, ledFactor: 0.32, invest: 600 },
     ],
   },
   {
     group: "Leuchtstoffröhre T8 (klassisch)",
     options: [
-      { value: "t8-18", label: "18 Watt (T8)", watts: 24, ledFactor: 0.35, invest: 90 },
-      { value: "t8-36", label: "36 Watt (T8)", watts: 43, ledFactor: 0.35, invest: 120 },
-      { value: "t8-58", label: "58 Watt (T8)", watts: 65, ledFactor: 0.35, invest: 140 },
-      { value: "t8-2x36", label: "2x36 Watt (T8)", watts: 84, ledFactor: 0.35, invest: 155 },
-      { value: "t8-2x58", label: "2x58 Watt (T8)", watts: 130, ledFactor: 0.33, invest: 170 },
+      { value: "t8-18", label: "18 Watt (T8)", watts: 21, ledFactor: 0.32, invest: 85 },
+      { value: "t8-36", label: "36 Watt (T8)", watts: 43, ledFactor: 0.32, invest: 115 },
+      { value: "t8-58", label: "58 Watt (T8)", watts: 69, ledFactor: 0.32, invest: 130 },
+      { value: "t8-2x36", label: "2x36 Watt (T8)", watts: 86, ledFactor: 0.32, invest: 140 },
+      { value: "t8-2x58", label: "2x58 Watt (T8)", watts: 138, ledFactor: 0.32, invest: 146 },
     ],
   },
   {
