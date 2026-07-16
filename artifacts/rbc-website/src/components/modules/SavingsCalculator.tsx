@@ -210,7 +210,7 @@ export function SavingsCalculator() {
               </Label>
             </div>
 
-            <p className="text-sm text-white/50">Berechnung inkl. Montagekosten und realem Verbrauch (inkl. Vorschaltgerät)</p>
+            <p className="text-sm text-white/50">Berechnung inkl. Montagekosten und realem Verbrauch</p>
           </div>
         </div>
 
