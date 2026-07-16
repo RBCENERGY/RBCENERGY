@@ -112,12 +112,25 @@ export function SavingsCalculator() {
 
           <div className="space-y-6">
             <div className="space-y-3">
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center gap-4">
                 <Label className="text-base text-white">Anzahl der Lichtpunkte</Label>
-                <span className="font-mono text-primary">{lightPoints} Stk.</span>
+                <div className="flex items-center gap-2">
+                  <Input
+                    type="number"
+                    min={0}
+                    max={50000}
+                    value={lightPoints}
+                    onChange={(e) => {
+                      const val = parseInt(e.target.value);
+                      setLightPoints(isNaN(val) ? 0 : Math.max(0, Math.min(50000, val)));
+                    }}
+                    className="w-24 h-8 bg-white/5 border-white/10 text-primary font-mono text-right"
+                  />
+                  <span className="font-mono text-primary">Stk.</span>
+                </div>
               </div>
               <Slider 
-                value={[lightPoints]} 
+                value={[Math.min(lightPoints, 5000)]} 
                 onValueChange={(val) => setLightPoints(val[0])} 
                 max={5000} 
                 step={50} 
