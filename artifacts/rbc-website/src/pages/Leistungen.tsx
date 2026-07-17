@@ -131,7 +131,7 @@ function TestimonialsSlideshow() {
                 <img
                   src={t.photo}
                   alt={t.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top scale-125 origin-top"
                 />
               ) : (
                 <span className="text-[#98B94B] font-display font-bold text-2xl select-none">
