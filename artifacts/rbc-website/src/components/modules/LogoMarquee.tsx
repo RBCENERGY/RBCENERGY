@@ -31,6 +31,7 @@ import logoBenckiser from "@assets/RBC_Benckiser_1783272813760.webp";
 import logoSRH from "@assets/RBC_SRH_1783272813760.webp";
 import logoEuroMaint from "@assets/RBC_EuroMaint_klein_1783272813761.webp";
 import logoOrsay from "@assets/RBC_Orsay_1783272813761.webp";
+import logoLinamar from "@assets/Linamar_1784721513200.png";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -66,6 +67,7 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoSRH, alt: "SRH" },
   { src: logoEuroMaint, alt: "EuroMaint" },
   { src: logoOrsay, alt: "Orsay" },
+  { src: logoLinamar, alt: "Linamar" },
 ];
 
 export function LogoMarquee() {
