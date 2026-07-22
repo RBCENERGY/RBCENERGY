@@ -44,7 +44,6 @@ import logoSentronics from "@assets/sentronics-nova-company_1784727301118.jpg";
 import logoRiha from "@assets/riha_1784727301119.png";
 import logoPaulKauth from "@assets/Paul_Kauth_1784727301113.png";
 import logoKranwerke from "@assets/logo-kranwerke-mannheim-35b1d8da_1784727567666.png";
-import logoDS from "@assets/ds-desktop-logo_1784727694832.svg";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -93,7 +92,6 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoRiha, alt: "riha" },
   { src: logoPaulKauth, alt: "Paul Kauth" },
   { src: logoKranwerke, alt: "Kranwerke Mannheim" },
-  { src: logoDS, alt: "DS" },
 ];
 
 export function LogoMarquee() {
