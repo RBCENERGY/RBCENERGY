@@ -45,6 +45,7 @@ import logoRiha from "@assets/riha_1784727301119.png";
 import logoPaulKauth from "@assets/Paul_Kauth_1784727301113.png";
 import logoKranwerke from "@assets/logo-kranwerke-mannheim-35b1d8da_1784727567666.png";
 import logoDentsplySirona from "@assets/sirona_1784727890135.png";
+import logoBAG from "@assets/bag_1784728285217.png";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -94,6 +95,7 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoPaulKauth, alt: "Paul Kauth" },
   { src: logoKranwerke, alt: "Kranwerke Mannheim" },
   { src: logoDentsplySirona, alt: "Dentsply Sirona" },
+  { src: logoBAG, alt: "BAG" },
 ];
 
 export function LogoMarquee() {
