@@ -32,6 +32,17 @@ import logoSRH from "@assets/RBC_SRH_1783272813760.webp";
 import logoEuroMaint from "@assets/RBC_EuroMaint_klein_1783272813761.webp";
 import logoOrsay from "@assets/RBC_Orsay_1783272813761.webp";
 import logoLinamar from "@assets/Linamar_1784721513200.png";
+import logoHoyer from "@assets/logo_hoyer_1784727301112.svg";
+import logoADM from "@assets/ADM_1784727301114.png";
+import logoNicolay from "@assets/nicolay-logo_1784727301114.svg";
+import logoKardex from "@assets/logo-kardex-group_1784727301115.svg";
+import logoEwellix from "@assets/Ewellix_1784727301116.png";
+import logoHD from "@assets/HD_1784727301116.svg";
+import logoNES from "@assets/logo-nes_1784727301117.svg";
+import logoMusashi from "@assets/MEE-Logo-Blue_1784727301118.png";
+import logoSentronics from "@assets/sentronics-nova-company_1784727301118.jpg";
+import logoRiha from "@assets/riha_1784727301119.png";
+import logoPaulKauth from "@assets/Paul_Kauth_1784727301113.png";
 
 const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoThyssenkrupp, alt: "thyssenkrupp" },
@@ -68,6 +79,17 @@ const clientLogos: { src: string; alt: string; invert?: boolean }[] = [
   { src: logoEuroMaint, alt: "EuroMaint" },
   { src: logoOrsay, alt: "Orsay" },
   { src: logoLinamar, alt: "Linamar" },
+  { src: logoHoyer, alt: "Hoyer Group" },
+  { src: logoADM, alt: "ADM" },
+  { src: logoNicolay, alt: "Nicolay" },
+  { src: logoKardex, alt: "Kardex Group" },
+  { src: logoEwellix, alt: "Ewellix" },
+  { src: logoHD, alt: "HD" },
+  { src: logoNES, alt: "NES" },
+  { src: logoMusashi, alt: "Musashi Engineering Europe" },
+  { src: logoSentronics, alt: "Sentronics Metrology" },
+  { src: logoRiha, alt: "riha" },
+  { src: logoPaulKauth, alt: "Paul Kauth" },
 ];
 
 export function LogoMarquee() {
