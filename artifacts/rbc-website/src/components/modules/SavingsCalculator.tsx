@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import { Slider } from "@/components/ui/slider";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -63,7 +62,6 @@ export function SavingsCalculator() {
   const [hours, setHours] = useState(12);
   const [price, setPrice] = useState(0.30);
   const [days, setDays] = useState("250");
-  const [funding, setFunding] = useState(false);
 
   const results = useMemo(() => {
     const fixture = ALL_FIXTURES.find((f) => f.value === wattage) ?? ALL_FIXTURES[2];
@@ -78,7 +76,7 @@ export function SavingsCalculator() {
     const savingsEuro = oldCost - newCost;
     const savingsCo2 = (oldKwh - newKwh) * 0.42; // ca. 0,42 kg CO2 je kWh
 
-    const investment = lightPoints * fixture.invest * (funding ? 0.85 : 1);
+    const investment = lightPoints * fixture.invest;
     const payback = investment / savingsEuro;
 
     return {
@@ -89,7 +87,7 @@ export function SavingsCalculator() {
       reductionPct: oldCost > 0 ? Math.round((savingsEuro / oldCost) * 100) : 0,
       payback: isNaN(payback) || payback === Infinity ? 0 : payback
     };
-  }, [lightPoints, wattage, hours, price, days, funding]);
+  }, [lightPoints, wattage, hours, price, days]);
 
   const formatEuro = (val: number) => new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(val);
 
@@ -196,18 +194,6 @@ export function SavingsCalculator() {
                   <SelectItem value="365">365 Tage (Durchgehend)</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Checkbox
-                id="funding"
-                checked={funding}
-                onCheckedChange={(checked) => setFunding(checked === true)}
-                className="border-white/30 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-              />
-              <Label htmlFor="funding" className="text-white cursor-pointer">
-                15 % Förderung einkalkulieren
-              </Label>
             </div>
 
             <p className="text-sm text-white/50">Berechnung inkl. Montagekosten und realem Verbrauch</p>

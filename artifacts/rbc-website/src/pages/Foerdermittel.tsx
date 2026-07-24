@@ -12,13 +12,13 @@ const fadeUp: Variants = {
 const programs = [
   {
     n: "1",
-    title: "BEG-Förderung (BAFA)",
-    desc: "Für Unternehmen. Förderung von bis zu 20 % (KMU) auf Material und Installation bei der Modernisierung von Innen- und Außenbeleuchtung.",
+    title: "Fördermittel für Ihre LED-Modernisierung",
+    desc: "Bund und Länder stellen Programme zur Förderung energieeffizienter Beleuchtung bereit. Wir prüfen gemeinsam mit Ihnen, welche aktuell verfügbaren Fördermöglichkeiten für Ihr Vorhaben in Frage kommen.",
   },
   {
     n: "2",
     title: "Kommunalrichtlinie (ZUG)",
-    desc: "Für Kommunen, Vereine und soziale Einrichtungen. Bis zu 40 % Zuschuss (finanzschwache Kommunen noch mehr) für den Austausch der Straßen- und Innenbeleuchtung.",
+    desc: "Für Kommunen, Vereine und soziale Einrichtungen. Zuschuss (finanzschwache Kommunen noch mehr) für den Austausch der Straßen- und Innenbeleuchtung.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Foerdermittel() {
         <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
-              Bis zu <span className="text-[#98B94B]">20 % Zuschuss</span> sichern
+              Staatliche <span className="text-[#98B94B]">Förderung</span> sichern
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
               Bund und Länder fördern den Umstieg auf energieeffiziente LED-Beleuchtung. Wir übernehmen die komplette Abwicklung für Sie — von der Antragstellung bis zur Auszahlung.
