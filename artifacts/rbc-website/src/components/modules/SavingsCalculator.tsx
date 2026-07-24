@@ -78,7 +78,7 @@ export function SavingsCalculator() {
     const savingsEuro = oldCost - newCost;
     const savingsCo2 = (oldKwh - newKwh) * 0.42; // ca. 0,42 kg CO2 je kWh
 
-    const investment = lightPoints * fixture.invest * (funding ? 0.85 : 1);
+    const investment = lightPoints * fixture.invest * (funding ? 0.80 : 1);
     const payback = investment / savingsEuro;
 
     return {
@@ -206,7 +206,7 @@ export function SavingsCalculator() {
                 className="border-white/30 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
               />
               <Label htmlFor="funding" className="text-white cursor-pointer">
-                15 % Förderung einkalkulieren
+                20 % Förderung einkalkulieren
               </Label>
             </div>
 

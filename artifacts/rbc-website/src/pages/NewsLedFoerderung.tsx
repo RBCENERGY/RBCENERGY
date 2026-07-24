@@ -69,7 +69,7 @@ export default function NewsLedFoerderung() {
               <span className="text-white/40 text-sm">17. Juni 2025</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white leading-[1.1] mb-4">
-              LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern
+              LED-Förderung für Unternehmen: Bis zu 25 % Zuschuss sichern
             </h1>
           </motion.div>
         </div>
@@ -82,7 +82,7 @@ export default function NewsLedFoerderung() {
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="prose-custom">
 
               <p className="text-[#1a1a1a]/70 text-lg leading-relaxed mb-6">
-                In Zeiten steigender Energiepreise und wachsenden ökologischen Bewusstseins rückt das Thema Energieeffizienz für Unternehmen immer mehr in den Fokus. Eine besonders effektive Maßnahme: die Umrüstung auf moderne LED-Beleuchtungssysteme. Neben den direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme – ein enormer Hebel für jedes Unternehmen.
+                In Zeiten steigender Energiepreise und wachsenden ökologischen Bewusstseins rückt das Thema Energieeffizienz für Unternehmen immer mehr in den Fokus. Eine besonders effektive Maßnahme: die Umrüstung auf moderne LED-Beleuchtungssysteme. Neben den direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 25 % der Investitionssumme – ein enormer Hebel für jedes Unternehmen.
               </p>
 
               <p className="text-[#1a1a1a]/60 text-[15px] leading-relaxed mb-4">In diesem Artikel zeigen wir Ihnen:</p>
@@ -108,10 +108,10 @@ export default function NewsLedFoerderung() {
 
               <H2>Förderprogramme für LED-Umrüstung</H2>
 
-              <H3>1. BEG Einzelmaßnahmen (Bundesförderung für effiziente Gebäude)</H3>
+              <H3>1. EEW-Förderung (Bundesförderung Energie- und Ressourceneffizienz in der Wirtschaft)</H3>
               <BulletList items={[
-                "Zuschusshöhe: bis zu 20 %",
-                "Förderfähig: LED-Beleuchtung in Nichtwohngebäuden (Büros, Lager, Produktion)",
+                "Zuschusshöhe: bis zu 25 % (KMU), Modul 4 auch höher",
+                "Förderfähig: LED-Beleuchtung in Industrie-, Gewerbe- und Produktionsgebäuden",
                 "Ansprechpartner: BAFA (Bundesamt für Wirtschaft und Ausfuhrkontrolle)",
                 "Antragsstellung: über das BAFA-Onlineportal vor Projektbeginn",
               ]} />
@@ -180,7 +180,7 @@ export default function NewsLedFoerderung() {
               <H2>FAQ: LED-Förderung im Schnellüberblick</H2>
               {[
                 { q: "Wer kann die LED-Förderung beantragen?", a: "Alle gewerblichen Unternehmen, KMU, kommunale Träger und Vereine." },
-                { q: "Wie hoch ist die maximale Förderung?", a: "Bis zu 20 % der Nettokosten. Kombination mit Steuerersparnis möglich." },
+                { q: "Wie hoch ist die maximale Förderung?", a: "Bis zu 25 % der Nettokosten (KMU). Kombination mit Steuerersparnis möglich." },
                 { q: "Welche Gebäude sind förderfähig?", a: "Nichtwohngebäude wie Büros, Hallen, Lager oder Werkstätten." },
                 { q: "Ist eine Kombination mit anderen Energieeffizienzmaßnahmen erlaubt?", a: "Ja, z. B. mit Heizungsoptimierung oder Dämmung. Beachten Sie die Antragsdetails." },
                 { q: "Wie lange dauert die Bearbeitung beim BAFA?", a: "Etwa 8–10 Wochen. Bei fehlenden Dokumenten verlängert sich die Frist." },
