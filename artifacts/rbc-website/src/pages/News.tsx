@@ -47,9 +47,9 @@ const articles: Article[] = [
   },
   {
     date: "17. Juni 2025",
-    title: "LED-Förderung für Unternehmen: Bis zu 25 % Zuschuss sichern",
+    title: "LED-Förderung für Unternehmen: Bis zu 20 % Zuschuss sichern",
     category: "Fördermittel",
-    excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 25 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
+    excerpt: "Neben direkten Stromkosteneinsparungen winken staatliche Förderungen von bis zu 20 % der Investitionssumme. Wir übernehmen die komplette Abwicklung für Sie.",
     link: "/news/led-foerderung",
     image: "/news-foerderung.webp",
   },

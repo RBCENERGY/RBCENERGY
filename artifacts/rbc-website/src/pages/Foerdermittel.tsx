@@ -12,8 +12,8 @@ const fadeUp: Variants = {
 const programs = [
   {
     n: "1",
-    title: "EEW-Förderung (BAFA)",
-    desc: "Für Unternehmen. Zuschuss von bis zu 25 % (KMU) auf Investitionen in energieeffiziente Beleuchtung im Rahmen der Bundesförderung für Energie- und Ressourceneffizienz in der Wirtschaft.",
+    title: "BEG-Förderung (BAFA)",
+    desc: "Für Unternehmen. Förderung von bis zu 20 % (KMU) auf Material und Installation bei der Modernisierung von Innen- und Außenbeleuchtung.",
   },
   {
     n: "2",
@@ -52,7 +52,7 @@ export default function Foerdermittel() {
         <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-32 md:pb-20">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white leading-[1.05] mb-6">
-              Bis zu <span className="text-[#98B94B]">25 % Zuschuss</span> sichern
+              Bis zu <span className="text-[#98B94B]">20 % Zuschuss</span> sichern
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-xl">
               Bund und Länder fördern den Umstieg auf energieeffiziente LED-Beleuchtung. Wir übernehmen die komplette Abwicklung für Sie — von der Antragstellung bis zur Auszahlung.

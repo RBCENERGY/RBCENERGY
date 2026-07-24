@@ -14,8 +14,8 @@ const services = [
   {
     icon: <Zap size={24} />,
     title: "Lichtplanung & Fördermittel",
-    desc: "Individuelle Lichtkonzepte inklusive Wirtschaftlichkeitsberechnung — und die komplette Abwicklung Ihrer Fördermittel von bis zu 25 %.",
-    points: ["Bedarfsanalyse & Lichtkonzept", "Wirtschaftlichkeitsberechnung", "Fördermittel-Beratung (bis 25 %)"],
+    desc: "Individuelle Lichtkonzepte inklusive Wirtschaftlichkeitsberechnung — und die komplette Abwicklung Ihrer Fördermittel von bis zu 20 %.",
+    points: ["Bedarfsanalyse & Lichtkonzept", "Wirtschaftlichkeitsberechnung", "Fördermittel-Beratung (bis 20 %)"],
     featured: true,
   },
   {
