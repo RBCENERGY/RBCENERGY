@@ -46,7 +46,7 @@ export default function Projekte() {
         <div className="container mx-auto px-6">
           <div className="space-y-24">
             {/* BUHLMANN Mannheim */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-stretch">
               <div className="order-2 lg:order-1 space-y-6">
                 <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
                   Lager & Stahlhandel
@@ -78,17 +78,11 @@ export default function Projekte() {
                   <p>Bedarfsgerechte Dimmung und tageslichtabhängige Steuerung</p>
                 </div>
               </div>
-              <div className="order-1 lg:order-2 grid grid-cols-2 gap-3">
-                <img
-                  src="/buhlmann-lager.webp"
-                  alt="BUHLMANN Lager Mannheim — modernisierte Hallenbeleuchtung"
-                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
-                  loading="lazy"
-                />
+              <div className="order-1 lg:order-2 relative min-h-[420px]">
                 <img
                   src="/buhlmann-regallager.webp"
                   alt="BUHLMANN Lager Mannheim — gleichmäßig beleuchtete Regalgänge"
-                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
                   loading="lazy"
                 />
               </div>
