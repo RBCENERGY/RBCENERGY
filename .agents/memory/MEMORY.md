@@ -5,4 +5,5 @@
 - [RBC contact form email](rbc-contact-email.md) — Kontakt form → /api/contact → Resend; needs a verified domain (CONTACT_FROM) to deliver to info@rbc-energy.de, else 403.
 - [RBC Einsparrechner calibration](rbc-savings-calculator.md) — 78% savings T8/HQL, 50% T5; ~160€/Lichtpunkt incl. Montage+DALI; acceptance fixture reproduces real Excel (1.27y payback).
 - [RBC deploy via git](rbc-deploy.md) — user pushes to Netlify via git; do NOT create dist ZIPs anymore.
+- [RBC Netlify image assets](rbc-netlify-image-assets.md) — files under globally ignored `attached_assets/` are local-only; copy deployable logos/images into tracked `public/`.
 - [RBC mobile/responsive conventions](rbc-website-mobile.md) — canonical text/padding scales; Home hero absolute stats-bar overlaps CTAs on mobile (items-start + big pb fix); collapse dup tokens after bulk p-10 sed.
