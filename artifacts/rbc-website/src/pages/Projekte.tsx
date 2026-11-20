@@ -223,6 +223,55 @@ export default function Projekte() {
               </div>
             </div>
 
+            {/* BUHLMANN Mannheim */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 space-y-6">
+                <div className="inline-flex px-3 py-1 bg-[#98B94B]/12 text-xs font-bold tracking-widest uppercase text-[#25412D]">
+                  Lager & Stahlhandel
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1a1a1a]">
+                  BUHLMANN — LED-Modernisierung im Lager Mannheim
+                </h2>
+                <p className="text-[#1a1a1a]/55 text-lg leading-relaxed">
+                  Am Mannheimer Standort der BUHLMANN Gruppe wurde die Beleuchtung eines Lagers für Stahlrohre und Rohrverbindungsteile modernisiert. Die bisherige Anlage erreichte nur 40 bis 80 Lux. Das neue Lichtkonzept verbessert die Lichtqualität auf eine gleichmäßige Ausleuchtung mit bis zu 300 Lux und senkt den Energieverbrauch um 62 %. Die Arbeiten erfolgten im laufenden Betrieb; auch die fachgerechte Entsorgung der Altanlage und die Erweiterung der Außenbeleuchtung gehörten zum Projekt.
+                </p>
+                <div className="grid grid-cols-3 gap-4 py-6 border-y border-black/8">
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Energieeinsparung</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">−62 %</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">Beleuchtungsstärke</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">bis 300 lx</div>
+                  </div>
+                  <div>
+                    <div className="text-[#1a1a1a]/45 text-sm mb-1">VEKO-Lichtsystem</div>
+                    <div className="text-2xl font-display font-bold text-[#98B94B]">240 m</div>
+                  </div>
+                </div>
+                <div className="bg-[#F7F8F9] rounded-lg px-5 py-4 text-sm text-[#1a1a1a]/60 space-y-1">
+                  <p className="font-bold text-[#25412D] text-xs uppercase tracking-widest mb-2">Tech Facts</p>
+                  <p>94 Hallentiefstrahler à 200 W · spezielle Regaloptik · 5.600 K</p>
+                  <p>DALI-dimmbare VEKO-Lichtsysteme · Casambi-Sensorik</p>
+                  <p>Bedarfsgerechte Dimmung und tageslichtabhängige Steuerung</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 grid grid-cols-2 gap-3">
+                <img
+                  src="/buhlmann-lager.webp"
+                  alt="BUHLMANN Lager Mannheim — modernisierte Hallenbeleuchtung"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/buhlmann-regallager.webp"
+                  alt="BUHLMANN Lager Mannheim — gleichmäßig beleuchtete Regalgänge"
+                  className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             {/* Peter-Bruckmann-Schule Heilbronn */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 space-y-6">
