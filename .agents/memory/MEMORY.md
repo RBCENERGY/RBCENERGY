@@ -6,4 +6,5 @@
 - [RBC Einsparrechner calibration](rbc-savings-calculator.md) — 78% savings T8/HQL, 50% T5; ~160€/Lichtpunkt incl. Montage+DALI; acceptance fixture reproduces real Excel (1.27y payback).
 - [RBC deploy via git](rbc-deploy.md) — user pushes to Netlify via git; do NOT create dist ZIPs anymore.
 - [RBC Netlify image assets](rbc-netlify-image-assets.md) — files under globally ignored `attached_assets/` are local-only; copy deployable logos/images into tracked `public/`.
+- [RBC Green Industry Cluster logo](rbc-green-industry-cluster-logo.md) — CCI reasons require the Green Industry Cluster logo to stay off every RBC website page.
 - [RBC mobile/responsive conventions](rbc-website-mobile.md) — canonical text/padding scales; Home hero absolute stats-bar overlaps CTAs on mobile (items-start + big pb fix); collapse dup tokens after bulk p-10 sed.

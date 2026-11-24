@@ -1,21 +1,6 @@
 import { Link } from "wouter";
 import { FaFacebookF, FaLinkedinIn, FaXing } from "react-icons/fa";
 
-function MembershipBadge() {
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Wir sind Mitglied</p>
-      <div className="bg-white p-3 rounded-full">
-        <img
-          src="/green-industry-cluster.png"
-          alt="Mitglied im Green Industry Cluster"
-          className="w-24 h-24 object-contain"
-        />
-      </div>
-    </div>
-  );
-}
-
 function VekoBadge() {
   return (
     <img
@@ -41,11 +26,6 @@ export function Footer() {
     <footer className="bg-[#0D0F12] text-white/70">
       {/* Main footer — centered, old-site style */}
       <div className="container mx-auto px-6 py-16 relative">
-        {/* Membership badge — left */}
-        <div className="hidden lg:block absolute left-6 xl:left-16 top-1/2 -translate-y-1/2">
-          <MembershipBadge />
-        </div>
-
         {/* Partner + certificate badges — right */}
         <div className="hidden lg:flex items-center gap-6 absolute right-6 xl:right-16 top-1/2 -translate-y-1/2">
           <IsoBadge />
@@ -105,7 +85,6 @@ export function Footer() {
 
         {/* Badges — stacked on mobile / tablet */}
         <div className="lg:hidden flex flex-wrap items-center justify-center gap-10 mt-14">
-          <MembershipBadge />
           <VekoBadge />
           <IsoBadge />
         </div>
